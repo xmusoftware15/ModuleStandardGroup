@@ -1,4 +1,4 @@
-###CourseBO
+### CourseBO
     BigInteger id
     string name
     BigInteger numClass
@@ -7,20 +7,20 @@
     string endTime
     BigInteger teacherId
     Proportions proportions
-###ProportionsBO
+### ProportionsBO
     BigInteger id
     BigInteger report
     BigInteger presentation
     BigInteger c
     BigInteger b
     BigInteger a
-###UserBO
+### UserBO
     BigInteger id
     string name
     string number
     string email
     string type
-###ClassBO
+### ClassBO
     BigInteger id
     string name
     string site
@@ -31,7 +31,7 @@
     bool isGrouped
     string roster
     Proportions proportions
-###SeminarBO
+### SeminarBO
     BigInteger id
     string name
     string description
@@ -40,13 +40,13 @@
     string endTime
     BigInteger grade
     List<BigInteger> topicIds
-###GroupBO
+### GroupBO
     BigInteger id
     string name
     User leader
     List<User> membrs
     string report
-###TopicBO
+### TopicBO
     BigInteger id
     string name
     string serial
@@ -54,10 +54,10 @@
     BigInteger groupLimit
     BigInteger groupMemberLimit
     BigInteger groupLeft
-###AttendanceBO
+### AttendanceBO
     BigInteger userId
     BigInteger seminarId
-###SchoolBO
+### SchoolBO
     BigInteger id
     string name
     string province

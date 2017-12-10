@@ -1,4 +1,4 @@
-###CourseDO
+### CourseDO
     BigInteger id
     string name
     BigInteger numClass
@@ -11,13 +11,13 @@
     BigInteger c
     BigInteger b
     BigInteger a
-###UserDO
+### UserDO
     BigInteger id
     string name
     string number
     string email
     string type
-###ClassDO
+### ClassDO
     BigInteger id
     BigInteger courseId
     string name
@@ -31,7 +31,7 @@
     BigInteger c
     BigInteger b
     BigInteger a
-###SeminarDO
+### SeminarDO
     BigInteger id
     BigInteger courseId
     string name
@@ -39,12 +39,12 @@
     string groupingMethod
     string startTime
     string endTime
-###GroupDO
+### GroupDO
     BigInteger id
     string name
     User leader
     string report
-###TopicDO
+### TopicDO
     BigInteger id
     string name
     string serial
@@ -53,14 +53,14 @@
     BigInteger groupMemberLimit
     BigInteger groupLeft
     BigInteger seminarId
-###AttendanceDO
+### AttendanceDO
     BigInteger userId
     BigInteger seminarId
     StudentScoring
     BigInteger userId
     BigInteger groupId
     BigInteger grade
-###SchoolDO
+### SchoolDO
     BigInteger id
     string name
     string province

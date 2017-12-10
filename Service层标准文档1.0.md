@@ -1,5 +1,5 @@
-#Service（包）  
-###UserService（类）
+# Service（包）  
+### UserService（类）
 1. List<UserBO> listPresentStudent(BigInteger seminarId,BigInteger classId)  
     * 方法简介:根据讨论课id及班级id，讨论课所在的班级出勤学生信息  
     *  参数:  
@@ -82,7 +82,7 @@
         - UserDao.List<UserDO> listUserBeginWithNum(BigInteger classId,String numBeginWith)
         - UserDao.List<UserDO> listUserBeginWithName(BigInteger classId,String nameBeginWith)  
 
-###SeminarService（类）
+### SeminarService（类）
 1. SeminarBO getMySeminarBySeminarId(BigInteger seminarId，User  userId)  
     * 方法简介:获得与当前学生相关的讨论课的信息（此学生是否是队长，当前讨论课是否处于签到状态，当前讨论课是否可以选题，当前讨论课的组队方式）
     * 参数:  
@@ -122,7 +122,7 @@
     * 返回值：true/false是否删除成功  
     * 调用的Dao方法:  
         - SeminarDao.deleteSeminarBySeminarId(SeminarDO seminar)  
-###TopicService（类）  
+### TopicService（类）  
 1. TopicBO getTopicByTopicId(BigInteger topicId)
     * 方法简介:根据话题Id获得改话题的信息
     * 参数:  
@@ -175,7 +175,7 @@
     * 返回值：true/false  
     * 调用的DAO方法：
         - topicDAO.deleteTopicByGroupId(BigInteger groupId)  
-###GroupService（类）
+### GroupService（类）
 1. List<GroupBO>  listGroupBySeminarId(BigInteger seminarId)
     * 方法简介:根据讨论课Id获得属于该讨论课的所有小组的信息
     * 参数:  
@@ -225,7 +225,7 @@
     - 调用的Dao方法：
         - GroupDao.getFixedGroupById(BigInteger userId,BigInteger classId) 
 
-##GradeService（类）
+### GradeService（类）
 1. BigInteger countGradeByGroupId(BigInteger groupId)
     * 方法简述： 按ID获取小组讨论课成绩  
     * 参数： 
@@ -278,7 +278,7 @@
     * 返回值：true/false  
     * 调用的DAO方法：
         - gradeDAO.insertGroupGradeByUserId(BigInteger groupId, BigInteger userId)  
-###ClassService（类）
+### ClassService（类）
 1. List<ClassBO> listClassByName(String courseName,String teacherName)
     - 方法简述：按课程名称和教师名称获取班级列表
     - 参数：
@@ -342,7 +342,7 @@
         - SeminarDao.getSeminarBySeminarId(BigInteger seminarId)
         - ClassDao.getClassByClassId(BigInteger classId)
 
-###AttendanceService（类）
+### AttendanceService（类）
 1. Boolean updateAttendanceById(Biginteger seminarId,Biginteger classId,Biginteger userId,LocationBO location )
     * 方法简介:根据讨论课id及班级id，学生id，进行签到
     * 参数:  

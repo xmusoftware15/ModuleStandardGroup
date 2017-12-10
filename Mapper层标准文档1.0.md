@@ -1,6 +1,6 @@
-#Mapper(包)
+# Mapper(包)
 
-###UserMapper（类）
+### UserMapper（类）
 1. UserDO selectUserByUserId(BigInteger userId)
     * 方法简介:根据用户id返回用户信息
     * 参数:  1.BigInteger userId(用户的id)
@@ -61,7 +61,7 @@
     - 参数：班级id、姓名开头
     - 返回值：学生列表
 
-###SeminarMapper（类）
+### SeminarMapper（类）
 
 1. SeminarDO selectSeminarBySeminarId(BigInteger seminarId)  
     * 方法简述：按讨论课id获取讨论课  
@@ -78,7 +78,7 @@
     * 参数：SeminarDO seminar 讨论课信息  
     * 返回值：true/false是否删除成功
 
-###ClassMapper（类）
+### ClassMapper（类）
 1. List<ClassDO> selectClassByCourseName(String courseName) 
     - 方法简述：按课程名称查询班级列表
     - 参数：课程名称
@@ -124,7 +124,7 @@
     * 参数:  1.BigInteger seminarId (讨论课的id) 2.BigInteger userId(用户的id)
     * 返回值: ClassDO 班级的信息
 
-###TopicMapper（类）
+### TopicMapper（类）
 
 1. TopicDO selectTopicByTopicId(BigInteger topicId)
     * 方法简介:根据话题Id获得改话题的信息
@@ -150,7 +150,7 @@
     * 参数:  1.BigInteger seminarId (讨论课的id)  2.TopicDO topic(要创建的话题信息)
     * 返回值: 话题的id
 
-###GroupMapper（类）
+### GroupMapper（类）
 
 1. GroupDO selectGroupById(BigInteger seminarId，BigInteger userId)
     * 方法简介:获得与当前学生在当前讨论课的小组信息（队长是谁，是否选题等）
@@ -190,7 +190,7 @@
     - 方法简述：按学生id和班级id查询学生所在小组
     - 参数：学生id、班级id
     - 返回值：小组
-###GradeMapper:
+### GradeMapper:
 1. BigInteger.countGradeByGroupId(BigInteger groupId)
     * 方法简述：计算小组得分
     * 参数：groupId
@@ -211,7 +211,7 @@
     * 参数：userId、groupId
     * 返回值：true/false
 
-###AttendanceMapper（类）
+### AttendanceMapper（类）
 
 1. Boolean updateAttendanceById(integer seminarId,integer classId,integer userId,String status)  
     * 方法简介:根据讨论课id， 班级id，学生id，在考勤表修改学生的考勤状态为出勤  
@@ -242,7 +242,7 @@
     * 方法描述：按courseId删除课程  
     * 参数：courseId  
     * 返回值：boolean（用于判断是否删除成功）
-###SchoolMapper  
+### SchoolMapper  
 1. List<SchoolDO> selectSchoolByCity(string city)  
     * 方法描述：按照城市名称查找学校  
     * 参数：string city  
