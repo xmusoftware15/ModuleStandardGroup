@@ -1,4 +1,4 @@
-﻿package xmu.crms.service;
+package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class SchoolService {
 	 * <p>根据城市名称，查询出在该城市的所有学校<br>
 	 * @author LiuAiqi
 	 * @param city 城市名称
-	 * @return List<SchoolBO> 学校列表
+	 * @return list 学校列表
 	 */
 	List<SchoolBO> listSchoolByCity(String city)
 	{
@@ -49,7 +49,7 @@ public class SchoolService {
 	 * 获取省份列表.
 	 * <p>获取所有省份的名称<br>
 	 * @author LiuAiqi
-	 * @return List<String> 省份名称列表
+	 * @return list 省份名称列表
 	 */
 	List<String> listProvince()
 	{
@@ -62,7 +62,7 @@ public class SchoolService {
 	 * <p>根据省份名称，获取该省份所有城市名称，返回城市名称列表<br>
 	 * @author LiuAiqi
 	 * @param province 省份名称
-	 * @return List<String> 城市名称列表
+	 * @return list 城市名称列表
 	 */
 	List<String> listCity(String province)
 	{

@@ -17,8 +17,8 @@ public class FixGroupService {
 	/**
 	 * 按FixGroupId删除FixGroupMember.
 	 * @author zhouzhongjun
-     * @param BigInteger fixGroupId 固定分组Id
-     * @return true/false 是否成功删除
+     * @param fixGroupId 固定分组Id
+     * @return true删除成功  false删除失败
 	 */
 	boolean deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId) {
 		
@@ -55,8 +55,8 @@ public class FixGroupService {
 	/**
 	 * 按classId查找FixGroup信息.
 	 * @author zhouzhongjun
-     * @param BigInteger classId 班级Id
-     * @return List<FixGroupBO> 固定分组列表
+     * @param classId 班级Id
+     * @return null 固定分组列表
 	 */
 	List<FixGroupBO> listFixGroupByClassId(BigInteger classId) {
 		
@@ -67,10 +67,10 @@ public class FixGroupService {
 	 * 按classId删除FixGroup
 	 * <p>先根据classId得到所有的FixGroup信息，再根据FixGroupid删除FixGroupMember表的信息，最后再将FixGroup信息删除<br>  
 	 * @author zhouzhongjun
-     * @param BigInteger classId 班级Id
+     * @param classId 班级Id
      * @see FixGroupService #listFixGroupByClassId(BigInteger classId)
      * @see FixGroupService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
-     * @return true/false 是否成功删除
+     * @return true删除成功  false删除失败
 	 */
 	boolean deleteFixGroupByClassId(BigInteger classId) {
 		
@@ -96,9 +96,9 @@ public class FixGroupService {
 	 * 删除固定小组.
 	 * ＜p＞按照id删除固定小组<br>*
 	 * @author YeHongjie
-	 * @param groupID 固定小组的id
-	 * @return Boolean 若创建成功返回true，失败返回false
-	 * @see FixGroupMemberService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
+	 * @param groupId 固定小组的id
+	 * @return state 若创建成功返回true，失败返回false
+	 * @see FixGroupService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
 	 */
     Boolean deleteFixGroupByGroupId(BigInteger groupId)
     {
@@ -110,7 +110,7 @@ public class FixGroupService {
 	 * 修改固定小组.
 	 * ＜p＞修改固定小组的信息（不包括成员）<br>*
 	 * @author YeHongjie
-	 * @param groupID 小组的id
+	 * @param groupId 小组的id
 	 * @param fixGroupBO 小组信息
 	 * @return Boolean 若创建成功返回true，失败返回false
 	 */
@@ -124,9 +124,9 @@ public class FixGroupService {
 	 * 查询固定小组.
 	 * ＜p＞按照id查询某一固定小组的信息（包括成员）<br>*
 	 * @author YeHongjie
-	 * @param groupID 小组的id
+	 * @param groupId 小组的id
 	 * @return fixGroupBO 固定小组对象，若未找到相关小组返回空(null)
-	 * @see FixGroupMemberService #listFixGroupMemberByGroupId(BigInteger groupId)
+	 * @see FixGroupService #listFixGroupMemberByGroupId(BigInteger groupId)
 	 */
     FixGroupBO getFixGroupByGroupId(BigInteger groupId)
     {
