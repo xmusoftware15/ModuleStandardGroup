@@ -12,7 +12,6 @@ public class SchoolService {
 	 * @author LiuAiqi
 	 * @param city 城市名称
 	 * @return List<SchoolBO> 学校列表
-	 * @see SchoolService#listSchoolByCity(String city)
 	 */
 	List<SchoolBO> listSchoolByCity(String city)
 	{
@@ -26,7 +25,6 @@ public class SchoolService {
 	 * @author LiuAiqi
 	 * @param school 学校的信息
 	 * @return true（添加学校成功）/false（添加学校未成功）
-	 * @see SchoolService#insertSchool(School school)
 	 */
 	boolean insertSchool(School school)
 	{
@@ -41,7 +39,6 @@ public class SchoolService {
 	 * ＜p＞获取所有省份的名称
 	 * @author LiuAiqi
 	 * @return List<String> 省份名称列表
-	 * @see SchoolService#listProvince()
 	 */
 	List<String> listProvince()
 	{
@@ -55,7 +52,6 @@ public class SchoolService {
 	 * @author LiuAiqi
 	 * @param province 省份名称
 	 * @return List<String> 城市名称列表
-	 * @see SchoolService#listCity(String province)
 	 */
 	List<String> listCity(String province)
 	{
