@@ -107,9 +107,6 @@ public class UserService {
 		return user;
 		
 	}
-	
-<<<<<<< HEAD
-=======
 
 	/**
 	 * 根据用户名获取用户ID.
@@ -122,8 +119,6 @@ public class UserService {
 		BigInteger userId=new BigInteger("100");
 		return userId;
 	}
-	
->>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
 	
 	/**
 	 * 根据用户ID修改用户信息.
