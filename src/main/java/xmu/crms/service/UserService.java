@@ -22,14 +22,14 @@ public class UserService {
 		
 		List<UserBO> list = new ArrayList<UserBO>();		
 		
-		return List<UserBO>;
+		return list;
 		
-	};
+	}
 
 
 	/**
 	 * 方法简述.
-	 * <p>用户解绑(.NET)<br>.NET解绑是置空手机号Phone,J2EE解绑是置空微信号unionId<br>
+	 * <p>用户解绑(.NET)<br>*.NET解绑是置空手机号Phone,J2EE解绑是置空微信号unionId<br>
 	 * @param UserId 用户id
 	 * @return true 解绑成功 false 解绑失败
 	 */
@@ -44,7 +44,7 @@ public class UserService {
 			return false;
 			
 		}
-	};	
+	}	
 
 	
 	/**
@@ -58,9 +58,9 @@ public class UserService {
 
 		List<UserBO> list = new ArrayList<UserBO>();
 		
-		return List<UserBO>;
+		return list;
 		
-	};
+	}
 
 
 	/**
@@ -68,6 +68,7 @@ public class UserService {
 	 * <p>根据用户Id获取用户的信息<br> 
 	 * @param UserId 用户Id
 	 * @return UserBO 用户信息
+	 * @see SchoolService#getSchoolBySchoolId(BigInteger SchoolId)
 	 */
 	private UserBo getUserByUserId(BigInteger UserId) {
 		
@@ -75,7 +76,7 @@ public class UserService {
 
 		return UserBO;
 		
-	};
+	}
 	
 	
 	/**
@@ -97,7 +98,7 @@ public class UserService {
 			
 		}
 		
-	};
+	}
 
 	
 	/**
@@ -113,12 +114,12 @@ public class UserService {
 		
 		return userBO;
 		
-	};	
+	}
 	
 	
 	/**
 	 * 方法简述.
-	 * <p>手机号登录 (.Net使用)<br>User中只有Phone和Password，用于判断用户名密码是否正确<br> 
+	 * <p>手机号登录 (.Net使用)<br>*User中只有Phone和Password，用于判断用户名密码是否正确<br> 
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 * @return user 该用户信息
 	 */
@@ -131,7 +132,7 @@ public class UserService {
 	
 	/**
 	 * 方法简述.
-	 * <p>手机号注册 (.Net使用)<br>User中只有Phone和Password，UserId是注册后才有并且在数据库自增<br> 
+	 * <p>手机号注册 (.Net使用)<br>*User中只有Phone和Password，UserId是注册后才有并且在数据库自增<br> 
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 * @return user 该用户信息
 	 */
@@ -139,7 +140,7 @@ public class UserService {
 		
 		return UserBO;
 		
-	};
+	}
 	
 
 	/**
@@ -154,9 +155,9 @@ public class UserService {
 
 		List<UserBO> list = new ArrayList<UserBO>(); 
 		
-		return List<UserBO>;
+		return list;
 		
-	};
+	}
 	
 	
 	/**
@@ -168,6 +169,6 @@ public class UserService {
 	private BigInteger getUserIdByUserName(String UserName) {
 		
 		return UserId;
-	};
+	}
 		
 }
