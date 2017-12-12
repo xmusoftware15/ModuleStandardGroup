@@ -10,13 +10,13 @@ import java.math.BigInteger;
  */
 public class GradeService {
 	/**
-	 * æäº¤å¯¹å…¶ä»–å°ç»„çš„æ‰“åˆ†.
+	 * Ìá½»¶ÔÆäËûĞ¡×éµÄ´ò·Ö.
 	 * 
 	 * @author Huhui
-	 * @param seminar_group_id è®¨è®ºè¯¾ç»„id
-	 * @param userId ç”¨æˆ·id
-	 * @param grade åˆ†æ•°
-	 * @return Boolean trueè¡¨ç¤ºæ’å…¥æˆåŠŸï¼Œfalseè¡¨ç¤ºæ’å…¥å¤±è´¥
+	 * @param seminar_group_id ÌÖÂÛ¿Î×éid
+	 * @param userId ÓÃ»§id
+	 * @param grade ·ÖÊı
+	 * @return Boolean true±íÊ¾²åÈë³É¹¦£¬false±íÊ¾²åÈëÊ§°Ü
 	 * @see xmu.crms.service.GroupService#selectGroupTopicByGroupId()
 	 */
 	private boolean insertGroupGradeByUserId(BigInteger seminar_group_id, BigInteger userId,BigInteger grade) {
@@ -27,15 +27,46 @@ public class GradeService {
 	}
 
 	/**
-	 * æŒ‰IDè®¾ç½®å°ç»„æŠ¥å‘Šåˆ†.
+	 * °´IDÉèÖÃĞ¡×é±¨¸æ·Ö.
 	 * 
 	 * @author Huhui
-	 * @param seminar_group_id è®¨è®ºè¯¾ç»„id
-	 * @param grade åˆ†æ•°
-	 * @return Boolean trueè¡¨ç¤ºæ’å…¥æˆåŠŸï¼Œfalseè¡¨ç¤ºæ’å…¥å¤±è´¥
+	 * @param seminar_group_id ÌÖÂÛ¿Î×éid
+	 * @param grade ·ÖÊı
+	 * @return Boolean true±íÊ¾²åÈë³É¹¦£¬false±íÊ¾²åÈëÊ§°Ü
 	 */
 	private boolean updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade) {
 		//GradeDAO.updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade)
 		return true;
 	}
+	
+    /**
+     * ·½·¨¼òÊö
+     * <p>°´ID»ñÈ¡Ğ¡×éÌÖÂÛ¿Î³É¼¨</p>
+     * @param groupId Ğ¡×éID
+     * @return Ğ¡×é³É¼¨
+     * @see xmu.crms.service.GroupService#countGradeByGroupId()
+     */
+    BigInteger countGradeByGroupId(BigInteger groupId){
+        BigInteger grade;
+        gradeDAO.countGradeByGroupId(BigInteger groupId);
+        return grade;
+    };
+    
+    /**
+     * ·½·¨¼òÊö
+     * <p>°´IDÉèÖÃĞ¡×é±¨¸æ·Ö</p>
+     * @param groupId Ğ¡×éID
+     * @param grade Ğ¡×é³É¼¨
+     * @see xmu.crms.service.GroupService#updateGroupByGroupId()
+     * @return ÊÇ·ñ³É¹¦
+     */
+    boolean updateGroupByGroupId(BigInteger groupId, BigInteger grade){
+        gradeDAO.updateGroupByGroupId(BigInteger groupId, BigInteger grade);
+        if(true){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
 }
