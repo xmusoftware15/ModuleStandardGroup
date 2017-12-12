@@ -72,7 +72,6 @@ public class TopicService {
 	 */
 	List<TopicBO> listTopicBySeminarId(BigInteger seminarId) {
 			
-		
 		return null;
 	};
 	
