@@ -1,4 +1,4 @@
-package xmu.crms.service;
+﻿package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -135,4 +135,50 @@ public class FixGroupService {
     	FixGroupBO fixGroupBO=null;
     	return fixGroupBO;
     }
+ 
+
+    /**
+	 * 将学生加入小组.
+	 * ＜p＞将用户加入指定的小组<br>*
+	 * @author YeHongjie
+	 * @param userId 学生的id
+	 * @param groupId 要加入小组的id
+	 * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
+	 */
+    BigInteger insertStudnetIntoGroup(BigInteger userId,BigInteger groupId)
+    {
+    	BigInteger recordId = BigInteger.valueOf(-1);
+    	return recordId;
+    }
+
+    /**
+	 * 小组取消话题.
+	 * <p>小组按小组id取消讨论课的话题的选择<br>
+	 * @author heqi
+	 * @param groupId 小组id
+	 * @return true or false 返回取消话题是否成功
+	 */
+	private boolean deleteTopicByGroupId(BigInteger groupId) {
+		//TopicDao.deleteTopicByGroupId(BigInteger groupId)
+		return true;
+	}
+
+    /**
+	 * 按id获取小组.
+	 * <p>通过学生id和班级id获取学生所在的班级固定小组<br>
+	 * @author heqi
+	 * @param userId 学生id
+	 * @param classId 班级id
+	 * @return GroupBO 返回班级固定小组的信息 
+	 * @see xmu.crms.service.UserService#listFixedMembersById(BigInteger userId)
+	 * @see xmu.crms.service.UserService#getUserByUserId(BigInteger UserId)
+	 */
+	private GroupBO getFixedGroupById(BigInteger userId,BigInteger classId){
+		//rs = UserService.listMembersById(BigInteger userId);
+		//for student_id in rs;
+		//UserService.UserBO getUserByUserId(BigInteger UserId)
+		//得到小组所有成员信息返回小组信息
+		GroupBO groupBO = new GroupBO();
+		return groupBO;
+	}
 }
