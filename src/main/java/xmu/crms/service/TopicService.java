@@ -44,6 +44,7 @@ public class TopicService {
      * <p>删除topic<br>
      * @param topicId 要删除的topic的topicId
      * @param seminarId 要删除topic所属seminar的id
+     * @see SeminarGroupService
      * @return 是否成功
      */
     boolean deleteTopicByTopicId(BigInteger topicId,BigInteger seminarId){
