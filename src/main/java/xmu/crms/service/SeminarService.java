@@ -54,7 +54,6 @@ public class SeminarService {
 	 * @param seminarId 讨论课的id
 	 * @param classId 班级的id
 	 * @return 当前讨论课的信息
-	 * @see SeminarService#getMySeminarBySeminarId(BigInteger, BigInteger)
 	 */
 	private SeminarBO getMySeminarBySeminarId(BigInteger seminarId,BigInteger userId){
 		SeminarBO nowSeminar = new SeminarBO();
@@ -68,7 +67,6 @@ public class SeminarService {
 	 * @param seminarId 讨论课的id
 	 * @param userId 学生的id
 	 * @return 相应的讨论课的详细信息
-	 * @see SeminarService#getSeminarDetailBySeminarId(BigInteger, BigInteger) )
 	 */
 	private SeminarBO getSeminarDetailBySeminarId(BigInteger seminarId,BigInteger userId){
 		SeminarBO nowSeminar = new SeminarBO();
@@ -95,17 +93,9 @@ public class SeminarService {
 	 * @param seminarId 讨论课的id
 	 * @param seminar 讨论课信息
 	 * @return 相应的讨论课信息
-	 * @see SeminarService#updateSeminarBySeminarId(BigInteger, SeminarBO) )
 	 */
 	private boolean updateSeminarBySeminarId(BigInteger seminarId, SeminarBO seminar){
-		SeminarBO seminarInfo = new SeminarBO();
-		if(true){
-			return true;
-		}
-		
-		else{
-			return false;
-		}
+		return true;
 	}
 	
 	/**
@@ -114,26 +104,13 @@ public class SeminarService {
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @return true(删除成功), false(删除失败)
-	 * @see SeminarService#deleteSeminarBySeminarId(BigInteger) )
+	 * @see TopicService#deleteTopcById(BigInteger)
+	 * @see GroupService#deleteGroupByGroupId(BigInteger)
 	 */
 	private boolean deleteSeminarBySeminarId(BigInteger seminarId){
 		List<TopicBO> topicList = new ArrayList<TopicBO>();
 		List<GroupBO> groupList = new ArrayList<GroupBO>();
-		
-		/*topicList = listTopicBySeminarId(seminarId);
-		groupList = listGroupBySeminarId(seminarId);
-		
-		for topicId in topicList
-			TopicService.deleteTopicByTopicId(topicId);
-		
-		for groupId in groupList
-			GroupService.deleteGroupByGroupId(groupId);
-		
-		deleteSeminarBySeminarId(seminatId);*/
-		if(true)
-			return true;
-		else
-			return false;
+		return true;
 	}
 	
 	/**
