@@ -54,7 +54,7 @@ public class TopicService {
 	 *@see StudentScoreGroupService   #deleteStudentScoreGroupByTopicId(BigInteger topicId)
 	 * @return true/false 是否成功删除
 	 */
-	boolean deleteCourseByCourseId(BigInteger courseId) {
+	boolean deleteTopicBySeminarId(BigInteger seminarId) {
 		
 		
 		//删除自己

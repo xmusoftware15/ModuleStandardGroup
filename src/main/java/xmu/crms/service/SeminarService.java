@@ -41,7 +41,7 @@ public class SeminarService {
 	 *@see SeminarGroupService  #deleteSeminarGroupBySeminarId(BigInteger seminarId)
 	 * @return true/false 是否成功删除
 	 */
-	boolean deleteCourseByCourseId(BigInteger courseId) {
+	boolean deleteSeminarByCourseId(BigInteger courseId) {
 			
 		//删除自己
 		return true;
@@ -54,6 +54,7 @@ public class SeminarService {
 	 * @param seminarId 讨论课的id
 	 * @param classId 班级的id
 	 * @return 当前讨论课的信息
+	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
 	 */
 	private SeminarBO getMySeminarBySeminarId(BigInteger seminarId,BigInteger userId){
 		SeminarBO nowSeminar = new SeminarBO();
@@ -62,50 +63,51 @@ public class SeminarService {
 	
 	/**
 	 * 获得学生相关的某个讨论课的信息.
-	 * ＜p＞通过学生用户id和讨论课id获得学生某个讨论课的详细信息<br>* (包括讨论课信息，上课地点，教师信息).
+	 * ＜p＞通过学生用户id和讨论课id获得学生某个讨论课的详细信息<br>* (包括讨论课信息，教师信息).
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @param userId 学生的id
 	 * @return 相应的讨论课的详细信息
+	 * 
 	 */
 	private SeminarBO getSeminarDetailBySeminarId(BigInteger seminarId,BigInteger userId){
+		
 		SeminarBO nowSeminar = new SeminarBO();
 		return nowSeminar;
 	}
 	
 	/**
-	 * 获得学生相关的某个讨论课的信息.
-	 * ＜p＞通过学生用户id和讨论课id获得学生某个讨论课的信息<br>* (包括讨论课信息，上课地点，教师信息).
+	 * 用户通过讨论课id获得讨论课的信息.
+	 * ＜p＞用户通过讨论课id获得讨论课的信息（包括讨论课名称、讨论课描述、分组方式、开始时间、结束时间）<br>*.
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @return 相应的讨论课信息
-	 * @see SeminarService#getSeminarBySeminarId(BigInteger) )
 	 */
 	private SeminarBO getSeminarBySeminarId(BigInteger seminarId){
-		SeminarBO seminarInfo = new SeminarBO();
-		return seminarInfo;
+		SeminarBO seminar = new SeminarBO();
+		return seminar;
 	}
 	
 	/**
 	 * 按讨论课id修改讨论课.
-	 * ＜p＞用户（老师）通过seminarId修改讨论课的相关信息<br>* (包括讨论课信息，上课地点，教师信息).
+	 * ＜p＞用户（老师）通过seminarId修改讨论课的相关信息<br>*.
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @param seminar 讨论课信息
-	 * @return 相应的讨论课信息
+	 * @return true(修改成功), false(修改失败)
 	 */
 	private boolean updateSeminarBySeminarId(BigInteger seminarId, SeminarBO seminar){
 		return true;
 	}
 	
 	/**
-	 * 按讨论课id修改讨论课.
-	 * ＜p＞用户（老师）通过seminarId修改讨论课的相关信息<br>* (包括删除讨论课包含的topic信息和小组信息).
+	 * 按讨论课id删除讨论课.
+	 * ＜p＞用户（老师）通过seminarId删除讨论课<br>* (包括删除讨论课包含的topic信息和小组信息).
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @return true(删除成功), false(删除失败)
-	 * @see TopicService#deleteTopcById(BigInteger)
-	 * @see GroupService#deleteGroupByGroupId(BigInteger)
+	 * @see SeminarGroupService #deleteSeminarGroupBySeminarId(BigInteger seminarId)
+	 * @see TopicService#deleteTopicBySeminarId(BigInteger seminarId)
 	 */
 	private boolean deleteSeminarBySeminarId(BigInteger seminarId){
 		List<TopicBO> topicList = new ArrayList<TopicBO>();
