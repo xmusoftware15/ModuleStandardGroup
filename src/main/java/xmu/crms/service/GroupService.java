@@ -3,6 +3,7 @@ package xmu.crms.service;
 import java.math.BigInteger;
 import java.util.List;
 import java.sql.ResultSet;
+import xmu.crms.bo.GroupBO;
 
 /**
  * 
@@ -18,9 +19,9 @@ public class GroupService {
 	 */
 
 	private List<GroupBO> listGroupBySeminarId(BigInteger seminarId)  {
-                List<GroupBO> list;
+        List<GroupBO> list;
 		//list = GroupDao.listGroupBySeminarId(BigInteger seminarId);
-		return list;
+		return null;
 	}
 
 	/**
@@ -29,9 +30,9 @@ public class GroupService {
 	 * @return  List<GroupBO> 所有选择该话题的所有group的信息
 	 */
 	private List<GroupBO> listGroupByTopicId(BigInteger topicId) {
-                List<GroupBO> list;
+        List<GroupBO> list;
 		//list = GroupDao. listGroupByTopicId(BigInteger topicId);
-		return list;
+		return null;
 	}
 	
      /**
@@ -47,8 +48,38 @@ public class GroupService {
           //for groupBO in rs
           //   if (GroupDao.(groupBO,userId)) //如果该用户在该小组中，则直接返回此小组的信息
           //          return groupBO;
-          //return null;   //如果该用户不在该讨论课的任何小组中返回空
+          return null;   //如果该用户不在该讨论课的任何小组中返回空
     };
     
-   
+    /**
+	 * 自动分组.
+	 * ＜p＞根据讨论课id和班级id，对签到的学生进行自动分组<br>*
+	 * @author YeHongjie
+	 * @param seminarId 讨论课的id
+	 * @param classId 班级的id
+	 * @return Boolean 自动分组成功返回true，否则返回false
+	 */
+    Boolean automaticallyGrouping(BigInteger seminarId,BigInteger classId)
+    {
+    	Boolean groupingState=Boolean.valueOf(false);
+    	return groupingState;
+    }
+    
+    /**
+	 * 将学生加入小组.
+	 * ＜p＞将用户加入指定的小组<br>*
+	 * @author YeHongjie
+	 * @param userId 学生的id
+	 * @param groupId 要加入小组的id
+	 * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
+	 */
+    BigInteger insertStudnetIntoGroup(BigInteger userId,BigInteger groupId)
+    {
+    	BigInteger recordId = BigInteger.valueOf(-1);
+    	return recordId;
+    }
+    
+    
+    
+    
 }

@@ -88,7 +88,7 @@ public class SeminarService {
 		List<TopicBO> topicList = new ArrayList<TopicBO>();
 		List<GroupBO> groupList = new ArrayList<GroupBO>();
 		
-		topicList = listTopicBySeminarId(seminarId);
+		/*topicList = listTopicBySeminarId(seminarId);
 		groupList = listGroupBySeminarId(seminarId);
 		
 		for topicId in topicList
@@ -97,10 +97,25 @@ public class SeminarService {
 		for groupId in groupList
 			GroupService.deleteGroupByGroupId(groupId);
 		
-		deleteSeminarBySeminarId(seminatId);
+		deleteSeminarBySeminarId(seminatId);*/
 		if(true)
 			return true;
 		else
 			return false;
+	}
+	
+	/**
+	 * 新增讨论课.
+	 * ＜p＞用户（老师）在指定的课程下创建讨论课<br>*
+	 * @author YeHongjie
+	 * @param courseId 课程的id
+	 * @param SeminarBO 讨论课信息
+	 * @return BigInteger 若创建成功返回创建的讨论课id，失败则返回-1
+	 */
+	BigInteger insertSeminarByCourseId(BigInteger courseId, SeminarBO seminarBO)
+	{
+		
+		BigInteger seminarId=BigInteger.valueOf(-1);
+		return seminarId;
 	}
 }
