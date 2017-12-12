@@ -83,4 +83,36 @@ public class SeminarGroupService {
     	SeminarGroupBO seminarGroupBO=null;
     	return seminarGroupBO;
     }
+    
+    /**
+	 * 获取学生所在讨论课小组.
+	 * ＜p＞按照用户id和讨论课id获取学生所在讨论课小组id<br>*
+	 * @author YeHongjie
+	 * @param userId 用户的id
+	 * @param seminarId 讨论课id
+	 * @return BigInteger 讨论课小组的id，若未找到相关小组返回空(null)
+	 */
+    BigInteger getSeminarGroupById(BigInteger userId, BigInteger seminarId)
+    {
+    	//Maybe you need to use intersection while querying
+    	//if you have some advice, contract me@YeHonjie, thanks!
+    	BigInteger groupId=null;
+    	return groupId;
+    }
+    
+    /**
+	 * 获取学生所在讨论课队长.
+	 * ＜p＞按照用户id和讨论课id获取学生所在讨论课小组队长<br>*
+	 * @author YeHongjie
+	 * @param userId 用户的id
+	 * @param seminarId 讨论课id
+	 * @return BigInteger 讨论课小组的队长id，若未找到相关小组队长返回空(null)
+	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
+	 * @see SeminarGroupMemberService #getSeminarGroupLeaderByGroupId(BigInteger groupId)
+	 */
+    BigInteger getSeminarGroupLeaderById(BigInteger userId, BigInteger seminarId)
+    {
+    	BigInteger groupId=null;
+    	return groupId;
+    }
 }

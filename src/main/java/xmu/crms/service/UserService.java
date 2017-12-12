@@ -61,30 +61,34 @@ public class UserService {
 	
 	/**
 	 * 用户解绑.
-	 * <p>教师解绑账号<br>*.NET解绑是置空手机号phone,J2EE解绑是置空微信号unionId<br>
+	 * <p>教师解绑账号<br>
 	 * @author qinlingyun
 	 * @param userId 用户id
 	 * @return true 解绑成功 false 解绑失败
-	 * @see CourseService#listCourseByTeacherName(String teacherName)
+	 * @see CourseService#listCourseByUserId(BigInteger userId)
 	 * @see CourseService#deleteCourseByCourseId(BigInteger courseId)
 	 */
 	private boolean deleteTeacherAccount(BigInteger userId) {
-			
-			return true;
+		
+		boolean isDeleted = true;
+		
+		return isDeleted;
 	}	
 	
 	
 	/**
 	 * 用户解绑.
-	 * <p>学生解绑账号<br>*.NET解绑是置空手机号phone,J2EE解绑是置空微信号unionId<br>
+	 * <p>学生解绑账号<br>
 	 * @author qinlingyun 
 	 * @param userId 用户id
 	 * @return true 解绑成功 false 解绑失败
-	 * @see ？？？？？？？？？？？？？
+	 * @see ClassService#deleteCourseSelectionById(BigInteger userId,BigInteger classId)
 	 */		
 	private boolean deleteStudentAccount(BigInteger userId) {
 	
-		return true;
+		boolean isDeleted = true;
+		
+		return isDeleted;
 	}
 	
 	
@@ -103,7 +107,6 @@ public class UserService {
 		return user;
 		
 	}
-	
 
 	/**
 	 * 根据用户名获取用户ID.
@@ -113,10 +116,9 @@ public class UserService {
 	 * @return userId 用户ID
 	 */
 	private BigInteger getUserIdByUserName(String userName) {
-		
+		BigInteger userId=new BigInteger("100");
 		return userId;
 	}
-	
 	
 	/**
 	 * 根据用户ID修改用户信息.
@@ -128,7 +130,9 @@ public class UserService {
 	 */
 	private boolean updateUserByUserId(BigInteger userId, UserBO user) {
 		
-			return true;
+		boolean isDeleted = true;
+		
+		return isDeleted;
 	}
 	
 
@@ -142,6 +146,22 @@ public class UserService {
 	 * @return list 用户列表
 	 */	
 	private List listUserByClassId(BigInteger classId,String numBeginWith,String nameBeginWith) {
+
+		List<UserBO> list = new ArrayList<UserBO>(); 
+		
+		return list;
+		
+	}
+	
+
+	/**
+	 * 根据用户名获取用户列表.
+	 * <p>根据用户名获取用户列表<br> 
+	 * @author qinlingyun
+	 * @param userName 用户名
+	 * @return list 用户列表
+	 */	
+	private List listUserByUserName(String userName) {
 
 		List<UserBO> list = new ArrayList<UserBO>(); 
 		
