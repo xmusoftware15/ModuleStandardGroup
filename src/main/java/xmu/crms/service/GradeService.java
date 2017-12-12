@@ -15,8 +15,8 @@ public class GradeService {
 	/**
 	 * 按topicId删除学生打分表.
 	 * @author zhouzhongjun
-     * @param BigInteger topicId 话题Id
-     *  @return true/false 是否成功删除
+     * @param topicId 话题Id
+     *  @return true删除成功  false删除失败
 	 */
 	private boolean deleteStudentScoreGroupByTopicId(BigInteger topicId) {
 		
@@ -30,7 +30,7 @@ public class GradeService {
 	 * @param userId 学生id
 	 * @param seminarGroupId 讨论课小组id
 	 * @return list 讨论课分数列表
-	 * @see SeminarGroupMemberService#listSeminarGroupIdByStudentId(BigInteger userId)
+	 * @see SeminarGroupService#listSeminarGroupIdByStudentId(BigInteger userId)
 	 */
     List<BigInteger> listSeminarGradeBySeminarGroupId(BigInteger userId, BigInteger seminarGroupId)
     {
@@ -45,8 +45,8 @@ public class GradeService {
 	 * @param seminar_group_id 讨论课组id
 	 * @param userId 用户id
 	 * @param grade 分数
-	 * @return Boolean true 提交成功 false 提交失败
-	 * @see xmu.crms.service.GroupService#selectGroupTopicByGroupId()
+	 * @return true 提交成功 false 提交失败
+	 * @see GroupService#selectGroupTopicByGroupId()
 	 */
 	private boolean insertGroupGradeByUserId(BigInteger seminar_group_id, BigInteger userId,BigInteger grade) {
 		//rs=GroupService.selectGroupTopicByGroupId(seminar_group_id)
@@ -71,7 +71,6 @@ public class GradeService {
 	/**
 	 * 获取某学生的讨论课成绩列表.
 	 * @author qinlingyun
-	 * @param seminarId 讨论课id
 	 * @param userId 用户id
 	 * @return list 讨论课成绩列表
 	 * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId);

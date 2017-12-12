@@ -18,9 +18,9 @@ public class ScoreRuleService {
 		/**
 		 * 按classId和CourseId删除ScoreRule.
 		 * @author zhouzhongjun
-		 * @param BigInteger courseId 班级Id
-	     * @param BigInteger classId 班级Id
-	     * @return true/false 是否成功删除
+		 * @param courseId 班级Id
+	     * @param classId 班级Id
+	     * @return true删除成功 false删除失败
 		 */
 		boolean deleteScoreRuleById(BigInteger courseId,BigInteger classId) {
 			
@@ -32,8 +32,8 @@ public class ScoreRuleService {
 		 * 新增评分规则.
 		 * <p>新增评分规则<br>  
 		 * @author YeHongjie
-	     * @param proportionBO 评分规则
-	     * @return BigInteger 若创建成功则返回该评分规则的id，失败则返回-1
+	     * @param proportionsBO 评分规则
+	     * @return scoreRuleId 若创建成功则返回该评分规则的id，失败则返回-1
 		 */
 		BigInteger insertScoreRule(ProportionsBO proportionsBO)
 		{
@@ -46,8 +46,8 @@ public class ScoreRuleService {
 		 * <p>修改指定的评分规则<br>  
 		 * @author YeHongjie
 		 * @param proportionId 评分规则id
-	     * @param proportionBO 评分规则
-	     * @return Boolean 若修改成功则返回true，失败则返回false
+	     * @param proportionsBO 评分规则
+	     * @return state 若修改成功则返回true，失败则返回false
 		 */
 		Boolean updateScoreRule(BigInteger proportionId, ProportionsBO proportionsBO)
 		{

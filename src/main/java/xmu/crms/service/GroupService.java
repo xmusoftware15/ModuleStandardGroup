@@ -1,4 +1,4 @@
-﻿package xmu.crms.service;
+package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -13,33 +13,21 @@ import xmu.crms.bo.GroupBO;
  */
 public class GroupService {
 	/**
-	 * 根据讨论课Id获得属于该讨论课的所有小组信息.
-	 * @param seminarId 讨论课的id
-	 * @return List<GroupBO> 所有group的信息
-	 */
-
-	private List<GroupBO> listGroupBySeminarId(BigInteger seminarId)  {
-        List<GroupBO> list;
-		//list = GroupDao.listGroupBySeminarId(BigInteger seminarId);
-		return null;
-	}
-
-	/**
 	 * 根据话题Id获得选择该话题的所有小组的信息.
 	 * @param  topicId(话题的id)
-	 * @return  List<GroupBO> 所有选择该话题的所有group的信息
+	 * @return  list 所有选择该话题的所有group的信息
 	 */
 	private List<GroupBO> listGroupByTopicId(BigInteger topicId) {
-        List<GroupBO> list;
+        List<GroupBO> list=null;
 		//list = GroupDao. listGroupByTopicId(BigInteger topicId);
-		return null;
+		return list;
 	}
 	
      /**
      * 根据讨论课Id及用户id，获得该用户所在的讨论课的小组的信息.
-     * @param BigInteger seminarId (讨论课的id)
-     * @param BigInteger userId（用户的id）
-     * @return GroupBO Group的相关信息
+     * @param seminarId (讨论课的id)
+     * @param userId（用户的id）
+     * @return null Group的相关信息
      */
      GroupBO getSeminarGroupById(BigInteger seminarId,BigInteger userId){
           GroupBO groupBO;
@@ -57,7 +45,7 @@ public class GroupService {
      * @author aixing
      * @param groupId 要修改的group的Id
      * @param group 新的group信息
-     * @return
+     * @return bi
      */
     BigInteger updateSeminarGroupById(BigInteger groupId,GroupBO group){
         BigInteger bi=null;
@@ -71,7 +59,7 @@ public class GroupService {
 	 * @author YeHongjie
 	 * @param seminarId 讨论课的id
 	 * @param classId 班级的id
-	 * @return Boolean 自动分组成功返回true，否则返回false
+	 * @return groupingState 自动分组成功返回true，否则返回false
 	 */
     Boolean automaticallyGrouping(BigInteger seminarId,BigInteger classId)
     {
@@ -126,8 +114,8 @@ public class GroupService {
 	 * @param userId 学生id
 	 * @param classId 班级id
 	 * @return GroupBO 返回班级固定小组的信息 
-	 * @see xmu.crms.service.UserService#listFixedMembersById(BigInteger userId)
-	 * @see xmu.crms.service.UserService#getUserByUserId(BigInteger UserId)
+	 * @see UserService#listFixedMembersById(BigInteger userId)
+	 * @see UserService#getUserByUserId(BigInteger UserId)
 	 */
 	private GroupBO getFixedGroupById(BigInteger userId,BigInteger classId){
 		//rs = UserService.listMembersById(BigInteger userId);

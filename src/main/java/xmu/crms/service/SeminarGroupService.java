@@ -19,7 +19,7 @@ public class SeminarGroupService {
 	/**
 	 * 按seminarGroupId删除SeminarGroupMember信息.
 	 * @author zhouzhongjun
-     * @param BigInteger seminarGroupId 讨论课小组Id
+     * @param seminarGroupId 讨论课小组Id
      *  @return true/false 是否成功删除
 	 */
 	boolean deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId) {
@@ -76,7 +76,7 @@ public class SeminarGroupService {
 	 * <p>按照讨论课小组id查询该小组的队长id<br>*
 	 * @author YeHongjie
 	 * @param groupId 要查询的讨论课小组id
-	 * @return BigInteger 讨论课小组队长id
+	 * @return leaderId 讨论课小组队长id
 	 */
     BigInteger getSeminarGroupLeaderByGroupId(BigInteger groupId)
     {
@@ -86,8 +86,8 @@ public class SeminarGroupService {
 	/**
 	 * 按seminarId获取SeminarGroup.
 	 * @author zhouzhongjun
-     * @param BigInteger seminarId 课程Id
-     * @return List<SeminarGroupBO> 讨论课小组列表
+     * @param seminarId 课程Id
+     * @return null 讨论课小组列表
 	 */
 	List<SeminarGroupBO> listSeminarGroupBySeminarId(BigInteger seminarId) {
 			
@@ -98,10 +98,10 @@ public class SeminarGroupService {
 	 * 按seminarId删除讨论课小组信息.
 	 * <p>根据seminarId获得SeminarGroup，然后根据SeminarGroupId删除SeminarGroupMember信息，最后再删除SeminarGroup信息<br>  
 	 * @author zhouzhongjun
-     * @param BigInteger seminarId 讨论课Id
+     * @param seminarId 讨论课Id
 	 * @see SeminarGroupService #listSeminarGroupBySeminarId(BigInteger seminarId)
-	 * @see SeminarGroupMember  #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
-	 * @return true/false 是否成功删除
+	 * @see SeminarGroupSerice #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
+	 * @return true删除成功 false删除失败
 	 */
 	boolean deleteSeminarGroupBySeminarId(BigInteger seminarId) {
 			
@@ -127,7 +127,7 @@ public class SeminarGroupService {
 	 * 删除讨论课小组.
 	 * ＜p＞按照id删除讨论课小组<br>*
 	 * @author YeHongjie
-	 * @param groupID 讨论课小组的id
+	 * @param groupId 讨论课小组的id
 	 * @return Boolean 若创建成功返回true，失败返回false
 	 * @see SeminarGroupMemberService #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
 	 */
