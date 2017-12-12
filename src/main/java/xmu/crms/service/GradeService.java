@@ -13,7 +13,7 @@ import java.util.List;
 public class GradeService {
 
 	/**
-	 * 按topicId删除学生打分表
+	 * 按topicId删除学生打分表.
 	 * @author zhouzhongjun
      * @param BigInteger topicId 话题Id
      *  @return true/false 是否成功删除

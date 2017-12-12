@@ -13,7 +13,7 @@ import xmu.crms.bo.UserBO;
  */
 public class UserService {
 	/**
-	 * 添加学生签到信息
+	 * 添加学生签到信息.
 	 * <p>根据班级id，讨论课id，学生id，经度，纬度进行签到<br>*在方法中通过班级id，讨论课id获取当堂课发起签到的位置
 	 * @author LiuAiqi
 	 * @param classId 班级的id
@@ -38,7 +38,7 @@ public class UserService {
 	}
 	
 	/**
-	 * 获取学生签到信息
+	 * 获取学生签到信息.
 	 * <p>根据班级id，讨论课id获取当堂课签到信息
 	 * @author LiuAiqi
 	 * @param classId 班级的id

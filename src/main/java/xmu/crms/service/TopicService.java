@@ -1,4 +1,4 @@
-package xmu.crms.service;
+﻿package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import xmu.crms.bo.*;
 public class TopicService {
 	
 	/**
-	 * 方法简述
+	 * 按topicId获取topic.
 	 * <p>按topicId获取topic<br>
 	 * @author aixing
 	 * @param topicId 要获取的topic的topicId
@@ -27,7 +27,7 @@ public class TopicService {
     }
     
     /**
-     * 方法简介
+     * 根据topicId修改topic.
      * <p>根据topicId修改topic<br>
      * @author aixing
      * @param topicId 讨论课的ID
@@ -40,7 +40,7 @@ public class TopicService {
     }
     
     /**
-     * 方法简介
+     * 删除topic.
      * <p>删除topic<br>
      * @param topicId 要删除的topic的topicId
      * @param seminarId 要删除topic所属seminar的id
@@ -64,7 +64,9 @@ public class TopicService {
     }
     
 	/**
-	 * 按seminarId获取Topic
+
+	 * 按seminarId获取Topic.
+	 * <p>按seminarId获取Topic<br>  
 	 * @author zhouzhongjun
      * @param BigInteger seminarId 课程Id
 	 */
@@ -74,7 +76,7 @@ public class TopicService {
 	};
 	
 	/**
-	 * 方法简介
+	 * 根据讨论课Id和topic信息创建一个话题.
 	 * <p>根据讨论课Id和topic信息创建一个话题<br>
 	 * @author aixing
 	 * @param seminarId 话题所属讨论课的Id
@@ -87,7 +89,8 @@ public class TopicService {
 	}
 	
 	/**
-	 * 小组取消选择话题  
+
+	 * 小组取消选择话题.
 	 * <p>小组取消选择话题  <br> 
 	 * <p>删除seminar_group_topic表的记录<br>
 	 * @author zhouzhongjun
@@ -116,8 +119,8 @@ public class TopicService {
 	
 	
 	/**
-	 * 按seminarId删除话题
-	 * <p>根据seminarId获得topic信息，然后再根据topic删除seninargrouptopic信息和StudentScoreGroup信息，最后再根据删除topic信息<br>  
+	 * 按seminarId删除话题.
+	 * <p>根据seminarId获得topic信息，然后再根据topic删除seninargrouptopic信息和StudentScoreGroup信息，最后再根据删除topic信息
 	 * @author zhouzhongjun
      * @param BigInteger seminarId 讨论课Id
 	 *@see TopicService #listTopicBySeminarId(BigInteger seminarId)
