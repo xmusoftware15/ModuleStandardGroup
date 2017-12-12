@@ -42,4 +42,45 @@ public class SeminarGroupService {
 		return true;
 	};
 
+	/**
+	 * 创建讨论课小组.
+	 * ＜p＞在指定讨论课下创建讨论课小组<br>*
+	 * @author YeHongjie
+	 * @param seminarId 讨论课的id
+	 * @param seminarGroupBO 小组信息
+	 * @return BigInteger 若创建成功返回该小组的id，失败则返回-1
+	 */
+    BigInteger insertSeminarGroupBySeminarId(BigInteger seminarId,SeminarGroupBO seminarGroupBO)
+    {
+    	BigInteger seminarGroupId = BigInteger.valueOf(-1);
+    	return seminarGroupId;
+    }
+    
+    /**
+	 * 删除讨论课小组.
+	 * ＜p＞按照id删除讨论课小组<br>*
+	 * @author YeHongjie
+	 * @param groupID 讨论课小组的id
+	 * @return Boolean 若创建成功返回true，失败返回false
+	 * @see SeminarGroupMemberService #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
+	 */
+    Boolean deleteSeminarGroupByGroupId(BigInteger groupId)
+    {
+    	Boolean state=Boolean.valueOf(false);
+    	return state;
+    }
+    
+    /**
+	 * 查询讨论课小组.
+	 * ＜p＞按照id查询某一讨论课小组的信息（包括成员）<br>*
+	 * @author YeHongjie
+	 * @param groupID 小组的id
+	 * @return seminarGroupBO 讨论课小组对象，若未找到相关小组返回空(null)
+	 * @see SeminarGroupMemberService #listSeminarGroupMemberByGroupId(BigInteger groupId)
+	 */
+    SeminarGroupBO getSeminarGroupByGroupId(BigInteger groupId)
+    {
+    	SeminarGroupBO seminarGroupBO=null;
+    	return seminarGroupBO;
+    }
 }

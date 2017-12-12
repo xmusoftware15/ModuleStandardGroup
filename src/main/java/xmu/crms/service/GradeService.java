@@ -10,13 +10,13 @@ import java.math.BigInteger;
  */
 public class GradeService {
 	/**
-	 * �ύ������С��Ĵ��.
+	 * 提交对其他小组的打分.
 	 * 
 	 * @author Huhui
-	 * @param seminar_group_id ���ۿ���id
-	 * @param userId �û�id
-	 * @param grade ����
-	 * @return Boolean true��ʾ����ɹ���false��ʾ����ʧ��
+	 * @param seminar_group_id 讨论课组id
+	 * @param userId 用户id
+	 * @param grade 分数
+	 * @return Boolean true 提交成功 false 提交失败
 	 * @see xmu.crms.service.GroupService#selectGroupTopicByGroupId()
 	 */
 	private boolean insertGroupGradeByUserId(BigInteger seminar_group_id, BigInteger userId,BigInteger grade) {
@@ -27,30 +27,16 @@ public class GradeService {
 	}
 
 	/**
-	 * ��ID����С�鱨���.
+	 * 按ID设置小组报告分.
 	 * 
 	 * @author Huhui
-	 * @param seminar_group_id ���ۿ���id
-	 * @param grade ����
-	 * @return Boolean true��ʾ����ɹ���false��ʾ����ʧ��
+	 * @param seminar_group_id 讨论课组id
+	 * @param grade 分数
+	 * @return Boolean true 操作成功 false 操作失败
 	 */
 	private boolean updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade) {
 		//GradeDAO.updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade)
 		return true;
 	}
 	
-    /**
-     * ��������
-     * <p>��ID��ȡС�����ۿγɼ�</p>
-     * @param groupId С��ID
-     * @return С��ɼ�
-     * @see xmu.crms.service.GroupService#countGradeByGroupId()
-     */
-    BigInteger countGradeByGroupId(BigInteger groupId){
-        BigInteger grade=new BigInteger("100");
-        //GradeDAO.countGradeByGroupId(BigInteger groupId);
-        return grade;
-    }
-    
- 
 }
