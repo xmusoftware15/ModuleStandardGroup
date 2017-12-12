@@ -1,4 +1,4 @@
-package xmu.crms.service;
+﻿package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -176,5 +176,17 @@ public class UserService {
 		BigInteger userid=new BigInteger("100");
 		return userid;
 	}
-		
+        
+	/**
+	 * 获取小组成员.
+	 * <p>通过学生个人的id获取学生所在小组的成员列表<br>
+	 * @author heqi
+	 * @param userId 学生id
+	 * @return list 学生小组成员列表
+	 */
+	private List<UserBO> listFixedGroupMembersById(BigInteger userId){
+		//UserDao.listFixedGroupMembersById(BigInteger userId)
+		List<UserBO> list = new ArrayList<UserBO>();
+		return list;
+	}	
 }
