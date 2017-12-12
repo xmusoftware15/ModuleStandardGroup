@@ -1,6 +1,10 @@
 ﻿package xmu.crms.service;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+import xmu.crms.bo.AttendanceBO;
 
 /**
  * 
@@ -41,7 +45,7 @@ public class AttendanceService {
 	 * @param classId 班级的id
 	 * @return List<AttendanceBO> 当堂课签到信息
 	 */
-	List<AttendanceBO> getAttendanceById(BigInteger classId)
+	private List<AttendanceBO> getAttendanceById(BigInteger classId)
 	{
 		
 		List<AttendanceBO> list = new ArrayList<AttendanceBO>();		
