@@ -103,7 +103,7 @@ public class TopicService {
 		
 	};	
 	/**
-	 * 按topicId删除SeminarGroupTopic表信息
+	 * 按topicId删除SeminarGroupTopic表信息.
 	 * @author zhouzhongjun
      * @param BigInteger topicId 讨论课Id
 	 * @return true/false 是否成功删除
