@@ -64,7 +64,6 @@ public class TopicService {
     }
     
 	/**
-
 	 * 按seminarId获取Topic.
 	 * <p>按seminarId获取Topic<br>  
 	 * @author zhouzhongjun
@@ -89,7 +88,6 @@ public class TopicService {
 	}
 	
 	/**
-
 	 * 小组取消选择话题.
 	 * <p>小组取消选择话题  <br> 
 	 * <p>删除seminar_group_topic表的记录<br>
