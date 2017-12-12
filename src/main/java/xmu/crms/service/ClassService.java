@@ -21,8 +21,8 @@ public class ClassService {
 	 * @param courseName 课程名称
 	 * @param teacherName 教师名称
 	 * @return List<ClassBO> 班级列表
-	 * @see ClassService#listClassByCourseName(String courseName)
-	 * @see ClassService#listClassByTeacherName(String teacherName)
+	 * @see ClassService #listClassByCourseName(String courseName)
+	 * @see ClassService #listClassByTeacherName(String teacherName)
 	 */
 	private List<ClassBO> listClassByName(String courseName,String teacherName)
 	{
@@ -36,8 +36,8 @@ public class ClassService {
 	 * @author yexiaona
 	 * @param courseName 课程名称
 	 * @return List<ClassBO> 班级列表
-	 * @see CourseService#listCourseByCourseName(String courseName)
-	 * @see ClassService#listClassByCourseId(BigInteger courseId)
+	 * @see CourseService #listCourseByCourseName(String courseName)
+	 * @see ClassService #listClassByCourseId(BigInteger courseId)
 	 */
 	private List<ClassBO> listClassByCourseName(String courseName)
 	{
@@ -51,8 +51,8 @@ public class ClassService {
 	 * @author yexiaona
 	 * @param teacherName 教师名称
 	 * @return List<ClassBO> 班级列表
-	 * @see CourseService#listCourseByTeacherName(String teacherName)
-	 * @see ClassService#listClassByCourseId(BigInteger courseId)
+	 * @see CourseService #listCourseByTeacherName(String teacherName)
+	 * @see ClassService #listClassByCourseId(BigInteger courseId)
 	 */
 	private List<ClassBO> listClassByTeacherName(String teacherName)
 	{
@@ -65,7 +65,7 @@ public class ClassService {
 	 * @author yexiaona
 	 * @param userId 教师ID
 	 * @return List<ClassBO> 班级列表
-	 * @see CourseService#listCourseByUserId(BigInteger userId)
+	 * @see CourseService #listCourseByUserId(BigInteger userId)
 	 */
 	private List<ClassBO> listClassByUserId(BigInteger userId)
 	{
@@ -104,7 +104,7 @@ public class ClassService {
 	 * @author yexiaona
 	 * @param classId 班级ID
 	 * @return boolean 班级修改是否成功情况
-	 * @see ?????????????#updateScoreRuleById(BigInteger scoreRuleId)
+	 * @see ScoreRule #updateScoreRuleById(BigInteger scoreRuleId)
 	 */
 	private boolean updateClassByClassId(BigInteger classId)
 	{
@@ -117,8 +117,10 @@ public class ClassService {
 	 * @author yexiaona
 	 * @param classId 班级ID
 	 * @return boolean 班级删除是否成功情况
-	 * @see ?????????????#deleteScoreRuleById(BigInteger scoreRuleId)
-	 * @see ClassService#deleteCourseSelectionById(BigInteger classId,User user)
+	 * @see ScoreRule #deleteScoreRuleById(BigInteger scoreRuleId)
+	 * @see ClassService #deleteCourseSelectionById(BigInteger classId,User user)
+	 * @see FixGroupService #deleteFixGroupByClassId(BigInteger classId)
+	 * @see SeminarGroupService #deleteSeminarGroupByClaaId(BigInteger classId)
 	 */
 	private boolean deleteClassByClassId(BigInteger classId)
 	{
@@ -161,7 +163,7 @@ public class ClassService {
 	 * @param seminarId 讨论课id
 	 * @param classid 班级id
 	 * @return classBO 班级
-	 * @see GroupService#listGroupBySeminarId(BigInteger seminarId)
+	 * @see GroupService #listGroupBySeminarId(BigInteger seminarId)
 	 */
 	private ClassBO getCallGroupStatusById(BigInteger seminarId,BigInteger classId)
 	{
@@ -177,7 +179,7 @@ public class ClassService {
 	 * @param courseId 课程id
 	 * @param List<userId> 学生列表
 	 * @return ClassBO 班级
-	 * @see ClassService#insertCourseSelectionById(BigInteger userId,BigInteger classId)
+	 * @see ClassService #insertCourseSelectionById(BigInteger userId,BigInteger classId)
 	 */
 	private ClassBO insertClassById(BigInteger userId,BigInteger courseId)
 	{
