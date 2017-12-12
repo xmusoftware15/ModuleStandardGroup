@@ -91,11 +91,11 @@ public class CourseService {
 	};
 	
 	/**
-	 * ���γ�����ȡ�γ�
-	 * <p>���ݿγ����ƻ�ȡ�γ�<br>
+	 * 方法简述
+	 * <p>根据课程名称获取课程列表<br>
 	 * @author yexiaona
-	 * @param courseName �γ�����
-	 * @return List<CourseBO> �γ��б�
+	 * @param courseName 课程名称
+	 * @return List<CourseBO> 课程列表
 	 */
 	private List<CourseBO> listCourseByCourseName(String courseName)
 	{
@@ -104,11 +104,11 @@ public class CourseService {
 	}
 	
 	/**
-	 * ����ʦ���ƻ�ȡ�γ�
-	 * <p>���ݽ�ʦ���ƻ�ȡ��ʦID�����ݽ�ʦID��ȡ�γ�ID<br>
+	 * 方法简述.
+	 * <p>根据教师名称列出课程名称<br>
 	 * @author yexiaona
-	 * @param teacherName ��ʦ����
-	 * @return List<CourseBO> �γ��б�
+	 * @param teacherName 教师名称
+	 * @return List<CourseBO> 课程列表
 	 * @see xmu.crms.service.CourseService#listCourseByUserId(BigInteger userId)
 	 */
 	private List<CourseBO> listCourseByTeacherName(String teacherName)
