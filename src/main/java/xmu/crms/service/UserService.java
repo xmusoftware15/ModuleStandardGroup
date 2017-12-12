@@ -7,7 +7,7 @@ import java.util.List;
 import xmu.crms.bo.UserBO;
 
 /**
- * @author Qinlingyun
+ * @author ModuleStandardGroup
  * @version 1.00
  */
 public class UserService {
@@ -173,8 +173,8 @@ public class UserService {
 	 * @return UserId 用户ID
 	 */
 	private BigInteger getUserIdByUserName(String UserName) {
-		
-		return UserId;
+		BigInteger userid=new BigInteger("100");
+		return userid;
 	}
         
 	/**

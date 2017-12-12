@@ -18,11 +18,17 @@ public class AttendanceService {
 	 * @return true（添加签到信息成功）/false（添加签到信息未成功）
      * @see ClassService#getClassByClassId(BigInteger classId)
 	 */
-	boolean insertAttendanceById(Biginteger classId,Biginteger userId)
+	boolean insertAttendanceById(BigInteger classId,BigInteger userId)
 	{
-		if(true)
+		if(true) 
+		{
 			return true;
-		else return false;
+		}
+		else 
+		{
+			return false;
+		}
 	}
-
 }
+
+

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import xmu.crms.bo.SchoolBO;
+import xmu.crms.pojo.School;
 
 /**
  * 
@@ -23,7 +24,7 @@ public class SchoolService {
 	List<SchoolBO> listSchoolByCity(String city)
 	{
 		List<SchoolBO> list = new ArrayList<SchoolBO>();		
-		return List<SchoolBO> list;
+		return  list;
 	}
 	
 	/**
@@ -36,9 +37,13 @@ public class SchoolService {
 	boolean insertSchool(School school)
 	{
 		if(true)
+		{
 			return true;
+		}
 		else 
+		{
 			return false;
+		}
 	}
 	
 	/**
@@ -50,7 +55,7 @@ public class SchoolService {
 	List<String> listProvince()
 	{
 		List<String> list = new ArrayList<String>();		
-		return List<String> list;
+		return list;
 	}
 	
 	/**
@@ -63,7 +68,7 @@ public class SchoolService {
 	List<String> listCity(String province)
 	{
 		List<String> list = new ArrayList<String>();		
-		return List<String> list;
+		return list;
 	}
 	
 	/**
@@ -76,7 +81,6 @@ public class SchoolService {
 	SchoolBO getSchoolBySchoolId(BigInteger SchoolId)
 	{
 		SchoolBO school = new SchoolBO();
-		
 		return school;
 	}
 }

@@ -10,13 +10,13 @@ import java.math.BigInteger;
  */
 public class GradeService {
 	/**
-	 * Ìá½»¶ÔÆäËûÐ¡×éµÄ´ò·Ö.
+	 * ï¿½á½»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½Ä´ï¿½ï¿½.
 	 * 
 	 * @author Huhui
-	 * @param seminar_group_id ÌÖÂÛ¿Î×éid
-	 * @param userId ÓÃ»§id
-	 * @param grade ·ÖÊý
-	 * @return Boolean true±íÊ¾²åÈë³É¹¦£¬false±íÊ¾²åÈëÊ§°Ü
+	 * @param seminar_group_id ï¿½ï¿½ï¿½Û¿ï¿½ï¿½ï¿½id
+	 * @param userId ï¿½Ã»ï¿½id
+	 * @param grade ï¿½ï¿½ï¿½ï¿½
+	 * @return Boolean trueï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½falseï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
 	 * @see xmu.crms.service.GroupService#selectGroupTopicByGroupId()
 	 */
 	private boolean insertGroupGradeByUserId(BigInteger seminar_group_id, BigInteger userId,BigInteger grade) {
@@ -27,12 +27,12 @@ public class GradeService {
 	}
 
 	/**
-	 * °´IDÉèÖÃÐ¡×é±¨¸æ·Ö.
+	 * ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½Ð¡ï¿½é±¨ï¿½ï¿½ï¿½.
 	 * 
 	 * @author Huhui
-	 * @param seminar_group_id ÌÖÂÛ¿Î×éid
-	 * @param grade ·ÖÊý
-	 * @return Boolean true±íÊ¾²åÈë³É¹¦£¬false±íÊ¾²åÈëÊ§°Ü
+	 * @param seminar_group_id ï¿½ï¿½ï¿½Û¿ï¿½ï¿½ï¿½id
+	 * @param grade ï¿½ï¿½ï¿½ï¿½
+	 * @return Boolean trueï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½falseï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
 	 */
 	private boolean updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade) {
 		//GradeDAO.updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade)
@@ -40,33 +40,17 @@ public class GradeService {
 	}
 	
     /**
-     * ·½·¨¼òÊö
-     * <p>°´ID»ñÈ¡Ð¡×éÌÖÂÛ¿Î³É¼¨</p>
-     * @param groupId Ð¡×éID
-     * @return Ð¡×é³É¼¨
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     * <p>ï¿½ï¿½IDï¿½ï¿½È¡Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Û¿Î³É¼ï¿½</p>
+     * @param groupId Ð¡ï¿½ï¿½ID
+     * @return Ð¡ï¿½ï¿½É¼ï¿½
      * @see xmu.crms.service.GroupService#countGradeByGroupId()
      */
     BigInteger countGradeByGroupId(BigInteger groupId){
-        BigInteger grade;
-        gradeDAO.countGradeByGroupId(BigInteger groupId);
+        BigInteger grade=new BigInteger("100");
+        //GradeDAO.countGradeByGroupId(BigInteger groupId);
         return grade;
-    };
+    }
     
-    /**
-     * ·½·¨¼òÊö
-     * <p>°´IDÉèÖÃÐ¡×é±¨¸æ·Ö</p>
-     * @param groupId Ð¡×éID
-     * @param grade Ð¡×é³É¼¨
-     * @see xmu.crms.service.GroupService#updateGroupByGroupId()
-     * @return ÊÇ·ñ³É¹¦
-     */
-    boolean updateGroupByGroupId(BigInteger groupId, BigInteger grade){
-        gradeDAO.updateGroupByGroupId(BigInteger groupId, BigInteger grade);
-        if(true){
-            return true;
-        }
-        else{
-            return false;
-        }
-    };
+ 
 }
