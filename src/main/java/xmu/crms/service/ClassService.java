@@ -14,7 +14,7 @@ import xmu.crms.bo.ClassBO;
  */
 public class ClassService {
 	/**
-	 * 方法简述按classId删除CourseSelection表的一条记录 
+	 * 按classId删除CourseSelection表的一条记录 .
 	 * @author zhouzhongjun
      * @param BigInteger classId 班级Id
      * @return true/false 是否成功删除
@@ -25,7 +25,7 @@ public class ClassService {
 		return true;
 	}
 	/**
-	 * 按课程名称和教师名称获取班级列表
+	 * 按课程名称和教师名称获取班级列表.
 	 * <p>根据课程名和教师名获取课程ID，通过课程ID获取班级列表;若课程名和班级名均不为空，取交集<br>
 	 * @author yexiaona
 	 * @param courseName 课程名称
@@ -41,7 +41,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 按课程名称获取班级列表
+	 * 按课程名称获取班级列表.
 	 * <p>根据课程名获取课程ID，通过课程ID获取班级列表<br>
 	 * @author yexiaona
 	 * @param courseName 课程名称
@@ -56,7 +56,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 按教师名称获取班级列表
+	 * 按教师名称获取班级列表.
 	 * <p>根据教师名称获取课程ID，通过课程ID获取班级列表<br>
 	 * @author yexiaona
 	 * @param teacherName 教师名称
@@ -71,7 +71,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 根据教师ID获取班级列表
+	 * 根据教师ID获取班级列表.
 	 * @author yexiaona
 	 * @param userId 教师ID
 	 * @return List<ClassBO> 班级列表
@@ -84,7 +84,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 根据课程ID获得班级列表
+	 * 根据课程ID获得班级列表.
 	 * @author yexiaona
 	 * @param courseId 课程ID
 	 * @return List<ClassBO> 班级列表
@@ -96,7 +96,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 按班级id获取班级详情
+	 * 按班级id获取班级详情.
 	 * <p>根据班级id获取班级<br>
 	 * @author yexiaona
 	 * @param classId 班级ID
@@ -109,7 +109,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 按班级id和班级修改班级信息
+	 * 按班级id和班级修改班级信息.
 	 * <p>根据班级id修改班级信息<br>
 	 * @author yexiaona
 	 * @param classId 班级ID
@@ -122,7 +122,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 按班级id删除班级
+	 * 按班级id删除班级.
 	 * <p>根据班级id删除班级<br>
 	 * @author yexiaona
 	 * @param classId 班级ID
@@ -139,7 +139,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 学生按班级id选择班级
+	 * 学生按班级id选择班级.
 	 * <p>根据班级id和用户id新增选课记录<br>
 	 * @author yexiaona
 	 * @param userId 用户id
@@ -153,7 +153,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 学生按班级id取消选择班级
+	 * 学生按班级id取消选择班级.
 	 * <p>根据班级id和用户id删除选课记录及与该班级相关的信息<br>
 	 * @author yexiaona
 	 * @param userId 用户id
@@ -167,7 +167,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 老师获取该班级签到、分组状态
+	 * 老师获取该班级签到、分组状态.
 	 * <p>根据讨论课id及班级id，获得该班级的签到、分组状态<br>
 	 * @author yexiaona
 	 * @param seminarId 讨论课id
@@ -182,7 +182,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 新建班级
+	 * 新建班级.
 	 * <p>根据教师id和课程id新建班级<br>
 	 * @author yexiaona
 	 * @param userId 教师id
@@ -198,7 +198,7 @@ public class ClassService {
 	}
 	
 	/**
-	 * 按courseId删除Class
+	 * 按courseId删除Class.
 	 * <p>先根据CourseId获得所有的class的信息，然后根据class信息删除courseSelection表的记录，然后再根据courseId和classId删除ScoureRule表记录，再调用根据classId删除固定分组，最后再将班级的信息删除<br>  
 	 * @author zhouzhongjun
      * @param BigInteger courseId 课程Id

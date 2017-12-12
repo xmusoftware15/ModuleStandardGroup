@@ -17,8 +17,7 @@ import xmu.crms.bo.UserBO;
 public class SeminarGroupService {
 	
 	/**
-	 * 方法简述.
-	 * <p>按seminarGroupId删除SeminarGroupMember信息<br>  
+	 * 按seminarGroupId删除SeminarGroupMember信息.
 	 * @author zhouzhongjun
      * @param BigInteger seminarGroupId 讨论课小组Id
      *  @return true/false 是否成功删除
@@ -85,8 +84,7 @@ public class SeminarGroupService {
     	return leaderId;
     }
 	/**
-	 * 方法简述.
-	 * <p>按seminarId获取SeminarGroup<br>  
+	 * 按seminarId获取SeminarGroup.
 	 * @author zhouzhongjun
      * @param BigInteger seminarId 课程Id
      * @return List<SeminarGroupBO> 讨论课小组列表
@@ -97,8 +95,8 @@ public class SeminarGroupService {
 	};
 	
 	/**
-	 * 方法简述.
-	 * <p>按seminarId删除讨论课小组信息<br>  
+	 * 按seminarId删除讨论课小组信息.
+	 * <p>根据seminarId获得SeminarGroup，然后根据SeminarGroupId删除SeminarGroupMember信息，最后再删除SeminarGroup信息<br>  
 	 * @author zhouzhongjun
      * @param BigInteger seminarId 讨论课Id
 	 * @see SeminarGroupService #listSeminarGroupBySeminarId(BigInteger seminarId)

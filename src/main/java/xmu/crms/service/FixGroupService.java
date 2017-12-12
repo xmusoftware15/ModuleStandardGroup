@@ -15,7 +15,7 @@ import xmu.crms.bo.UserBO;
 
 public class FixGroupService {
 	/**
-	 * 按FixGroupId删除FixGroupMember
+	 * 按FixGroupId删除FixGroupMember.
 	 * @author zhouzhongjun
      * @param BigInteger fixGroupId 固定分组Id
      * @return true/false 是否成功删除
@@ -53,7 +53,7 @@ public class FixGroupService {
     	return userBOs;
     }
 	/**
-	 * 按classId查找FixGroup信息
+	 * 按classId查找FixGroup信息.
 	 * @author zhouzhongjun
      * @param BigInteger classId 班级Id
      * @return List<FixGroupBO> 固定分组列表
