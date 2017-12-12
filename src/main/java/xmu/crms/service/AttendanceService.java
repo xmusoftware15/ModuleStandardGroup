@@ -1,6 +1,10 @@
-package xmu.crms.service;
+﻿package xmu.crms.service;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+import xmu.crms.bo.AttendanceBO;
 
 /**
  * 
@@ -11,15 +15,22 @@ import java.math.BigInteger;
 public class AttendanceService {
 	/**
 	 * 添加学生签到信息
-	 * ＜p＞根据班级id，学生id进行签到，在该操作内部调用相应API获取地理位置进行判断
+	 * <p>根据班级id，讨论课id，学生id，经度，纬度进行签到<br>*在方法中通过班级id，讨论课id获取当堂课发起签到的位置
 	 * @author LiuAiqi
 	 * @param classId 班级的id
+	 * @param seminarId 讨论课的id
 	 * @param userId 学生的id
+	 * @param longitude 经度
+	 * @param latitude 纬度
 	 * @return true（添加签到信息成功）/false（添加签到信息未成功）
-     * @see ClassService#getClassByClassId(BigInteger classId)
 	 */
-	boolean insertAttendanceById(BigInteger classId,BigInteger userId)
+<<<<<<< HEAD
+=======
+
+>>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
+	boolean insertAttendanceById(BigInteger classId, BigInteger seminarId, BigInteger userId, double longitude, double latitude)
 	{
+		
 		if(true) 
 		{
 			return true;
@@ -29,6 +40,22 @@ public class AttendanceService {
 			return false;
 		}
 	}
+	
+	/**
+	 * 获取学生签到信息
+	 * <p>根据班级id，讨论课id获取当堂课签到信息
+	 * @author LiuAiqi
+	 * @param classId 班级的id
+	 * @return List<AttendanceBO> 当堂课签到信息
+	 */
+	private List<AttendanceBO> getAttendanceById(BigInteger classId)
+	{
+		
+		List<AttendanceBO> list = new ArrayList<AttendanceBO>();		
+		return list;
+	}
+	
+	
 }
 
 

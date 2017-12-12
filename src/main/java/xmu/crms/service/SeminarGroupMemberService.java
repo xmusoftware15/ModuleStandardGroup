@@ -1,6 +1,7 @@
 package xmu.crms.service;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 
 import xmu.crms.bo.UserBO;
@@ -53,4 +54,33 @@ public class SeminarGroupMemberService {
     	List<UserBO> userBOs=null;
     	return userBOs;
     }
+    
+	/**
+<<<<<<< HEAD
+	 * 获取某学生所有的讨论课小组.
+	 * ＜p＞根据学生id获取学生所在的所有讨论课小组的id<br>
+	 * @author qinlingyun
+	 * @param userId 学生id
+	 * @return list 讨论课小组列表
+	 */
+    List<BigInteger> listSeminarGroupIdByStudentId(BigInteger userId)
+    {
+    	List<BigInteger> list = new ArrayList();
+    	
+    	return list;
+    }
+    
+=======
+	 * 查询讨论课小组队长id.
+	 * ＜p＞按照讨论课小组id查询该小组的队长id<br>*
+	 * @author YeHongjie
+	 * @param groupId 要查询的讨论课小组id
+	 * @return BigInteger 讨论课小组队长id
+	 */
+    BigInteger getSeminarGroupLeaderByGroupId(BigInteger groupId)
+    {
+    	BigInteger leaderId=null;
+    	return leaderId;
+    }
+>>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
 }

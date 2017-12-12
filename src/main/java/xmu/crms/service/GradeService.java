@@ -1,6 +1,8 @@
 package xmu.crms.service;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -37,6 +39,21 @@ public class GradeService {
 	private boolean updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade) {
 		//GradeDAO.updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade)
 		return true;
+	}
+	
+	/**
+	 * 获取某学生的讨论课成绩列表.
+	 * @author qinlingyun
+	 * @param seminarId 讨论课id
+	 * @param userId 用户id
+	 * @return list 讨论课成绩列表
+	 * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId);
+	 */
+	private List<BigInteger> listSeminarGradeByStudentId(BigInteger userId) {
+		
+		List<BigInteger> list = new ArrayList<BigInteger>();		
+		
+		return list;		
 	}
 	
 }
