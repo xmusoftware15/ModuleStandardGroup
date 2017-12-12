@@ -1,7 +1,6 @@
 ﻿package xmu.crms.service;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
 import java.sql.ResultSet;
 import xmu.crms.bo.GroupBO;
@@ -15,7 +14,6 @@ import xmu.crms.bo.GroupBO;
 public class GroupService {
 	/**
 	 * 根据讨论课Id获得属于该讨论课的所有小组信息
-	 * @author ZhouChulun
 	 * @param seminarId 讨论课的id
 	 * @return List<GroupBO> 所有group的信息
 	 */
@@ -28,7 +26,6 @@ public class GroupService {
 
 	/**
 	 * 根据话题Id获得选择该话题的所有小组的信息
-	 * @author ZhouChulun
 	 * @param  topicId(话题的id)
 	 * @return  List<GroupBO> 所有选择该话题的所有group的信息
 	 */
@@ -40,12 +37,11 @@ public class GroupService {
 	
      /**
      * 根据讨论课Id及用户id，获得该用户所在的讨论课的小组的信息
-     * @author ZhouChulun
      * @param BigInteger seminarId (讨论课的id)
      * @param BigInteger userId（用户的id）
      * @return GroupBO Group的相关信息
      */
-    private GroupBO getSeminarGroupById(BigInteger seminarId,BigInteger userId){
+     GroupBO getSeminarGroupById(BigInteger seminarId,BigInteger userId){
           GroupBO groupBO;
           ResultSet rs;
           //rs = GroupDao.listGroupBySeminarId(BigInteger seminarId);
@@ -58,6 +54,7 @@ public class GroupService {
     /**
      * 方法简介
      * <p>根据groupId修改group<br>
+     * @author aixing
      * @param groupId 要修改的group的Id
      * @param group 新的group信息
      * @return
@@ -76,7 +73,7 @@ public class GroupService {
 	 * @param classId 班级的id
 	 * @return Boolean 自动分组成功返回true，否则返回false
 	 */
-    private Boolean automaticallyGrouping(BigInteger seminarId,BigInteger classId)
+    Boolean automaticallyGrouping(BigInteger seminarId,BigInteger classId)
     {
     	Boolean groupingState=Boolean.valueOf(false);
     	return groupingState;
@@ -90,7 +87,7 @@ public class GroupService {
 	 * @param groupId 要加入小组的id
 	 * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
 	 */
-    private BigInteger insertStudnetIntoGroup(BigInteger userId,BigInteger groupId)
+    BigInteger insertStudnetIntoGroup(BigInteger userId,BigInteger groupId)
     {
     	BigInteger recordId = BigInteger.valueOf(-1);
     	return recordId;
@@ -140,16 +137,7 @@ public class GroupService {
 		GroupBO groupBO = new GroupBO();
 		return groupBO;
 	}
-	/**
-	 * 按groupid获取小组选题信息.
-	 * @author Huhui
-	 * @param groupid 组号
-	 * @return List group_topic_id
-	 */
-	private List selectGroupTopicByGroupId(BigInteger groupid) {
-		List list=new ArrayList<BigInteger>();
-		return list;
-	}
+
     
     
 }
