@@ -44,7 +44,7 @@ public class UserService {
 	 * @param classId 班级的id
 	 * @return List<AttendanceBO> 当堂课签到信息
 	 */
-	private List<AttendanceBO> getAttendanceById(BigInteger classId)
+	private List<AttendanceBO> listAttendanceById(BigInteger classId)
 	{
 		
 		List<AttendanceBO> list = new ArrayList<AttendanceBO>();		
