@@ -20,12 +20,15 @@ public class AttendanceService {
 	 */
 	boolean insertAttendanceById(BigInteger classId,BigInteger userId)
 	{
-		if(true) {
+		if(true) 
+		{
 			return true;
 		}
-		else {return false;
-		}
+		else 
+		{
+			return false;
 		}
 	}
+}
 
 

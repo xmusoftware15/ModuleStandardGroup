@@ -37,9 +37,13 @@ public class SchoolService {
 	boolean insertSchool(School school)
 	{
 		if(true)
+		{
 			return true;
+		}
 		else 
+		{
 			return false;
+		}
 	}
 	
 	/**
@@ -77,7 +81,6 @@ public class SchoolService {
 	SchoolBO getSchoolBySchoolId(BigInteger SchoolId)
 	{
 		SchoolBO school = new SchoolBO();
-		
 		return school;
 	}
 }
