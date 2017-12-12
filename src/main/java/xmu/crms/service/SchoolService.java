@@ -1,4 +1,11 @@
 package xmu.crms.service;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+import xmu.crms.bo.SchoolBO;
+
 /**
  * 
  * @author ModuleStandardGroup
@@ -16,7 +23,7 @@ public class SchoolService {
 	List<SchoolBO> listSchoolByCity(String city)
 	{
 		List<SchoolBO> list = new ArrayList<SchoolBO>();		
-		return List<SchoolBO>;
+		return List<SchoolBO> list;
 	}
 	
 	/**
@@ -57,5 +64,19 @@ public class SchoolService {
 	{
 		List<String> list = new ArrayList<String>();		
 		return List<String> list;
+	}
+	
+	/**
+	 * 获取学校信息
+	 * ＜p＞根据学校id，获取该学校的所有信息
+	 * @author LiuAiqi
+	 * @param SchoolId 学校id
+	 * @return SchoolBO 学校信息
+	 */
+	SchoolBO getSchoolBySchoolId(BigInteger SchoolId)
+	{
+		SchoolBO school = new SchoolBO();
+		
+		return school;
 	}
 }
