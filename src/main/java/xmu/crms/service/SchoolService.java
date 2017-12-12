@@ -14,7 +14,7 @@ import xmu.crms.bo.SchoolBO;
  */
 public class SchoolService {
 	/**
-	 * 按城市名称查学校
+	 * 按城市名称查学校.
 	 * <p>根据城市名称，查询出在该城市的所有学校<br>
 	 * @author LiuAiqi
 	 * @param city 城市名称
@@ -27,7 +27,7 @@ public class SchoolService {
 	}
 	
 	/**
-	 * 添加学校
+	 * 添加学校.
 	 * <p>根据学校详细的信息，添加相应学校<br>
 	 * @author LiuAiqi
 	 * @param school 学校的信息
@@ -46,7 +46,7 @@ public class SchoolService {
 	}
 	
 	/**
-	 * 获取省份列表
+	 * 获取省份列表.
 	 * <p>获取所有省份的名称<br>
 	 * @author LiuAiqi
 	 * @return List<String> 省份名称列表
@@ -58,7 +58,7 @@ public class SchoolService {
 	}
 	
 	/**
-	 * 获取城市列表
+	 * 获取城市列表.
 	 * <p>根据省份名称，获取该省份所有城市名称，返回城市名称列表<br>
 	 * @author LiuAiqi
 	 * @param province 省份名称
@@ -71,7 +71,7 @@ public class SchoolService {
 	}
 	
 	/**
-	 * 获取学校信息
+	 * 获取学校信息.
 	 * <p>根据学校id，获取该学校的所有信息<br>
 	 * @author LiuAiqi
 	 * @param SchoolId 学校id

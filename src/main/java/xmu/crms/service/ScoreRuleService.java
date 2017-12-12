@@ -16,7 +16,7 @@ public class ScoreRuleService {
 
 
 		/**
-		 * 按classId和CourseId删除ScoreRule
+		 * 按classId和CourseId删除ScoreRule.
 		 * @author zhouzhongjun
 		 * @param BigInteger courseId 班级Id
 	     * @param BigInteger classId 班级Id
@@ -29,7 +29,7 @@ public class ScoreRuleService {
 		};
 		
 		/**
-		 * 新增评分规则
+		 * 新增评分规则.
 		 * <p>新增评分规则<br>  
 		 * @author YeHongjie
 	     * @param proportionBO 评分规则
@@ -42,7 +42,7 @@ public class ScoreRuleService {
 		}
 		
 		/**
-		 * 修改评分规则
+		 * 修改评分规则.
 		 * <p>修改指定的评分规则<br>  
 		 * @author YeHongjie
 		 * @param proportionId 评分规则id
@@ -56,7 +56,7 @@ public class ScoreRuleService {
 		}
 		
 		/**
-		 * 删除评分规则
+		 * 删除评分规则.
 		 * <p>删除指定的评分规则<br>  
 		 * @author YeHongjie
 		 * @param proportionId 评分规则id
@@ -69,7 +69,7 @@ public class ScoreRuleService {
 		}
 		
 		/**
-		 * 查询评分规则
+		 * 查询评分规则.
 		 * <p>按id查询指定的评分规则<br>  
 		 * @author YeHongjie
 		 * @param proportionId 评分规则id
