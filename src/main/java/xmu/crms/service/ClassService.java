@@ -1,15 +1,11 @@
 package xmu.crms.service;
-<<<<<<< HEAD
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import xmu.crms.bo.*;
+import xmu.crms.bo.ClassBO;
 
-=======
-import java.math.BigInteger
->>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
 /**
  * 
  * @author ModuleStandardGroup
@@ -19,56 +15,14 @@ import java.math.BigInteger
 public class ClassService {
 	
 	/**
-<<<<<<< HEAD
-	 * 方法简述.
-	 * <p>按courseId获取课程<br> 
-	 * @author zhouzhongjun
-	 * @param BigInteger userId 用户Id
-	 * @return List<ClassBO> 班级列表
-	 */
-	private  List<ClassBO> listClassByuserId(BigInteger userId) {
-		
-		List<ClassBO> classBO=new ArrayList<ClassBO>();
-		return classBO;
-		
-	};	
-	
-	/**
-	 * 方法简述.
-	 * <p>按courseId获取Class<br>  
-	 * @author zhouzhongjun
-     * @param BigInteger courseId 课程Id
-     * @return List<ClassBO> 班级列表
-	 */
-	List<ClassBO> listClassByCourseId (BigInteger courseId) {
-			
-		return null;
-	};
-	
-	/**
-	 * 方法简述.
-	 * <p>按courseId删除Class<br>  
-	 * @author zhouzhongjun
-     * @param BigInteger courseId 课程Id
-	 *@see ClassService  #listClassByCourseId (BigInteger courseId)
-	 *@see ClasssSelectionService   #deleteClasssSelectionByClassId(BigInteger classId)
-	 *@see ScoreRuleService  #deleteScoreRuleById(BigInteger CourseId,BigInteger ClassId)
-	 *@see FixGroupService  #deleteFixGroupByClassId(BigInteger ClassId)
-	 */
-	boolean deleteCourseByCourseId(BigInteger courseId) {
-			
-		//删除自己
-		return true;
-	};
-=======
-	 * ���γ����ƺͽ�ʦ���ƻ�ȡ�༶�б�
-	 * <p>���ݿγ����ͽ�ʦ����ȡ�γ�ID��ͨ���γ�ID��ȡ�༶�б�;���γ����Ͱ༶������Ϊ�գ�ȡ����<br>
+	 * 按课程名称和教师名称获取班级列表
+	 * <p>根据课程名和教师名获取课程ID，通过课程ID获取班级列表;若课程名和班级名均不为空，取交集<br>
 	 * @author yexiaona
-	 * @param courseName �γ�����
-	 * @param teacherName ��ʦ����
-	 * @return List<ClassBO> �༶�б�
-	 * @see xmu.crms.service.ClassService#listClassByCourseName(String courseName)
-	 * @see xmu.crms.service.ClassService#listClassByTeacherName(String teacherName)
+	 * @param courseName 课程名称
+	 * @param teacherName 教师名称
+	 * @return List<ClassBO> 班级列表
+	 * @see ClassService#listClassByCourseName(String courseName)
+	 * @see ClassService#listClassByTeacherName(String teacherName)
 	 */
 	private List<ClassBO> listClassByName(String courseName,String teacherName)
 	{
@@ -77,13 +31,13 @@ public class ClassService {
 	}
 	
 	/**
-	 * ���γ����ƻ�ȡ�༶�б�
-	 * <p>���ݿγ�����ȡ�γ�ID��ͨ���γ�ID��ȡ�༶�б�<br>
+	 * 按课程名称获取班级列表
+	 * <p>根据课程名获取课程ID，通过课程ID获取班级列表<br>
 	 * @author yexiaona
-	 * @param courseName �γ�����
-	 * @return List<ClassBO> �༶�б�
-	 * @see xmu.crms.service.CourseService#listCourseByCourseName(String courseName)
-	 * @see xmu.crms.service.ClassService#listClassByCourseId (BigInteger courseId)
+	 * @param courseName 课程名称
+	 * @return List<ClassBO> 班级列表
+	 * @see CourseService#listCourseByCourseName(String courseName)
+	 * @see ClassService#listClassByCourseId(BigInteger courseId)
 	 */
 	private List<ClassBO> listClassByCourseName(String courseName)
 	{
@@ -92,13 +46,13 @@ public class ClassService {
 	}
 	
 	/**
-	 * ����ʦ���ƻ�ȡ�༶�б�
-	 * <p>���ݽ�ʦ���ƻ�ȡ�γ�ID��ͨ���γ�ID��ȡ�༶�б�<br>
+	 * 按教师名称获取班级列表
+	 * <p>根据教师名称获取课程ID，通过课程ID获取班级列表<br>
 	 * @author yexiaona
-	 * @param teacherName ��ʦ����
-	 * @return List<ClassBO> �༶�б�
-	 * @see xmu.crms.service.CourseService#listCourseByTeacherName(String teacherName)
-	 * @see xmu.crms.service.ClassService#listClassByCourseId (BigInteger courseId)
+	 * @param teacherName 教师名称
+	 * @return List<ClassBO> 班级列表
+	 * @see CourseService#listCourseByTeacherName(String teacherName)
+	 * @see ClassService#listClassByCourseId(BigInteger courseId)
 	 */
 	private List<ClassBO> listClassByTeacherName(String teacherName)
 	{
@@ -107,11 +61,11 @@ public class ClassService {
 	}
 	
 	/**
-	 * ���ݽ�ʦID��ȡ�༶�б�
+	 * 根据教师ID获取班级列表
 	 * @author yexiaona
-	 * @param userId ��ʦID
-	 * @return List<ClassBO> �༶�б�
-	 * @see xmu.crms.service.CourseService#listCourseByUserId(BigInteger userId)
+	 * @param userId 教师ID
+	 * @return List<ClassBO> 班级列表
+	 * @see CourseService#listCourseByUserId(BigInteger userId)
 	 */
 	private List<ClassBO> listClassByUserId(BigInteger userId)
 	{
@@ -120,10 +74,10 @@ public class ClassService {
 	}
 	
 	/**
-	 * ���ݿγ�ID��ð༶�б�
+	 * 根据课程ID获得班级列表
 	 * @author yexiaona
-	 * @param courseId �γ�ID
-	 * @return List<ClassBO> �༶�б�
+	 * @param courseId 课程ID
+	 * @return List<ClassBO> 班级列表
 	 */
 	private List<ClassBO> listClassByCourseId(BigInteger courseId)
 	{
@@ -132,11 +86,11 @@ public class ClassService {
 	}
 	
 	/**
-	 * ���༶id��ȡ�༶����
-	 * <p>���ݰ༶id��ȡ�༶<br>
+	 * 按班级id获取班级详情
+	 * <p>根据班级id获取班级<br>
 	 * @author yexiaona
-	 * @param classId �༶ID
-	 * @return ClassBO �༶
+	 * @param classId 班级ID
+	 * @return ClassBO 班级
 	 */
 	private ClassBO getClassByClassId(BigInteger classId)
 	{
@@ -145,41 +99,40 @@ public class ClassService {
 	}
 	
 	/**
-	 * ���༶id�Ͱ༶�޸İ༶��Ϣ
-	 * <p>���ݰ༶id�޸İ༶��Ϣ<br>
+	 * 按班级id和班级修改班级信息
+	 * <p>根据班级id修改班级信息<br>
 	 * @author yexiaona
-	 * @param classId �༶ID
-	 * @return boolean �༶�޸��Ƿ�ɹ����
-	 * @see xmu.crms.service.?????????????#updateScoreRuleById(BigInteger scoreRuleId)
+	 * @param classId 班级ID
+	 * @return boolean 班级修改是否成功情况
+	 * @see ?????????????#updateScoreRuleById(BigInteger scoreRuleId)
 	 */
 	private boolean updateClassByClassId(BigInteger classId)
 	{
-		boolean isUpdated;
-		return isUpdated;
+		return true;
 	}
 	
 	/**
-	 * ���༶idɾ���༶
-	 * <p>���ݰ༶idɾ���༶<br>
+	 * 按班级id删除班级
+	 * <p>根据班级id删除班级<br>
 	 * @author yexiaona
-	 * @param classId �༶ID
-	 * @return boolean �༶ɾ���Ƿ�ɹ����
-	 * @see xmu.crms.service.?????????????#deleteScoreRuleById(BigInteger scoreRuleId)
-	 * @see xmu.crms.service.ClassService#deleteCourseSelectionById(BigInteger classId,User user)
+	 * @param classId 班级ID
+	 * @return boolean 班级删除是否成功情况
+	 * @see ?????????????#deleteScoreRuleById(BigInteger scoreRuleId)
+	 * @see ClassService#deleteCourseSelectionById(BigInteger classId,User user)
 	 */
 	private boolean deleteClassByClassId(BigInteger classId)
 	{
-		boolean isDeleted;
+		boolean isDeleted=true;
 		return isDeleted;
 	}
 	
 	/**
-	 * ѧ�����༶idѡ��༶
-	 * <p>���ݰ༶id���û�id����ѡ�μ�¼<br>
+	 * 学生按班级id选择班级
+	 * <p>根据班级id和用户id新增选课记录<br>
 	 * @author yexiaona
-	 * @param userId �û�id
-	 * @param classId �༶id
-	 * @return url ѡ��url
+	 * @param userId 用户id
+	 * @param classId 班级id
+	 * @return url 选课url
 	 */
 	private String insertCourseSelectionById(BigInteger userId,BigInteger classId)
 	{
@@ -188,27 +141,27 @@ public class ClassService {
 	}
 	
 	/**
-	 * ѧ�����༶idȡ��ѡ��༶
-	 * <p>���ݰ༶id���û�idɾ��ѡ�μ�¼����ð༶��ص���Ϣ<br>
+	 * 学生按班级id取消选择班级
+	 * <p>根据班级id和用户id删除选课记录及与该班级相关的信息<br>
 	 * @author yexiaona
-	 * @param userId �û�id
-	 * @param classId �༶id
-	 * @return boolean ȡ���༶�Ƿ�ɹ�
+	 * @param userId 用户id
+	 * @param classId 班级id
+	 * @return boolean 取消班级是否成功
 	 */
 	private boolean deleteCourseSelectionById(BigInteger userId,BigInteger classId)
 	{
-		boolean isDeleted;
+		boolean isDeleted=true;
 		return isDeleted;
 	}
 	
 	/**
-	 * ��ʦ��ȡ�ð༶ǩ��������״̬
-	 * <p>�������ۿ�id���༶id����øð༶��ǩ��������״̬<br>
+	 * 老师获取该班级签到、分组状态
+	 * <p>根据讨论课id及班级id，获得该班级的签到、分组状态<br>
 	 * @author yexiaona
-	 * @param seminarId ���ۿ�id
-	 * @param classid �༶id
-	 * @return classBO �༶
-	 * @see xmu.crms.service.GroupService#listGroupBySeminarId(BigInteger seminarId)
+	 * @param seminarId 讨论课id
+	 * @param classid 班级id
+	 * @return classBO 班级
+	 * @see GroupService#listGroupBySeminarId(BigInteger seminarId)
 	 */
 	private ClassBO getCallGroupStatusById(BigInteger seminarId,BigInteger classId)
 	{
@@ -217,20 +170,19 @@ public class ClassService {
 	}
 	
 	/**
-	 * �½��༶
-	 * <p>���ݽ�ʦid�Ϳγ�id�½��༶<br>
+	 * 新建班级
+	 * <p>根据教师id和课程id新建班级<br>
 	 * @author yexiaona
-	 * @param userId ��ʦid
-	 * @param courseId �γ�id
-	 * @param List<userId> ѧ���б�
-	 * @return ClassBO �༶
-	 * @see xmu.crms.service.ClassService#insertCourseSelectionById(BigInteger userId,BigInteger classId)
+	 * @param userId 教师id
+	 * @param courseId 课程id
+	 * @param List<userId> 学生列表
+	 * @return ClassBO 班级
+	 * @see ClassService#insertCourseSelectionById(BigInteger userId,BigInteger classId)
 	 */
 	private ClassBO insertClassById(BigInteger userId,BigInteger courseId)
 	{
 		ClassBO classBO=new ClassBO();
 		return classBO;
 	}
->>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
 
 }

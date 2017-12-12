@@ -1,11 +1,7 @@
 package xmu.crms.service;
 
 import java.math.BigInteger;
-<<<<<<< HEAD
-import java.util.List;
 
-import xmu.crms.bo.*;
-=======
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +9,6 @@ import xmu.crms.bo.SeminarBO;
 import xmu.crms.bo.TopicBO;
 import xmu.crms.bo.GroupBO;
 
->>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
 /**
  * 
  * @author ModuleStandardGroup
@@ -21,7 +16,7 @@ import xmu.crms.bo.GroupBO;
  *
  */
 public class SeminarService {
-<<<<<<< HEAD
+
 	
 	/**
 	 * 方法简述.
@@ -52,7 +47,6 @@ public class SeminarService {
 		return true;
 	};
 
-=======
 	/**
 	 * 获得学生当前讨论课信息(小程序端获得讨论课信息进行选题分组、签到等).
 	 * ＜p＞通过学生用户id和讨论课id获得学生当前的讨论课信息<br>* (此学生是否是队长，当前讨论课是否处于签到状态，当前讨论课是否可以选题，当前讨论课的组队方式).
@@ -156,5 +150,4 @@ public class SeminarService {
 		BigInteger seminarId=BigInteger.valueOf(-1);
 		return seminarId;
 	}
->>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
 }

@@ -1,5 +1,4 @@
 package xmu.crms.service;
-<<<<<<< HEAD
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -8,9 +7,7 @@ import java.util.List;
 import xmu.crms.bo.CourseBO;
 import xmu.crms.bo.UserBO;
 
-=======
-import java.math.BigInteger;
->>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
+
 /**
  * 
  * @author ModuleStandardGroup
@@ -18,7 +15,6 @@ import java.math.BigInteger;
  *
  */
 public class CourseService {
-<<<<<<< HEAD
 	/**
 	 * 方法简述.
 	 * <p>按userId获取与当前用户相关联的课程列表<br> 
@@ -93,7 +89,6 @@ public class CourseService {
 		//删除自己
 		return true;
 	};
-=======
 	
 	/**
 	 * ���γ�����ȡ�γ�
@@ -122,5 +117,4 @@ public class CourseService {
 		return list;
 	}
 
->>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
 }
