@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 import xmu.crms.bo.FixGroupBO;
+import xmu.crms.bo.GroupBO;
 
 /**
  * 
@@ -41,6 +42,25 @@ public class FixGroupService {
 		return true;
 	};
     
+	/**
+	 * 按id获取小组.
+	 * <p>通过学生id和班级id获取学生所在的班级固定小组<br>
+	 * @author heqi
+	 * @param userId 学生id
+	 * @param classId 班级id
+	 * @return GroupBO 返回班级固定小组的信息 
+	 * @see xmu.crms.service.UserService#listFixedMembersById(BigInteger userId)
+	 * @see xmu.crms.service.UserService#getUserByUserId(BigInteger UserId)
+	 */
+	private GroupBO getFixedGroupById(BigInteger userId,BigInteger classId){
+		//rs = UserService.listMembersById(BigInteger userId);
+		//for student_id in rs;
+		//UserService.UserBO getUserByUserId(BigInteger UserId)
+		//得到小组所有成员信息返回小组信息
+		GroupBO groupBO = new GroupBO();
+		return groupBO;
+	}
+	
     /**
 	 * 创建固定小组.
 	 * ＜p＞在指定班级下创建固定小组<br>*
