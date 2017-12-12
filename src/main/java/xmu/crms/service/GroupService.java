@@ -52,6 +52,19 @@ public class GroupService {
     };
     
     /**
+     * 方法简介
+     * <p>根据groupId修改group<br>
+     * @param groupId 要修改的group的Id
+     * @param group 新的group信息
+     * @return
+     */
+    BigInteger updateSeminarGroupById(BigInteger groupId,GroupBO group){
+        BigInteger bi=null;
+        //修改此group
+        return bi;
+    }
+    
+    /**
 	 * 自动分组.
 	 * ＜p＞根据讨论课id和班级id，对签到的学生进行自动分组<br>*
 	 * @author YeHongjie
