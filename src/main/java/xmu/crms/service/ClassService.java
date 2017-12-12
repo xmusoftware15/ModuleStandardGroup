@@ -13,18 +13,7 @@ import xmu.crms.bo.ClassBO;
  *
  */
 public class ClassService {
-	/**
-	 * 方法简述.
-	 * <p>按classId删除ClassSelection<br>  
-	 * @author zhouzhongjun
-     * @param BigInteger classId 班级Id
-     * @return true/false 是否成功删除
-	 */
-	boolean deleteClassSelectionByClassId(BigInteger classId) {
-		
-		//删除自己
-		return true;
-	}
+	
 	/**
 	 * 按课程名称和教师名称获取班级列表
 	 * <p>根据课程名和教师名获取课程ID，通过课程ID获取班级列表;若课程名和班级名均不为空，取交集<br>

@@ -48,13 +48,14 @@ public class SeminarService {
 	};
 
 	/**
-	 * 获得学生当前讨论课信息(小程序端获得讨论课信息进行选题分组、签到等).
-	 * ＜p＞通过学生用户id和讨论课id获得学生当前的讨论课信息<br>* (此学生是否是队长，当前讨论课是否处于签到状态，当前讨论课是否可以选题，当前讨论课的组队方式).
+	 * 用户（学生）获得当前讨论课信息(小程序端获得讨论课信息进行选题分组、签到等).
+	 * ＜p＞用户（学生）通过用户id和讨论课id获得学生当前的讨论课信息<br>* (包括此学生是否是队长，当前讨论课是否处于签到状态，当前讨论课是否可以选题，当前讨论课的组队方式).
 	 * @author CaoXingmei
-	 * @param seminarId 讨论课的id
-	 * @param classId 班级的id
+	 * @param seminarId 讨论课id
+	 * @param classId 班级id
 	 * @return 当前讨论课的信息
-	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
+	 * @see SeminarGroupService #getSeminarGroupLeaderById(BigInteger, BigInteger)
+	 * @see 数据库更新后再完善
 	 */
 	private SeminarBO getMySeminarBySeminarId(BigInteger seminarId,BigInteger userId){
 		SeminarBO nowSeminar = new SeminarBO();
@@ -62,11 +63,11 @@ public class SeminarService {
 	}
 	
 	/**
-	 * 获得学生相关的某个讨论课的信息.
-	 * ＜p＞通过学生用户id和讨论课id获得学生某个讨论课的详细信息<br>* (包括讨论课信息，教师信息).
+	 * 用户（学生）获得讨论课的详细信息.
+	 * ＜p＞用户（学生）通过用户id和讨论课id获得讨论课的详细信息<br>* (包括讨论课信息，教师信息).
 	 * @author CaoXingmei
-	 * @param seminarId 讨论课的id
-	 * @param userId 学生的id
+	 * @param seminarId 讨论课id
+	 * @param userId 用户id
 	 * @return 相应的讨论课的详细信息
 	 * 
 	 */
@@ -77,8 +78,8 @@ public class SeminarService {
 	}
 	
 	/**
-	 * 用户通过讨论课id获得讨论课的信息.
-	 * ＜p＞用户通过讨论课id获得讨论课的信息（包括讨论课名称、讨论课描述、分组方式、开始时间、结束时间）<br>*.
+	 * 用户(老师)获得讨论课信息.
+	 * ＜p＞用户(老师)通过讨论课id获得讨论课信息（包括讨论课名称、讨论课描述、分组方式、开始时间、结束时间）<br>*.
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @return 相应的讨论课信息
@@ -89,7 +90,7 @@ public class SeminarService {
 	}
 	
 	/**
-	 * 按讨论课id修改讨论课.
+	 * 修改讨论课信息.
 	 * ＜p＞用户（老师）通过seminarId修改讨论课的相关信息<br>*.
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
@@ -101,7 +102,7 @@ public class SeminarService {
 	}
 	
 	/**
-	 * 按讨论课id删除讨论课.
+	 * 删除讨论课.
 	 * ＜p＞用户（老师）通过seminarId删除讨论课<br>* (包括删除讨论课包含的topic信息和小组信息).
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
