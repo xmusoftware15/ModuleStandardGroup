@@ -54,6 +54,19 @@ public class ClassService {
 	}
 	
 	/**
+	 * 根据教师ID获取班级列表
+	 * @author yexiaona
+	 * @param userId 教师ID
+	 * @return List<ClassBO> 班级列表
+	 * @see CourseService#listCourseByUserId(BigInteger userId)
+	 */
+	private List<ClassBO> listClassByUserId(BigInteger userId)
+	{
+		List<ClassBO> list=new ArrayList<ClassBO>();
+		return list;
+	}
+	
+	/**
 	 * 根据课程ID获得班级列表
 	 * @author yexiaona
 	 * @param courseId 课程ID
@@ -99,7 +112,7 @@ public class ClassService {
 	 * @param classId 班级ID
 	 * @return boolean 班级删除是否成功情况
 	 * @see ?????????????#deleteScoreRuleById(BigInteger scoreRuleId)
-	 * @see ClassService#deleteClassSelectionById(BigInteger classId,User user)
+	 * @see ClassService#deleteCourseSelectionById(BigInteger classId,User user)
 	 */
 	private boolean deleteClassByClassId(BigInteger classId)
 	{
@@ -115,7 +128,7 @@ public class ClassService {
 	 * @param classId 班级id
 	 * @return url 选课url
 	 */
-	private String insertClassSelectionById(BigInteger userId,BigInteger classId)
+	private String insertCourseSelectionById(BigInteger userId,BigInteger classId)
 	{
 		String url=new String();
 		return url;
@@ -129,7 +142,7 @@ public class ClassService {
 	 * @param classId 班级id
 	 * @return boolean 取消班级是否成功
 	 */
-	private boolean deleteClassSelectionById(BigInteger userId,BigInteger classId)
+	private boolean deleteCourseSelectionById(BigInteger userId,BigInteger classId)
 	{
 		boolean isDeleted;
 		return isDeleted;
@@ -145,6 +158,22 @@ public class ClassService {
 	 * @see GroupService#listGroupBySeminarId(BigInteger seminarId)
 	 */
 	private ClassBO getCallGroupStatusById(BigInteger seminarId,BigInteger classId)
+	{
+		ClassBO classBO=new ClassBO();
+		return classBO;
+	}
+	
+	/**
+	 * 新建班级
+	 * <p>根据教师id和课程id新建班级<br>
+	 * @author yexiaona
+	 * @param userId 教师id
+	 * @param courseId 课程id
+	 * @param List<userId> 学生列表
+	 * @return ClassBO 班级
+	 * @see ClassService#insertCourseSelectionById(BigInteger userId,BigInteger classId)
+	 */
+	private ClassBO insertClassById(BigInteger userId,BigInteger courseId)
 	{
 		ClassBO classBO=new ClassBO();
 		return classBO;
