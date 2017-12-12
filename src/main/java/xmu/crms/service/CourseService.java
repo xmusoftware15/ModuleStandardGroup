@@ -1,4 +1,5 @@
 package xmu.crms.service;
+import java.math.BigInteger;
 /**
  * 
  * @author ModuleStandardGroup
@@ -26,7 +27,7 @@ public class CourseService {
 	 * @author yexiaona
 	 * @param teacherName 教师名称
 	 * @return List<CourseBO> 课程列表
-	 * @see CourseService#listCourseByUserId(BigInteger userId)
+	 * @see xmu.crms.service.CourseService#listCourseByUserId(BigInteger userId)
 	 */
 	private List<CourseBO> listCourseByTeacherName(String teacherName)
 	{
