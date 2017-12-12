@@ -30,7 +30,7 @@ public class SeminarGroupMemberService {
 	
 	/**
 	 * 将学生加入讨论课小组.
-	 * ＜p＞将用户加入指定的讨论课小组<br>*
+	 * <p>将用户加入指定的讨论课小组<br>*
 	 * @author YeHongjie
 	 * @param userId 学生的id
 	 * @param groupId 要加入讨论课小组的id
@@ -44,7 +44,7 @@ public class SeminarGroupMemberService {
     
 	/**
 	 * 查询讨论课小组成员.
-	 * ＜p＞按照讨论课小组id查询该小组的成员<br>*
+	 * <p>按照讨论课小组id查询该小组的成员<br>*
 	 * @author YeHongjie
 	 * @param groupId 要查询的讨论课小组id
 	 * @return List 讨论课小组成员信息
@@ -56,9 +56,9 @@ public class SeminarGroupMemberService {
     }
     
 	/**
-<<<<<<< HEAD
+	 *
 	 * 获取某学生所有的讨论课小组.
-	 * ＜p＞根据学生id获取学生所在的所有讨论课小组的id<br>
+	 * <p>根据学生id获取学生所在的所有讨论课小组的id<br>
 	 * @author qinlingyun
 	 * @param userId 学生id
 	 * @return list 讨论课小组列表
@@ -70,9 +70,10 @@ public class SeminarGroupMemberService {
     	return list;
     }
     
-=======
+    
+    /**
 	 * 查询讨论课小组队长id.
-	 * ＜p＞按照讨论课小组id查询该小组的队长id<br>*
+	 * <p>按照讨论课小组id查询该小组的队长id<br>*
 	 * @author YeHongjie
 	 * @param groupId 要查询的讨论课小组id
 	 * @return BigInteger 讨论课小组队长id
@@ -82,5 +83,5 @@ public class SeminarGroupMemberService {
     	BigInteger leaderId=null;
     	return leaderId;
     }
->>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
+
 }
