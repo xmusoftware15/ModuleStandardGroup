@@ -15,6 +15,7 @@ public class StudentScoreGroupService {
 	 * <p>按topicId删除学生打分表<br>  
 	 * @author zhouzhongjun
      * @param BigInteger topicId 话题Id
+     *  @return true/false 是否成功删除
 	 */
 	boolean deleteStudentScoreGroupByTopicId(BigInteger topicId) {
 		

@@ -15,6 +15,7 @@ public class FixGroupMemberService {
 	 * <p>按FixGroupId删除FixGroupMember<br>  
 	 * @author zhouzhongjun
      * @param BigInteger fixGroupId 固定分组Id
+     * @return true/false 是否成功删除
 	 */
 	boolean deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId) {
 		

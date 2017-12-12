@@ -19,6 +19,7 @@ public class FixGroupService {
 	 * <p>按classId查找FixGroup<br>  
 	 * @author zhouzhongjun
      * @param BigInteger classId 班级Id
+     * @return List<FixGroupBO> 固定分组列表
 	 */
 	List<FixGroupBO> listFixGroupByClassId(BigInteger classId) {
 		
@@ -32,6 +33,7 @@ public class FixGroupService {
      * @param BigInteger classId 班级Id
      * @see FixGroupService #listFixGroupByClassId(BigInteger classId)
      * @see FixGroupMemberService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
+     * @return true/false 是否成功删除
 	 */
 	boolean deleteFixGroupByClassId(BigInteger classId) {
 		

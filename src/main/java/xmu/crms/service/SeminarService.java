@@ -28,6 +28,7 @@ public class SeminarService {
 	 * <p>按courseId获取Seminar<br>  
 	 * @author zhouzhongjun
      * @param BigInteger courseId 课程Id
+     * @return List<SeminarBO> 讨论课列表
 	 */
 	List<SeminarBO> listSeminarByCourseId(BigInteger courseId) {
 			
@@ -43,6 +44,7 @@ public class SeminarService {
 	 *@see SeminarService #listSemiarByCourseId(BigInteger courseId)
 	 *@see TopicService   #deleteTopicBySeminarId(BigInteger seminarId)
 	 *@see SeminarGroupService  #deleteSeminarGroupBySeminarId(BigInteger seminarId)
+	 * @return true/false 是否成功删除
 	 */
 	boolean deleteCourseByCourseId(BigInteger courseId) {
 			

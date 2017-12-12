@@ -19,6 +19,7 @@ public class ScoreRuleService {
 		 * @author zhouzhongjun
 		 * @param BigInteger courseId 班级Id
 	     * @param BigInteger classId 班级Id
+	     * @return true/false 是否成功删除
 		 */
 		boolean deleteClassSelectionByClassId(BigInteger courseId,BigInteger classId) {
 			

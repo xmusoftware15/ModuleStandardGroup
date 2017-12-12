@@ -58,6 +58,7 @@ public class TopicService {
      * @param BigInteger seminarId 讨论课Id
 	 *@see TopicService #listTopicBySeminarId(BigInteger seminarId)
 	 *@see StudentScoreGroupService   #deleteStudentScoreGroupByTopicId(BigInteger topicId)
+	 * @return true/false 是否成功删除
 	 */
 	boolean deleteCourseByCourseId(BigInteger courseId) {
 		

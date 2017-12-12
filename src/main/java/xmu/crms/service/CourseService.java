@@ -27,6 +27,7 @@ public class CourseService {
 	 * @return List<CourseBO>  è¯¾ç¨‹åˆ—è¡¨
 	 * @see ClassService #listClassByuserId(BigInteger userId)
 	 * @see CourseService #listCourseBycourseId((BigInteger userId)
+	 * @return List<CourseBO> è¯¾ç¨‹åˆ—è¡¨
 	 */
 	private List<CourseBO> listCourseByUserId(BigInteger userId) {
 		
@@ -69,7 +70,7 @@ public class CourseService {
 	 * @author zhouzhongjun
      * @param BigInteger courseId è¯¾ç¨‹Id
 	 * @param CourseBO course è¯¾ç¨‹ä¿¡æ¯
-	 * @return æ˜¯å¦æˆåŠŸä¿®æ”¹è¯¾ç¨‹
+	 * @return true/false æ˜¯å¦æˆåŠŸä¿®æ”¹è¯¾ç¨‹
 	 */
 	private boolean updateCourseByCourseId(BigInteger courseId,CourseBO course) {
 		
@@ -84,6 +85,7 @@ public class CourseService {
      * @param BigInteger courseId è¯¾ç¨‹Id
 	 *@see SeminarService #deleteSemiarByCourseId(BigInteger courseId)
 	 *@see ClassService   #deleteClassByCourseId(BigInteger courseId)
+	 *@return true/false æ˜¯å¦æˆåŠŸåˆ é™¤
 	 */
 	boolean deleteCourseByCourseId(BigInteger courseId) {
 		
@@ -94,11 +96,11 @@ public class CourseService {
 =======
 	
 	/**
-	 * °´¿Î³ÌÃû»ñÈ¡¿Î³Ì
-	 * <p>¸ù¾İ¿Î³ÌÃû³Æ»ñÈ¡¿Î³Ì<br>
+	 * ï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½Î³ï¿½
+	 * <p>ï¿½ï¿½ï¿½İ¿Î³ï¿½ï¿½ï¿½ï¿½Æ»ï¿½È¡ï¿½Î³ï¿½<br>
 	 * @author yexiaona
-	 * @param courseName ¿Î³ÌÃû³Æ
-	 * @return List<CourseBO> ¿Î³ÌÁĞ±í
+	 * @param courseName ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @return List<CourseBO> ï¿½Î³ï¿½ï¿½Ğ±ï¿½
 	 */
 	private List<CourseBO> listCourseByCourseName(String courseName)
 	{
@@ -107,11 +109,11 @@ public class CourseService {
 	}
 	
 	/**
-	 * °´½ÌÊ¦Ãû³Æ»ñÈ¡¿Î³Ì
-	 * <p>¸ù¾İ½ÌÊ¦Ãû³Æ»ñÈ¡½ÌÊ¦ID£¬¸ù¾İ½ÌÊ¦ID»ñÈ¡¿Î³ÌID<br>
+	 * ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½Æ»ï¿½È¡ï¿½Î³ï¿½
+	 * <p>ï¿½ï¿½ï¿½İ½ï¿½Ê¦ï¿½ï¿½ï¿½Æ»ï¿½È¡ï¿½ï¿½Ê¦IDï¿½ï¿½ï¿½ï¿½ï¿½İ½ï¿½Ê¦IDï¿½ï¿½È¡ï¿½Î³ï¿½ID<br>
 	 * @author yexiaona
-	 * @param teacherName ½ÌÊ¦Ãû³Æ
-	 * @return List<CourseBO> ¿Î³ÌÁĞ±í
+	 * @param teacherName ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
+	 * @return List<CourseBO> ï¿½Î³ï¿½ï¿½Ğ±ï¿½
 	 * @see xmu.crms.service.CourseService#listCourseByUserId(BigInteger userId)
 	 */
 	private List<CourseBO> listCourseByTeacherName(String teacherName)

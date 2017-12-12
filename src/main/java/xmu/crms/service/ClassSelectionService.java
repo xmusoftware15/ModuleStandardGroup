@@ -19,6 +19,7 @@ public class ClassSelectionService {
 	 * <p>按classId删除ClassSelection<br>  
 	 * @author zhouzhongjun
      * @param BigInteger classId 班级Id
+     * @return true/false 是否成功删除
 	 */
 	boolean deleteClassSelectionByClassId(BigInteger classId) {
 		

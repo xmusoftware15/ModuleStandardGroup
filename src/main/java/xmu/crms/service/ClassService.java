@@ -38,8 +38,9 @@ public class ClassService {
 	 * <p>æŒ‰courseIdè·å–Class<br>  
 	 * @author zhouzhongjun
      * @param BigInteger courseId è¯¾ç¨‹Id
+     * @return List<ClassBO> ç­çº§åˆ—è¡¨
 	 */
-	List<ClassBO> listClassByCourseId(BigInteger courseId) {
+	List<ClassBO> listClassByCourseId (BigInteger courseId) {
 			
 		return null;
 	};
@@ -49,7 +50,7 @@ public class ClassService {
 	 * <p>æŒ‰courseIdåˆ é™¤Class<br>  
 	 * @author zhouzhongjun
      * @param BigInteger courseId è¯¾ç¨‹Id
-	 *@see ClassService  #listClassByCourseId(BigInteger courseId)
+	 *@see ClassService  #listClassByCourseId (BigInteger courseId)
 	 *@see ClasssSelectionService   #deleteClasssSelectionByClassId(BigInteger classId)
 	 *@see ScoreRuleService  #deleteScoreRuleById(BigInteger CourseId,BigInteger ClassId)
 	 *@see FixGroupService  #deleteFixGroupByClassId(BigInteger ClassId)
@@ -60,12 +61,12 @@ public class ClassService {
 		return true;
 	};
 =======
-	 * °´¿Î³ÌÃû³ÆºÍ½ÌÊ¦Ãû³Æ»ñÈ¡°à¼¶ÁĞ±í
-	 * <p>¸ù¾İ¿Î³ÌÃûºÍ½ÌÊ¦Ãû»ñÈ¡¿Î³ÌID£¬Í¨¹ı¿Î³ÌID»ñÈ¡°à¼¶ÁĞ±í;Èô¿Î³ÌÃûºÍ°à¼¶Ãû¾ù²»Îª¿Õ£¬È¡½»¼¯<br>
+	 * ï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½ÆºÍ½ï¿½Ê¦ï¿½ï¿½ï¿½Æ»ï¿½È¡ï¿½à¼¶ï¿½Ğ±ï¿½
+	 * <p>ï¿½ï¿½ï¿½İ¿Î³ï¿½ï¿½ï¿½ï¿½Í½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½È¡ï¿½Î³ï¿½IDï¿½ï¿½Í¨ï¿½ï¿½ï¿½Î³ï¿½IDï¿½ï¿½È¡ï¿½à¼¶ï¿½Ğ±ï¿½;ï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½Í°à¼¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½È¡ï¿½ï¿½ï¿½ï¿½<br>
 	 * @author yexiaona
-	 * @param courseName ¿Î³ÌÃû³Æ
-	 * @param teacherName ½ÌÊ¦Ãû³Æ
-	 * @return List<ClassBO> °à¼¶ÁĞ±í
+	 * @param courseName ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @param teacherName ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
+	 * @return List<ClassBO> ï¿½à¼¶ï¿½Ğ±ï¿½
 	 * @see xmu.crms.service.ClassService#listClassByCourseName(String courseName)
 	 * @see xmu.crms.service.ClassService#listClassByTeacherName(String teacherName)
 	 */
@@ -76,13 +77,13 @@ public class ClassService {
 	}
 	
 	/**
-	 * °´¿Î³ÌÃû³Æ»ñÈ¡°à¼¶ÁĞ±í
-	 * <p>¸ù¾İ¿Î³ÌÃû»ñÈ¡¿Î³ÌID£¬Í¨¹ı¿Î³ÌID»ñÈ¡°à¼¶ÁĞ±í<br>
+	 * ï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½Æ»ï¿½È¡ï¿½à¼¶ï¿½Ğ±ï¿½
+	 * <p>ï¿½ï¿½ï¿½İ¿Î³ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½Î³ï¿½IDï¿½ï¿½Í¨ï¿½ï¿½ï¿½Î³ï¿½IDï¿½ï¿½È¡ï¿½à¼¶ï¿½Ğ±ï¿½<br>
 	 * @author yexiaona
-	 * @param courseName ¿Î³ÌÃû³Æ
-	 * @return List<ClassBO> °à¼¶ÁĞ±í
+	 * @param courseName ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * @return List<ClassBO> ï¿½à¼¶ï¿½Ğ±ï¿½
 	 * @see xmu.crms.service.CourseService#listCourseByCourseName(String courseName)
-	 * @see xmu.crms.service.ClassService#listClassByCourseId(BigInteger courseId)
+	 * @see xmu.crms.service.ClassService#listClassByCourseId (BigInteger courseId)
 	 */
 	private List<ClassBO> listClassByCourseName(String courseName)
 	{
@@ -91,13 +92,13 @@ public class ClassService {
 	}
 	
 	/**
-	 * °´½ÌÊ¦Ãû³Æ»ñÈ¡°à¼¶ÁĞ±í
-	 * <p>¸ù¾İ½ÌÊ¦Ãû³Æ»ñÈ¡¿Î³ÌID£¬Í¨¹ı¿Î³ÌID»ñÈ¡°à¼¶ÁĞ±í<br>
+	 * ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½Æ»ï¿½È¡ï¿½à¼¶ï¿½Ğ±ï¿½
+	 * <p>ï¿½ï¿½ï¿½İ½ï¿½Ê¦ï¿½ï¿½ï¿½Æ»ï¿½È¡ï¿½Î³ï¿½IDï¿½ï¿½Í¨ï¿½ï¿½ï¿½Î³ï¿½IDï¿½ï¿½È¡ï¿½à¼¶ï¿½Ğ±ï¿½<br>
 	 * @author yexiaona
-	 * @param teacherName ½ÌÊ¦Ãû³Æ
-	 * @return List<ClassBO> °à¼¶ÁĞ±í
+	 * @param teacherName ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
+	 * @return List<ClassBO> ï¿½à¼¶ï¿½Ğ±ï¿½
 	 * @see xmu.crms.service.CourseService#listCourseByTeacherName(String teacherName)
-	 * @see xmu.crms.service.ClassService#listClassByCourseId(BigInteger courseId)
+	 * @see xmu.crms.service.ClassService#listClassByCourseId (BigInteger courseId)
 	 */
 	private List<ClassBO> listClassByTeacherName(String teacherName)
 	{
@@ -106,10 +107,10 @@ public class ClassService {
 	}
 	
 	/**
-	 * ¸ù¾İ½ÌÊ¦ID»ñÈ¡°à¼¶ÁĞ±í
+	 * ï¿½ï¿½ï¿½İ½ï¿½Ê¦IDï¿½ï¿½È¡ï¿½à¼¶ï¿½Ğ±ï¿½
 	 * @author yexiaona
-	 * @param userId ½ÌÊ¦ID
-	 * @return List<ClassBO> °à¼¶ÁĞ±í
+	 * @param userId ï¿½ï¿½Ê¦ID
+	 * @return List<ClassBO> ï¿½à¼¶ï¿½Ğ±ï¿½
 	 * @see xmu.crms.service.CourseService#listCourseByUserId(BigInteger userId)
 	 */
 	private List<ClassBO> listClassByUserId(BigInteger userId)
@@ -119,10 +120,10 @@ public class ClassService {
 	}
 	
 	/**
-	 * ¸ù¾İ¿Î³ÌID»ñµÃ°à¼¶ÁĞ±í
+	 * ï¿½ï¿½ï¿½İ¿Î³ï¿½IDï¿½ï¿½Ã°à¼¶ï¿½Ğ±ï¿½
 	 * @author yexiaona
-	 * @param courseId ¿Î³ÌID
-	 * @return List<ClassBO> °à¼¶ÁĞ±í
+	 * @param courseId ï¿½Î³ï¿½ID
+	 * @return List<ClassBO> ï¿½à¼¶ï¿½Ğ±ï¿½
 	 */
 	private List<ClassBO> listClassByCourseId(BigInteger courseId)
 	{
@@ -131,11 +132,11 @@ public class ClassService {
 	}
 	
 	/**
-	 * °´°à¼¶id»ñÈ¡°à¼¶ÏêÇé
-	 * <p>¸ù¾İ°à¼¶id»ñÈ¡°à¼¶<br>
+	 * ï¿½ï¿½ï¿½à¼¶idï¿½ï¿½È¡ï¿½à¼¶ï¿½ï¿½ï¿½ï¿½
+	 * <p>ï¿½ï¿½ï¿½İ°à¼¶idï¿½ï¿½È¡ï¿½à¼¶<br>
 	 * @author yexiaona
-	 * @param classId °à¼¶ID
-	 * @return ClassBO °à¼¶
+	 * @param classId ï¿½à¼¶ID
+	 * @return ClassBO ï¿½à¼¶
 	 */
 	private ClassBO getClassByClassId(BigInteger classId)
 	{
@@ -144,11 +145,11 @@ public class ClassService {
 	}
 	
 	/**
-	 * °´°à¼¶idºÍ°à¼¶ĞŞ¸Ä°à¼¶ĞÅÏ¢
-	 * <p>¸ù¾İ°à¼¶idĞŞ¸Ä°à¼¶ĞÅÏ¢<br>
+	 * ï¿½ï¿½ï¿½à¼¶idï¿½Í°à¼¶ï¿½Ş¸Ä°à¼¶ï¿½ï¿½Ï¢
+	 * <p>ï¿½ï¿½ï¿½İ°à¼¶idï¿½Ş¸Ä°à¼¶ï¿½ï¿½Ï¢<br>
 	 * @author yexiaona
-	 * @param classId °à¼¶ID
-	 * @return boolean °à¼¶ĞŞ¸ÄÊÇ·ñ³É¹¦Çé¿ö
+	 * @param classId ï¿½à¼¶ID
+	 * @return boolean ï¿½à¼¶ï¿½Ş¸ï¿½ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½ï¿½
 	 * @see xmu.crms.service.?????????????#updateScoreRuleById(BigInteger scoreRuleId)
 	 */
 	private boolean updateClassByClassId(BigInteger classId)
@@ -158,11 +159,11 @@ public class ClassService {
 	}
 	
 	/**
-	 * °´°à¼¶idÉ¾³ı°à¼¶
-	 * <p>¸ù¾İ°à¼¶idÉ¾³ı°à¼¶<br>
+	 * ï¿½ï¿½ï¿½à¼¶idÉ¾ï¿½ï¿½ï¿½à¼¶
+	 * <p>ï¿½ï¿½ï¿½İ°à¼¶idÉ¾ï¿½ï¿½ï¿½à¼¶<br>
 	 * @author yexiaona
-	 * @param classId °à¼¶ID
-	 * @return boolean °à¼¶É¾³ıÊÇ·ñ³É¹¦Çé¿ö
+	 * @param classId ï¿½à¼¶ID
+	 * @return boolean ï¿½à¼¶É¾ï¿½ï¿½ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½ï¿½
 	 * @see xmu.crms.service.?????????????#deleteScoreRuleById(BigInteger scoreRuleId)
 	 * @see xmu.crms.service.ClassService#deleteCourseSelectionById(BigInteger classId,User user)
 	 */
@@ -173,12 +174,12 @@ public class ClassService {
 	}
 	
 	/**
-	 * Ñ§Éú°´°à¼¶idÑ¡Ôñ°à¼¶
-	 * <p>¸ù¾İ°à¼¶idºÍÓÃ»§idĞÂÔöÑ¡¿Î¼ÇÂ¼<br>
+	 * Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½à¼¶idÑ¡ï¿½ï¿½à¼¶
+	 * <p>ï¿½ï¿½ï¿½İ°à¼¶idï¿½ï¿½ï¿½Ã»ï¿½idï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½Î¼ï¿½Â¼<br>
 	 * @author yexiaona
-	 * @param userId ÓÃ»§id
-	 * @param classId °à¼¶id
-	 * @return url Ñ¡¿Îurl
+	 * @param userId ï¿½Ã»ï¿½id
+	 * @param classId ï¿½à¼¶id
+	 * @return url Ñ¡ï¿½ï¿½url
 	 */
 	private String insertCourseSelectionById(BigInteger userId,BigInteger classId)
 	{
@@ -187,12 +188,12 @@ public class ClassService {
 	}
 	
 	/**
-	 * Ñ§Éú°´°à¼¶idÈ¡ÏûÑ¡Ôñ°à¼¶
-	 * <p>¸ù¾İ°à¼¶idºÍÓÃ»§idÉ¾³ıÑ¡¿Î¼ÇÂ¼¼°Óë¸Ã°à¼¶Ïà¹ØµÄĞÅÏ¢<br>
+	 * Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½à¼¶idÈ¡ï¿½ï¿½Ñ¡ï¿½ï¿½à¼¶
+	 * <p>ï¿½ï¿½ï¿½İ°à¼¶idï¿½ï¿½ï¿½Ã»ï¿½idÉ¾ï¿½ï¿½Ñ¡ï¿½Î¼ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ã°à¼¶ï¿½ï¿½Øµï¿½ï¿½ï¿½Ï¢<br>
 	 * @author yexiaona
-	 * @param userId ÓÃ»§id
-	 * @param classId °à¼¶id
-	 * @return boolean È¡Ïû°à¼¶ÊÇ·ñ³É¹¦
+	 * @param userId ï¿½Ã»ï¿½id
+	 * @param classId ï¿½à¼¶id
+	 * @return boolean È¡ï¿½ï¿½ï¿½à¼¶ï¿½Ç·ï¿½É¹ï¿½
 	 */
 	private boolean deleteCourseSelectionById(BigInteger userId,BigInteger classId)
 	{
@@ -201,12 +202,12 @@ public class ClassService {
 	}
 	
 	/**
-	 * ÀÏÊ¦»ñÈ¡¸Ã°à¼¶Ç©µ½¡¢·Ö×é×´Ì¬
-	 * <p>¸ù¾İÌÖÂÛ¿Îid¼°°à¼¶id£¬»ñµÃ¸Ã°à¼¶µÄÇ©µ½¡¢·Ö×é×´Ì¬<br>
+	 * ï¿½ï¿½Ê¦ï¿½ï¿½È¡ï¿½Ã°à¼¶Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	 * <p>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û¿ï¿½idï¿½ï¿½ï¿½à¼¶idï¿½ï¿½ï¿½ï¿½Ã¸Ã°à¼¶ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬<br>
 	 * @author yexiaona
-	 * @param seminarId ÌÖÂÛ¿Îid
-	 * @param classid °à¼¶id
-	 * @return classBO °à¼¶
+	 * @param seminarId ï¿½ï¿½ï¿½Û¿ï¿½id
+	 * @param classid ï¿½à¼¶id
+	 * @return classBO ï¿½à¼¶
 	 * @see xmu.crms.service.GroupService#listGroupBySeminarId(BigInteger seminarId)
 	 */
 	private ClassBO getCallGroupStatusById(BigInteger seminarId,BigInteger classId)
@@ -216,13 +217,13 @@ public class ClassService {
 	}
 	
 	/**
-	 * ĞÂ½¨°à¼¶
-	 * <p>¸ù¾İ½ÌÊ¦idºÍ¿Î³ÌidĞÂ½¨°à¼¶<br>
+	 * ï¿½Â½ï¿½ï¿½à¼¶
+	 * <p>ï¿½ï¿½ï¿½İ½ï¿½Ê¦idï¿½Í¿Î³ï¿½idï¿½Â½ï¿½ï¿½à¼¶<br>
 	 * @author yexiaona
-	 * @param userId ½ÌÊ¦id
-	 * @param courseId ¿Î³Ìid
-	 * @param List<userId> Ñ§ÉúÁĞ±í
-	 * @return ClassBO °à¼¶
+	 * @param userId ï¿½ï¿½Ê¦id
+	 * @param courseId ï¿½Î³ï¿½id
+	 * @param List<userId> Ñ§ï¿½ï¿½ï¿½Ğ±ï¿½
+	 * @return ClassBO ï¿½à¼¶
 	 * @see xmu.crms.service.ClassService#insertCourseSelectionById(BigInteger userId,BigInteger classId)
 	 */
 	private ClassBO insertClassById(BigInteger userId,BigInteger courseId)
