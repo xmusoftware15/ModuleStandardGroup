@@ -7,16 +7,18 @@ import java.util.List;
 import xmu.crms.bo.UserBO;
 
 /**
- * @author qinlingyun
+ * @author Qinlingyun
  * @version 1.00
  */
 public class UserService {
+
+
 	/**
 	 * 方法简述.
 	 * <p>获取讨论课所在的班级的出勤学生名单<br>
 	 * @param seminarId 讨论课ID
 	 * @param classId 班级ID
-	 * @return List<User> 处于出勤状态的学生的列表
+	 * @return list 处于出勤状态的学生的列表
 	 */
 	private List listPresentStudent(BigInteger seminarId, BigInteger classId) {
 		
@@ -52,7 +54,7 @@ public class UserService {
 	 * <p>获取讨论课所在班级缺勤学生名单<br>
 	 * @param seminarId 讨论课ID
 	 * @param classId 班级ID
-	 * @return List<User> 处于缺勤状态的学生列表
+	 * @return list 处于缺勤状态的学生列表
 	 */
 	private List listAbsenceStudent(BigInteger seminarId,BigInteger classId) {
 
@@ -67,14 +69,16 @@ public class UserService {
 	 * 方法简述.
 	 * <p>根据用户Id获取用户的信息<br> 
 	 * @param UserId 用户Id
-	 * @return UserBO 用户信息
+	 * @return user 用户信息
 	 * @see SchoolService#getSchoolBySchoolId(BigInteger SchoolId)
 	 */
-	private UserBo getUserByUserId(BigInteger UserId) {
+	private UserBO getUserByUserId(BigInteger UserId) {
 		
 		/**SchoolService.getSchoolBySchoolId(BigInteger SchoolId);*/
 
-		return UserBO;
+		UserBO user = new UserBO();
+		
+		return user;
 		
 	}
 	
@@ -111,8 +115,10 @@ public class UserService {
 	 * @return user 该用户信息
 	 */
 	private UserBO signInWeChat(BigInteger UserId,String code,String state,String success_url) {
+
+		UserBO user = new UserBO();		
 		
-		return userBO;
+		return user;
 		
 	}
 	
@@ -125,7 +131,7 @@ public class UserService {
 	 */
 	private UserBO signInPhone(UserBO user) {
 		
-		return UserBO;
+		return user;
 		
 	};		
 
@@ -138,7 +144,7 @@ public class UserService {
 	 */
 	private UserBO signUpPhone(UserBO user) {
 		
-		return UserBO;
+		return user;
 		
 	}
 	
