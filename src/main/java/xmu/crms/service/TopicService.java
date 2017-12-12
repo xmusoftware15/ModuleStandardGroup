@@ -44,7 +44,6 @@ public class TopicService {
      * <p>删除topic<br>
      * @param topicId 要删除的topic的topicId
      * @param seminarId 要删除topic所属seminar的id
-     * @see SeminarGroupService
      * @return 是否成功
      */
     boolean deleteTopicByTopicId(BigInteger topicId,BigInteger seminarId){
@@ -65,8 +64,7 @@ public class TopicService {
     }
     
 	/**
-	 * 方法简述
-	 * <p>按seminarId获取Topic<br>  
+	 * 按seminarId获取Topic
 	 * @author zhouzhongjun
      * @param BigInteger seminarId 课程Id
 	 */
@@ -89,7 +87,7 @@ public class TopicService {
 	}
 	
 	/**
-	 * 方法简述.
+	 * 小组取消选择话题  
 	 * <p>小组取消选择话题  <br> 
 	 * <p>删除seminar_group_topic表的记录<br>
 	 * @author zhouzhongjun
@@ -103,14 +101,28 @@ public class TopicService {
 		return true;
 		
 	};	
+	/**
+	 * 按topicId删除SeminarGroupTopic表信息
+	 * @author zhouzhongjun
+     * @param BigInteger topicId 讨论课Id
+	 * @return true/false 是否成功删除
+	 */
+	boolean deleteSeminarGroupTopicByTopicId(BigInteger topicId) {
+		
+		
+		//删除自己
+		return true;
+	};
+	
 	
 	/**
-	 * 方法简述.
-	 * <p>按seminarId删除话题<br>  
+	 * 按seminarId删除话题
+	 * <p>根据seminarId获得topic信息，然后再根据topic删除seninargrouptopic信息和StudentScoreGroup信息，最后再根据删除topic信息<br>  
 	 * @author zhouzhongjun
      * @param BigInteger seminarId 讨论课Id
 	 *@see TopicService #listTopicBySeminarId(BigInteger seminarId)
-	 *@see StudentScoreGroupService   #deleteStudentScoreGroupByTopicId(BigInteger topicId)
+	 *@see TopicService #deleteSeminarGroupTopicByTopicId(BigInteger topicId)
+	 *@see GradeService   #deleteStudentScoreGroupByTopicId(BigInteger topicId)
 	 * @return true/false 是否成功删除
 	 */
 	boolean deleteTopicBySeminarId(BigInteger seminarId) {
