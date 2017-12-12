@@ -13,6 +13,7 @@ import xmu.crms.bo.GroupBO;
  *
  */
 public class GroupService {
+
 	/**
 	 * 根据讨论课Id获得属于该讨论课的所有小组信息
 	 * @author ZhouChulun
@@ -20,11 +21,7 @@ public class GroupService {
 	 * @return List<GroupBO> 所有group的信息
 	 */
 
-	private List<GroupBO> listGroupBySeminarId(BigInteger seminarId)  {
-        List<GroupBO> list;
-		//list = GroupDao.listGroupBySeminarId(BigInteger seminarId);
-		return null;
-	}
+
 
 	/**
 	 * 根据话题Id获得选择该话题的所有小组的信息
@@ -122,6 +119,7 @@ public class GroupService {
 		return true;
 	}
 	
+
 	/**
 	 * 按id获取小组.
 	 * <p>通过学生id和班级id获取学生所在的班级固定小组<br>
