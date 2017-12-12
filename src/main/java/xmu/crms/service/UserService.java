@@ -113,7 +113,7 @@ public class UserService {
 	 * @return userId 用户ID
 	 */
 	private BigInteger getUserIdByUserName(String userName) {
-		
+		BigInteger userId=new BigInteger("100");
 		return userId;
 	}
 	

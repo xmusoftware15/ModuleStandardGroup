@@ -90,18 +90,6 @@ public class CourseService {
 		return true;
 	};
 	
-	/**
-	 * 方法简述
-	 * <p>根据课程名称获取课程列表<br>
-	 * @author yexiaona
-	 * @param String courseName
-	 * @return List<CourseBO> 课程列表
-	 */
-	private List<CourseBO> listCourseByCourseName(String courseName)
-	{
-		List<CourseBO> list=new ArrayList<CourseBO>();
-		return list;
-	}
 	
 	/**
 	 * 方法简述

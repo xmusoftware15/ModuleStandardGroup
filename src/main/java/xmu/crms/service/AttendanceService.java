@@ -20,7 +20,7 @@ public class AttendanceService {
 	 * @param latitude 纬度
 	 * @return true（添加签到信息成功）/false（添加签到信息未成功）
 	 */
-	boolean insertAttendanceById(BigInteger classId, BigInteger seminarId, BigInteger userId， double longitude, double latitude)
+	boolean insertAttendanceById(BigInteger classId, BigInteger seminarId, BigInteger userId,double longitude, double latitude)
 	{
 		
 		if(true) 
