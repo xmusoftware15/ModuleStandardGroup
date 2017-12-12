@@ -1,4 +1,5 @@
 package xmu.crms.service;
+<<<<<<< HEAD
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -7,6 +8,9 @@ import java.util.List;
 import xmu.crms.bo.CourseBO;
 import xmu.crms.bo.UserBO;
 
+=======
+import java.math.BigInteger;
+>>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
 /**
  * 
  * @author ModuleStandardGroup
@@ -14,6 +18,7 @@ import xmu.crms.bo.UserBO;
  *
  */
 public class CourseService {
+<<<<<<< HEAD
 	/**
 	 * æ–¹æ³•ç®€è¿°.
 	 * <p>æŒ‰userIdè·å–ä¸å½“å‰ç”¨æˆ·ç›¸å…³è”çš„è¯¾ç¨‹åˆ—è¡¨<br> 
@@ -86,4 +91,34 @@ public class CourseService {
 		//åˆ é™¤è‡ªå·±
 		return true;
 	};
+=======
+	
+	/**
+	 * °´¿Î³ÌÃû»ñÈ¡¿Î³Ì
+	 * <p>¸ù¾İ¿Î³ÌÃû³Æ»ñÈ¡¿Î³Ì<br>
+	 * @author yexiaona
+	 * @param courseName ¿Î³ÌÃû³Æ
+	 * @return List<CourseBO> ¿Î³ÌÁĞ±í
+	 */
+	private List<CourseBO> listCourseByCourseName(String courseName)
+	{
+		List<CourseBO> list=new ArrayList<CourseBO>();
+		return list;
+	}
+	
+	/**
+	 * °´½ÌÊ¦Ãû³Æ»ñÈ¡¿Î³Ì
+	 * <p>¸ù¾İ½ÌÊ¦Ãû³Æ»ñÈ¡½ÌÊ¦ID£¬¸ù¾İ½ÌÊ¦ID»ñÈ¡¿Î³ÌID<br>
+	 * @author yexiaona
+	 * @param teacherName ½ÌÊ¦Ãû³Æ
+	 * @return List<CourseBO> ¿Î³ÌÁĞ±í
+	 * @see xmu.crms.service.CourseService#listCourseByUserId(BigInteger userId)
+	 */
+	private List<CourseBO> listCourseByTeacherName(String teacherName)
+	{
+		List<CourseBO> list=new ArrayList<CourseBO>();
+		return list;
+	}
+
+>>>>>>> 97c1cc349b0c55a1dfa9ed03e7faf5f0a534cdbf
 }
