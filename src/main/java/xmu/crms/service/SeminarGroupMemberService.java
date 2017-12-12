@@ -53,4 +53,17 @@ public class SeminarGroupMemberService {
     	List<UserBO> userBOs=null;
     	return userBOs;
     }
+    
+	/**
+	 * 查询讨论课小组队长id.
+	 * ＜p＞按照讨论课小组id查询该小组的队长id<br>*
+	 * @author YeHongjie
+	 * @param groupId 要查询的讨论课小组id
+	 * @return BigInteger 讨论课小组队长id
+	 */
+    BigInteger getSeminarGroupLeaderByGroupId(BigInteger groupId)
+    {
+    	BigInteger leaderId=null;
+    	return leaderId;
+    }
 }
