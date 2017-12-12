@@ -13,13 +13,12 @@ import java.util.List;
 public class GradeService {
 
 	/**
-	 * 方法简述.
-	 * <p>按topicId删除学生打分表<br>  
+	 * 按topicId删除学生打分表
 	 * @author zhouzhongjun
      * @param BigInteger topicId 话题Id
      *  @return true/false 是否成功删除
 	 */
-	boolean deleteStudentScoreGroupByTopicId(BigInteger topicId) {
+	private boolean deleteStudentScoreGroupByTopicId(BigInteger topicId) {
 		
 		//删除自己
 		return true;

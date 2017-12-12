@@ -14,8 +14,7 @@ import xmu.crms.bo.ClassBO;
  */
 public class ClassService {
 	/**
-	 * 方法简述.
-	 * <p>按classId删除ClassSelection<br>  
+	 * 方法简述按classId删除CourseSelection表的一条记录 
 	 * @author zhouzhongjun
      * @param BigInteger classId 班级Id
      * @return true/false 是否成功删除
@@ -197,5 +196,21 @@ public class ClassService {
 		ClassBO classBO=new ClassBO();
 		return classBO;
 	}
+	
+	/**
+	 * 按courseId删除Class
+	 * <p>先根据CourseId获得所有的class的信息，然后根据class信息删除courseSelection表的记录，然后再根据courseId和classId删除ScoureRule表记录，再调用根据classId删除固定分组，最后再将班级的信息删除<br>  
+	 * @author zhouzhongjun
+     * @param BigInteger courseId 课程Id
+	 *@see ClassService  #listClassByCourseId(BigInteger courseId)
+	 *@see ClasssService   #deleteClasssSelectionByClassId(BigInteger classId)
+	 *@see ScoreRuleService  #deleteScoreRuleById(BigInteger CourseId,BigInteger ClassId)
+	 *@see FixGroupService  #deleteFixGroupByClassId(BigInteger ClassId)
+	 */
+	boolean deleteClassByCourseId(BigInteger courseId) {
+			
+		//删除自己
+		return true;
+	};
 
 }

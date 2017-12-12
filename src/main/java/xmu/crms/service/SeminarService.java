@@ -19,8 +19,7 @@ public class SeminarService {
 
 	
 	/**
-	 * 方法简述.
-	 * <p>按courseId获取Seminar<br>  
+	 * 按courseId获取Seminar
 	 * @author zhouzhongjun
      * @param BigInteger courseId 课程Id
      * @return List<SeminarBO> 讨论课列表
@@ -32,8 +31,8 @@ public class SeminarService {
 	
 	
 	/**
-	 * 方法简述.
-	 * <p>按courseId删除Seminar<br>  
+	 * 按courseId删除Seminar
+	 * <p>先根据CourseId获得所有的seminar的信息，然后根据seminar信息删除相关topic的记录，然后再根据SeminarId删除SeminarGroup表记录,最后再将seminar的信息删除<br>  
 	 * @author zhouzhongjun
      * @param BigInteger courseId 课程Id
 	 *@see SeminarService #listSemiarByCourseId(BigInteger courseId)
