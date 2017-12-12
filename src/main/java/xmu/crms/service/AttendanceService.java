@@ -24,7 +24,10 @@ public class AttendanceService {
 	 * @param latitude 纬度
 	 * @return true（添加签到信息成功）/false（添加签到信息未成功）
 	 */
+<<<<<<< HEAD
+=======
 
+>>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
 	boolean insertAttendanceById(BigInteger classId, BigInteger seminarId, BigInteger userId, double longitude, double latitude)
 	{
 		
