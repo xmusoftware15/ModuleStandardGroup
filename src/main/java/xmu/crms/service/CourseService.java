@@ -1,4 +1,4 @@
-package xmu.crms.service;
+﻿package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -98,6 +98,7 @@ public class CourseService {
 	 * @author yexiaona
 	 * @param courseName 课程名称
 	 * @return List<CourseBO> 课程列表
+
 	 * @see CourseService #listCourseByCourseName(String courseName)
 	 * @see CourseService #getCourseByCourseId(BigInteger courseId)
 	 */
