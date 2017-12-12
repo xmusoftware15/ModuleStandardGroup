@@ -90,12 +90,18 @@ public class CourseService {
 		return true;
 	};
 	
+	
 	/**
 	 * 方法简述
 	 * <p>根据课程名称获取课程列表<br>
 	 * @author yexiaona
 	 * @param courseName 课程名称
 	 * @return List<CourseBO> 课程列表
+<<<<<<< HEAD
+=======
+	 * @see CourseService #listCourseByCourseName(String courseName)
+	 * @see CourseService #getCourseByCourseId(BigInteger courseId)
+>>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
 	 */
 	private List<CourseBO> listCourseByCourseName(String courseName)
 	{
@@ -109,7 +115,12 @@ public class CourseService {
 	 * @author yexiaona
 	 * @param teacherName 教师名称
 	 * @return List<CourseBO> 课程列表
+<<<<<<< HEAD
 	 * @see xmu.crms.service.CourseService#listCourseByUserId(BigInteger userId)
+=======
+	 * @see UserService #listUserByUserName(String userName)
+	 * @see CourseService #listCourseByUserId(BigInteger userId)
+>>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
 	 */
 	private List<CourseBO> listCourseByTeacherName(String teacherName)
 	{

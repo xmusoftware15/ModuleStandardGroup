@@ -108,6 +108,22 @@ public class UserService {
 		
 	}
 	
+<<<<<<< HEAD
+=======
+
+	/**
+	 * 根据用户名获取用户ID.
+	 * <p>根据用户名获取用户ID<br>
+	 * @author qinlingyun
+	 * @param userName 用户名
+	 * @return userId 用户ID
+	 */
+	private BigInteger getUserIdByUserName(String userName) {
+		BigInteger userId=new BigInteger("100");
+		return userId;
+	}
+	
+>>>>>>> d108dbcd1dba374eaf2b8594dbb05d3388203ae4
 	
 	/**
 	 * 根据用户ID修改用户信息.
