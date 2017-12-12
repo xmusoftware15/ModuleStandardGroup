@@ -42,7 +42,7 @@ public class UserService {
 	 * <p>根据班级id，讨论课id获取当堂课签到信息
 	 * @author LiuAiqi
 	 * @param classId 班级的id
-	 * @return List<AttendanceBO> 当堂课签到信息
+	 * @return list 当堂课签到信息
 	 */
 	private List<AttendanceBO> listAttendanceById(BigInteger classId)
 	{

@@ -171,11 +171,10 @@ public class ClassService {
 	 * <p>根据讨论课id及班级id，获得该班级的签到、分组状态<br>
 	 * @author yexiaona
 	 * @param seminarId 讨论课id
-	 * @param classId 班级id
 	 * @return classBO 班级
-	 * @see GroupService #listGroupBySeminarId(BigInteger seminarId,BigInteger classId)
+	 * @see SeminarGroupService #listSeminarGroupBySeminarId(BigInteger seminarId)
 	 */
-	private ClassBO getCallGroupStatusById(BigInteger seminarId,BigInteger classId)
+	private ClassBO getCallGroupStatusById(BigInteger seminarId)
 	{
 		ClassBO classBO=new ClassBO();
 		return classBO;

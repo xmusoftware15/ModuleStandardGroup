@@ -100,7 +100,7 @@ public class SeminarGroupService {
 	 * @author zhouzhongjun
      * @param seminarId 讨论课Id
 	 * @see SeminarGroupService #listSeminarGroupBySeminarId(BigInteger seminarId)
-	 * @see SeminarGroupSerice #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
+	 * @see SeminarGroupService #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
 	 * @return true删除成功 false删除失败
 	 */
 	boolean deleteSeminarGroupBySeminarId(BigInteger seminarId) {
@@ -129,7 +129,7 @@ public class SeminarGroupService {
 	 * @author YeHongjie
 	 * @param groupId 讨论课小组的id
 	 * @return Boolean 若创建成功返回true，失败返回false
-	 * @see SeminarGroupMemberService #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
+	 * @see SeminarGroupService #deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId)
 	 */
     Boolean deleteSeminarGroupByGroupId(BigInteger groupId)
     {
@@ -141,9 +141,9 @@ public class SeminarGroupService {
 	 * 查询讨论课小组.
 	 * ＜p＞按照id查询某一讨论课小组的信息（包括成员）<br>*
 	 * @author YeHongjie
-	 * @param groupID 小组的id
+	 * @param groupId 小组的id
 	 * @return seminarGroupBO 讨论课小组对象，若未找到相关小组返回空(null)
-	 * @see SeminarGroupMemberService #listSeminarGroupMemberByGroupId(BigInteger groupId)
+	 * @see SeminarGroupService #listSeminarGroupMemberByGroupId(BigInteger groupId)
 	 */
     SeminarGroupBO getSeminarGroupByGroupId(BigInteger groupId)
     {
@@ -166,6 +166,7 @@ public class SeminarGroupService {
     	BigInteger groupId=null;
     	return groupId;
     }
+   
     
     /**
 	 * 获取学生所在讨论课队长.
@@ -175,7 +176,7 @@ public class SeminarGroupService {
 	 * @param seminarId 讨论课id
 	 * @return BigInteger 讨论课小组的队长id，若未找到相关小组队长返回空(null)
 	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
-	 * @see SeminarGroupMemberService #getSeminarGroupLeaderByGroupId(BigInteger groupId)
+	 * @see SeminarGroupService #getSeminarGroupLeaderByGroupId(BigInteger groupId)
 	 */
     BigInteger getSeminarGroupLeaderById(BigInteger userId, BigInteger seminarId)
     {

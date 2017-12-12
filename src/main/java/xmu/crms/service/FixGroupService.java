@@ -1,10 +1,9 @@
-﻿package xmu.crms.service;
+package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.List;
 
-import xmu.crms.bo.FixGroupBO;
-import xmu.crms.bo.UserBO;
+import xmu.crms.bo.*;
 
 /**
  * 
@@ -168,8 +167,7 @@ public class FixGroupService {
 	 * @param userId 学生id
 	 * @param classId 班级id
 	 * @return GroupBO 返回班级固定小组的信息 
-	 * @see xmu.crms.service.UserService#listFixedMembersById(BigInteger userId)
-	 * @see xmu.crms.service.UserService#getUserByUserId(BigInteger UserId)
+	 * @see UserService#getUserByUserId(BigInteger UserId)
 	 */
 	private GroupBO getFixedGroupById(BigInteger userId,BigInteger classId){
 		//rs = UserService.listMembersById(BigInteger userId);

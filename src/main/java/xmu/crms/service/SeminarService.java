@@ -1,7 +1,7 @@
-﻿package xmu.crms.service;
+package xmu.crms.service;
 
 import java.math.BigInteger;
-
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +21,8 @@ public class SeminarService {
 	/**
 	 * 按courseId获取Seminar.
 	 * @author zhouzhongjun
-     * @param BigInteger courseId 课程Id
-     * @return List<SeminarBO> 讨论课列表
+     * @param courseId 课程Id
+     * @return null 讨论课列表
 	 */
 	List<SeminarBO> listSeminarByCourseId(BigInteger courseId) {
 			
@@ -34,11 +34,11 @@ public class SeminarService {
 	 * 按courseId删除Seminar.
 	 * <p>先根据CourseId获得所有的seminar的信息，然后根据seminar信息删除相关topic的记录，然后再根据SeminarId删除SeminarGroup表记录,最后再将seminar的信息删除<br>  
 	 * @author zhouzhongjun
-     * @param BigInteger courseId 课程Id
+     * @param courseId 课程Id
 	 *@see SeminarService #listSemiarByCourseId(BigInteger courseId)
 	 *@see TopicService   #deleteTopicBySeminarId(BigInteger seminarId)
 	 *@see SeminarGroupService  #deleteSeminarGroupBySeminarId(BigInteger seminarId)
-	 * @return true/false 是否成功删除
+	 * @return true删除成功 false删除失败
 	 */
 	boolean deleteSeminarByCourseId(BigInteger courseId) {
 			
@@ -51,7 +51,7 @@ public class SeminarService {
 	 * ＜p＞通过学生用户id和讨论课id获得学生当前的讨论课信息<br>* (此学生是否是队长，当前讨论课是否处于签到状态，当前讨论课是否可以选题，当前讨论课的组队方式).
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
-	 * @param classId 班级的id
+	 * @param userId 用户的id
 	 * @return 当前讨论课的信息
 	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
 	 */
@@ -119,8 +119,8 @@ public class SeminarService {
 	 * ＜p＞用户（老师）在指定的课程下创建讨论课<br>*
 	 * @author YeHongjie
 	 * @param courseId 课程的id
-	 * @param SeminarBO 讨论课信息
-	 * @return BigInteger 若创建成功返回创建的讨论课id，失败则返回-1
+	 * @param seminarBO 讨论课信息
+	 * @return seminarId 若创建成功返回创建的讨论课id，失败则返回-1
 	 */
 	BigInteger insertSeminarByCourseId(BigInteger courseId, SeminarBO seminarBO)
 	{
@@ -132,7 +132,7 @@ public class SeminarService {
         /**
 	 * 根据讨论课Id获得属于该讨论课的所有小组信息
 	 * @param seminarId 讨论课的id
-	 * @return List<GroupBO> 所有group的信息
+	 * @return null 所有group的信息
 	 */
 
 	private List<GroupBO> listGroupBySeminarId(BigInteger seminarId)  {
@@ -145,7 +145,7 @@ public class SeminarService {
         /**
 	 * 根据话题Id获得选择该话题的所有小组的信息
 	 * @param  topicId(话题的id)
-	 * @return  List<GroupBO> 所有选择该话题的所有group的信息
+	 * @return  null 所有选择该话题的所有group的信息
 	 */
 	private List<GroupBO> listGroupByTopicId(BigInteger topicId) {
         List<GroupBO> list;
@@ -155,9 +155,9 @@ public class SeminarService {
 
         /**
      * 根据讨论课Id及用户id，获得该用户所在的讨论课的小组的信息
-     * @param BigInteger seminarId (讨论课的id)
-     * @param BigInteger userId（用户的id）
-     * @return GroupBO Group的相关信息
+     * @param seminarId (讨论课的id)
+     * @param userId（用户的id）
+     * @return null Group的相关信息
      */
      GroupBO getSeminarGroupById(BigInteger seminarId,BigInteger userId){
           GroupBO groupBO;
@@ -176,7 +176,7 @@ public class SeminarService {
      * @author aixing
      * @param groupId 要修改的group的Id
      * @param group 新的group信息
-     * @return
+     * @return bi
      */
     BigInteger updateSeminarGroupById(BigInteger groupId,GroupBO group){
         BigInteger bi=null;

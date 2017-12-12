@@ -38,21 +38,21 @@ public class GradeService {
     	
     	return list;
     }
+    
 	/**
 	 * 提交对其他小组的打分.
 	 * 
 	 * @author Huhui
-	 * @param seminar_group_id 讨论课组id
 	 * @param userId 用户id
+	 * @param seminarId 讨论课Id
+	 * @param groupId 小组Id
 	 * @param grade 分数
 	 * @return true 提交成功 false 提交失败
-	 * @see GroupService#selectGroupTopicByGroupId()
 	 */
-	private boolean insertGroupGradeByUserId(BigInteger seminar_group_id, BigInteger userId,BigInteger grade) {
-		//rs=GroupService.selectGroupTopicByGroupId(seminar_group_id)
-		//for group_topic_Id in rs;
-		// GradeDAO.insertUserScoreGroupById(BigInteger group_topic_Id, BigInteger userId,BigInteger grade)
-		return true;
+	private boolean insertGroupGradeByUserId(BigInteger userId,BigInteger seminarId,BigInteger groupId,BigInteger grade) {
+	    
+	    //插入打分表
+	    return true;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class GradeService {
 	 * @author qinlingyun
 	 * @param userId 用户id
 	 * @return list 讨论课成绩列表
-	 * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId);
+	 * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId)
 	 */
 	private List<BigInteger> listSeminarGradeByStudentId(BigInteger userId) {
 		

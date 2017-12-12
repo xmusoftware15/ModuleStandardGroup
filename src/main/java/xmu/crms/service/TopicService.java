@@ -50,7 +50,7 @@ public class TopicService {
         //删除topic还要把每个选了这个topic的小组的选题属性修改为null
         //想找到选了这个topic的小组，首先通过seminarId获得该讨论课所有小组，遍历判断是否选了这个topic
         SeminarGroupService sg=new SeminarGroupService();
-        GroupService gs=new GroupService();
+        //GroupService gs=new GroupService();
         List<SeminarGroupBO> groups=sg.listSeminarGroupBySeminarId(seminarId);
         List<SeminarGroupBO> topic_group=new ArrayList<SeminarGroupBO>();
         //for g in groups
@@ -67,7 +67,8 @@ public class TopicService {
 	 * 按seminarId获取Topic.
 	 * <p>按seminarId获取Topic<br>  
 	 * @author zhouzhongjun
-     * @param BigInteger seminarId 课程Id
+     * @param seminarId 课程Id
+     * @return null
 	 */
 	List<TopicBO> listTopicBySeminarId(BigInteger seminarId) {
 			
@@ -92,9 +93,9 @@ public class TopicService {
 	 * <p>小组取消选择话题  <br> 
 	 * <p>删除seminar_group_topic表的记录<br>
 	 * @author zhouzhongjun
-     * @param BigInteger groupId 小组Id
-     * @param BigInteger topicId 话题Id
-	 * @return 是否成功取消选择话题
+     * @param groupId 小组Id
+     * @param topicId 话题Id
+	 * @return true删除成功 false删除失败
 	 */
 	private boolean deleteTopicById(BigInteger groupId,BigInteger topicId)  {
 		
@@ -105,8 +106,8 @@ public class TopicService {
 	/**
 	 * 按topicId删除SeminarGroupTopic表信息.
 	 * @author zhouzhongjun
-     * @param BigInteger topicId 讨论课Id
-	 * @return true/false 是否成功删除
+     * @param topicId 讨论课Id
+	 * @return true删除成功 false删除失败
 	 */
 	boolean deleteSeminarGroupTopicByTopicId(BigInteger topicId) {
 		
@@ -120,11 +121,11 @@ public class TopicService {
 	 * 按seminarId删除话题.
 	 * <p>根据seminarId获得topic信息，然后再根据topic删除seninargrouptopic信息和StudentScoreGroup信息，最后再根据删除topic信息
 	 * @author zhouzhongjun
-     * @param BigInteger seminarId 讨论课Id
+     * @param seminarId 讨论课Id
 	 *@see TopicService #listTopicBySeminarId(BigInteger seminarId)
 	 *@see TopicService #deleteSeminarGroupTopicByTopicId(BigInteger topicId)
 	 *@see GradeService   #deleteStudentScoreGroupByTopicId(BigInteger topicId)
-	 * @return true/false 是否成功删除
+	 * @return true删除成功 false删除失败
 	 */
 	boolean deleteTopicBySeminarId(BigInteger seminarId) {
 		
