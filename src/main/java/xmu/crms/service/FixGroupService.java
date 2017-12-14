@@ -192,20 +192,6 @@ public class FixGroupService {
 		return url;
 	}
 
-        /**
-	 * 将学生加入小组.
-	 * ＜p＞将用户加入指定的小组<br>*
-	 * @author YeHongjie
-	 * @param userId 学生的id
-	 * @param groupId 要加入小组的id
-	 * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
-	 */
-    BigInteger insertStudnetIntoGroup(BigInteger userId,BigInteger groupId)
-    {
-    	BigInteger recordId = BigInteger.valueOf(-1);
-    	return recordId;
-    }
-
     /**
      * 根据groupId修改group.
      * <p>根据groupId修改group<br>

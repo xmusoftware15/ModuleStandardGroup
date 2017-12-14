@@ -152,23 +152,6 @@ public class SeminarGroupService {
     }
     
     /**
-	 * 获取学生所在讨论课小组.
-	 * ＜p＞按照用户id和讨论课id获取学生所在讨论课小组id<br>*
-	 * @author YeHongjie
-	 * @param userId 用户的id
-	 * @param seminarId 讨论课id
-	 * @return BigInteger 讨论课小组的id，若未找到相关小组返回空(null)
-	 */
-    BigInteger getSeminarGroupById(BigInteger userId, BigInteger seminarId)
-    {
-    	//Maybe you need to use intersection while querying
-    	//if you have some advice, contract me@YeHonjie, thanks!
-    	BigInteger groupId=null;
-    	return groupId;
-    }
-   
-    
-    /**
 	 * 获取学生所在讨论课队长.
 	 * ＜p＞按照用户id和讨论课id获取学生所在讨论课小组队长<br>*
 	 * @author YeHongjie
@@ -220,7 +203,7 @@ public class SeminarGroupService {
      * @param group 新的group信息
      * @return
      */
-    BigInteger updateSeminarGroupById(BigInteger groupId,GroupBO group){
+    BigInteger updateSeminarGroupById(BigInteger groupId,SeminarGroupBO group){
         BigInteger bi=null;
         //修改此group
         return bi;
@@ -231,11 +214,11 @@ public class SeminarGroupService {
      * 根据讨论课Id及用户id，获得该用户所在的讨论课的小组的信息.
      * @param BigInteger seminarId (讨论课的id)
      * @param BigInteger userId（用户的id）
-     * @return GroupBO Group的相关信息
+     * @return SeminarGroupBO Group的相关信息
      */
-     GroupBO getSeminarGroupById(BigInteger seminarId,BigInteger userId){
-          GroupBO groupBO;
-          ResultSet rs;
+     SeminarGroupBO getSeminarGroupById(BigInteger seminarId,BigInteger userId){
+          SeminarGroupBO groupBO;
+          //ResultSet rs;
           //rs = GroupDao.listGroupBySeminarId(BigInteger seminarId);
           //for groupBO in rs
           //   if (GroupDao.(groupBO,userId)) //如果该用户在该小组中，则直接返回此小组的信息
@@ -246,11 +229,11 @@ public class SeminarGroupService {
     /**
 	 * 根据讨论课Id获得属于该讨论课的所有小组信息.
 	 * @param seminarId 讨论课的id
-	 * @return List<GroupBO> 所有group的信息
+	 * @return List<SeminarGroupBO> 所有group的信息
 	 */
 
-	private List<GroupBO> listGroupBySeminarId(BigInteger seminarId)  {
-        List<GroupBO> list;
+	private List<SeminarGroupBO> listGroupBySeminarId(BigInteger seminarId)  {
+        List<SeminarGroupBO> list;
 		//list = GroupDao.listGroupBySeminarId(BigInteger seminarId);
 		return null;
 	}
@@ -260,8 +243,8 @@ public class SeminarGroupService {
 	 * @param  topicId(话题的id)
 	 * @return  List<GroupBO> 所有选择该话题的所有group的信息
 	 */
-	private List<GroupBO> listGroupByTopicId(BigInteger topicId) {
-        List<GroupBO> list;
+	private List<SeminarGroupBO> listGroupByTopicId(BigInteger topicId) {
+        List<SeminarGroupBO> list;
 		//list = GroupDao. listGroupByTopicId(BigInteger topicId);
 		return null;
 	}
