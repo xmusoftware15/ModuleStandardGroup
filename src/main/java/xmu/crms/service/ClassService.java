@@ -143,13 +143,12 @@ public class ClassService {
 	 * @author yexiaona
 	 * @param userId 教师id
 	 * @param courseId 课程id
-	 * @return classBO 班级
-	 * @see ClassService #insertCourseSelectionById(BigInteger userId,BigInteger classId)
+	 * @return classId 班级Id
 	 */
-	private ClassBO insertClassById(BigInteger userId,BigInteger courseId)
+	private BigInteger insertClassById(BigInteger userId,BigInteger courseId)
 	{
-		ClassBO classBO=new ClassBO();
-		return classBO;
+		BigInteger classId=NULL;
+		return classId;
 	}
 	
 	/**
