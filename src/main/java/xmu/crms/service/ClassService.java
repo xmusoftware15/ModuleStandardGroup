@@ -8,7 +8,7 @@ import xmu.crms.bo.ClassBO;
 
 /**
  * 
- * @author ModuleStandardGroup
+ * @author YeXiaona
  * @version 1.00
  *
  */
@@ -35,49 +35,6 @@ public class ClassService {
 	 * @see ClassService #listClassByTeacherName(String teacherName)
 	 */
 	private List<ClassBO> listClassByName(String courseName,String teacherName)
-	{
-		List<ClassBO> list=new ArrayList<ClassBO>();
-		return list;
-	}
-	
-	/**
-	 * 按课程名称获取班级列表.
-	 * <p>根据课程名获取课程ID，通过课程ID获取班级列表<br>
-	 * @author yexiaona
-	 * @param courseName 课程名称
-	 * @return list 班级列表
-	 * @see CourseService #listCourseByCourseName(String courseName)
-	 * @see ClassService #listClassByCourseId(BigInteger courseId)
-	 */
-	private List<ClassBO> listClassByCourseName(String courseName)
-	{
-		List<ClassBO> list=new ArrayList<ClassBO>();
-		return list;
-	}
-	
-	/**
-	 * 按教师名称获取班级列表.
-	 * <p>根据教师名称获取课程ID，通过课程ID获取班级列表<br>
-	 * @author yexiaona
-	 * @param teacherName 教师名称
-	 * @return list 班级列表
-	 * @see CourseService #listCourseByTeacherName(String teacherName)
-	 * @see ClassService #listClassByCourseId(BigInteger courseId)
-	 */
-	private List<ClassBO> listClassByTeacherName(String teacherName)
-	{
-		List<ClassBO> list=new ArrayList<ClassBO>();
-		return list;
-	}
-	
-	/**
-	 * 根据教师ID获取班级列表.
-	 * @author yexiaona
-	 * @param userId 教师ID
-	 * @return list 班级列表
-	 * @see CourseService #listCourseByUserId(BigInteger userId)
-	 */
-	private List<ClassBO> listClassByUserId(BigInteger userId)
 	{
 		List<ClassBO> list=new ArrayList<ClassBO>();
 		return list;
