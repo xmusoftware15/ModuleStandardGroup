@@ -7,7 +7,7 @@ import xmu.crms.bo.*;
 
 
 /**
- * @author ModuleStandardGroup
+ * @author Aixing ZhouZhongjun
  * @version 1.00
  */
 
