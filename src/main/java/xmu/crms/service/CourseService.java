@@ -99,19 +99,6 @@ public class CourseService {
 		return list;
 	}
 	
-	/**
-	 * 根据教师名称列出课程名称.
-	 * <p>根据教师名称列出课程名称<br>
-	 * @author yexiaona
-	 * @param teacherName 教师名称
-	 * @return list 课程列表
-	 * @see UserService #listUserByUserName(String userName)
-	 * @see CourseService #listCourseByUserId(BigInteger userId)
-	 */
-	private List<CourseBO> listCourseByTeacherName(String teacherName)
-	{
-		List<CourseBO> list=new ArrayList<CourseBO>();
-		return list;
-	}
+
 
 }
