@@ -7,7 +7,7 @@ import xmu.crms.bo.*;
 
 /**
  * 
- * @author ModuleStandardGroup
+ * @author ZhouZhongjun YeHongjie Heqi Aixing
  * @version 1.00
  *
  */
@@ -169,7 +169,7 @@ public class FixGroupService {
 	 * @return GroupBO 返回班级固定小组的信息 
 	 * @see UserService#getUserByUserId(BigInteger UserId)
 	 */
-	private GroupBO getFixedGroupById(BigInteger userId,BigInteger classId){
+	private FixGroupBO getFixedGroupById(BigInteger userId,BigInteger classId){
 		//rs = UserService.listMembersById(BigInteger userId);
 		//for student_id in rs;
 		//UserService.UserBO getUserByUserId(BigInteger UserId)
