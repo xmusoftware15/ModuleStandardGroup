@@ -178,20 +178,6 @@ public class FixGroupService {
 		return groupBO;
 	}
 
-        /**
-	 * 小组按id选择话题.
-	 * <p>小组通过小组id和话题id选择讨论课的话题<br>
-	 * @author heqi
-	 * @param groupId 小组id
-	 * @param topicId 话题id
-	 * @return String 返回一个url
-	 */
-	private String insertTopicByGroupId(BigInteger groupId, BigInteger topicId){
-		//TopicDao.insertTopicByGroupId(BigInteger groupId, BigInteger topicId)
-		String url = null;
-		return url;
-	}
-
     /**
      * 根据groupId修改group.
      * <p>根据groupId修改group<br>
