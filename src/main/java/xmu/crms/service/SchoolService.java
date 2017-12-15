@@ -8,7 +8,7 @@ import xmu.crms.bo.SchoolBO;
 
 /**
  * 
- * @author ModuleStandardGroup
+ * @author LiuAiqi
  * @version 1.00
  *
  */
