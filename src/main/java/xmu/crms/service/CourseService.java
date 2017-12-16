@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import xmu.crms.bo.CourseBO;
 import xmu.crms.bo.UserBO;
+import xmu.crms.bo.ClassBO;
 
 
 /**
@@ -143,4 +144,3 @@ public class CourseService {
 	}
 }
 
-}
