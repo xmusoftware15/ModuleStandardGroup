@@ -20,7 +20,7 @@ public interface ScoreRuleService {
 		 * @param proportionId 评分规则id
 	     * @return Boolean 若删除成功则返回true，失败则返回false
 		 */
-		private boolean deleteScoreRule(BigInteger proportionId);
+		public boolean deleteScoreRule(BigInteger proportionId);
 		
 		/**
 		 * 按classId和CourseId删除ScoreRule.
@@ -29,7 +29,7 @@ public interface ScoreRuleService {
 	     * @param classId 班级Id
 	     * @return true删除成功 false删除失败
 		 */
-		private boolean deleteScoreRuleById(BigInteger courseId,BigInteger classId);
+		public boolean deleteScoreRuleById(BigInteger courseId,BigInteger classId);
 		
 		/**
 		 * 查询评分规则.
@@ -38,7 +38,7 @@ public interface ScoreRuleService {
 		 * @param proportionId 评分规则id
 	     * @return ProportionBO 返回评分规则，若未找到对应评分规则返回空（null)
 		 */
-		private ProportionsBO getScoreRule(BigInteger proportionId);
+		public ProportionsBO getScoreRule(BigInteger proportionId);
 		
 		/**
 		 * 新增评分规则.
@@ -47,7 +47,7 @@ public interface ScoreRuleService {
 	     * @param proportionsBO 评分规则
 	     * @return scoreRuleId 若创建成功则返回该评分规则的id，失败则返回-1
 		 */
-		private BigInteger insertScoreRule(ProportionsBO proportionsBO);
+		public BigInteger insertScoreRule(ProportionsBO proportionsBO);
 		
 		/**
 		 * 修改评分规则.
@@ -57,6 +57,6 @@ public interface ScoreRuleService {
 	     * @param proportionsBO 评分规则
 	     * @return state 若修改成功则返回true，失败则返回false
 		 */
-		private boolean updateScoreRule(BigInteger proportionId, ProportionsBO proportionsBO);
+		public boolean updateScoreRule(BigInteger proportionId, ProportionsBO proportionsBO);
 
 }
