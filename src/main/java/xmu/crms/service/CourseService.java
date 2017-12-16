@@ -93,7 +93,7 @@ public interface CourseService {
 	/**
 	 * 按教师名称获取班级列表.
 	 * <p>根据教师名称获取课程ID，通过课程ID获取班级列表<br>
-	 * @author yexiaona
+	 * @author YeXiaona
 	 * @param teacherName 教师名称
 	 * @return list 班级列表
 	 * @see CourseService #listCourseByTeacherName(String teacherName)
@@ -104,10 +104,11 @@ public interface CourseService {
 	
 	/**
 	 * 根据教师ID获取班级列表.  
-	 * @author yexiaona
+	 * @author YeXiaona
 	 * @param userId 教师ID
 	 * @return list 班级列表
 	 * @see CourseService #listCourseByUserId(BigInteger userId)
+	 * @see ClassService #listClassByCourseId(BigInteger courseId)
 	 */
 	public List<ClassBO> listClassByUserId(BigInteger userId);
 }
