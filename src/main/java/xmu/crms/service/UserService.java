@@ -25,7 +25,7 @@ public interface UserService {
 	 * @param latitude 纬度
 	 * @return true（添加签到信息成功）/false（添加签到信息未成功）
 	 * @exception InfoIllegalException 信息不合法，id格式错误 
-	 * @exception ClassNotFoundException 未找到班级
+	 * @exception ClassesNotFoundException 未找到班级
 	 * @exception SeminarNotFoundException 未找到讨论课
 	 */
 	public boolean insertAttendanceById(BigInteger classId, BigInteger seminarId, BigInteger userId, double longitude, double latitude);
@@ -38,7 +38,7 @@ public interface UserService {
 	 * @param seminarId 讨论课id
 	 * @return list 当堂课签到信息
 	 * @exception InfoIllegalException 信息不合法，id格式错误
-	 * @exception ClassNotFoundException 未找到班级
+	 * @exception ClassesNotFoundException 未找到班级
 	 * @exception SeminarNotFoundException 未找到讨论课
 	 */
 	public List<AttendanceBO> listAttendanceById(BigInteger classId, BigInteger seminarId);
@@ -124,7 +124,7 @@ public interface UserService {
 	 * @param nameBeginWith 姓名开头
 	 * @return list 用户列表
 	 * @exception InfoIllegalException 信息不合法
-	 * @exception ClassNotFoundException 未找到对应班级
+	 * @exception ClassesNotFoundException 未找到对应班级
 	 */	
 	public List listUserByClassId(BigInteger classId,String numBeginWith,String nameBeginWith);
 	
