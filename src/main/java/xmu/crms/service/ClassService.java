@@ -8,7 +8,7 @@ import xmu.crms.bo.ClassBO;
 
 /**
  * 
- * @author YeXiaona
+ * @author YeXiaona,ZhouZhongJun
  * @version 1.00
  *
  */
@@ -167,5 +167,41 @@ public class ClassService {
 		//删除自己
 		return true;
 	};
-
+	
+		/**
+		 * 按classId删除ScoreRule.
+		 * @author zhouzhongjun
+	     * @param classId 班级Id
+	     * @return true删除成功 false删除失败
+		 */
+		public boolean deleteScoreRuleById(BigInteger classId);
+		
+		/**
+		 * 查询评分规则.
+		 * <p>按id查询指定的评分规则<br>  
+		 * @author YeHongjie
+		 * @param classId 班级id
+	     * @return ProportionBO 返回评分规则，若未找到对应评分规则返回空（null)
+		 */
+		public ProportionsBO getScoreRule(BigInteger classId);
+		
+		/**
+		 * 新增评分规则.
+		 * <p>新增评分规则<br>  
+		 * @author YeHongjie
+		 *@param classId 班级Id
+	     * @param proportionsBO 评分规则
+	     * @return scoreRuleId 若创建成功则返回该评分规则的id，失败则返回-1
+		 */
+		public BigInteger insertScoreRule(BigInteger classId,ProportionsBO proportionsBO);
+		
+		/**
+		 * 修改评分规则.
+		 * <p>修改指定的评分规则<br>  
+		 * @author YeHongjie
+		 * @param classId 班级id
+	     * @param proportionsBO 评分规则
+	     * @return state 若修改成功则返回true，失败则返回false
+		 */
+		public boolean updateScoreRule(BigInteger classId, ProportionsBO proportionsBO);
 }
