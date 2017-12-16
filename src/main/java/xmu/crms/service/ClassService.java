@@ -147,7 +147,7 @@ public class ClassService {
 	 */
 	private BigInteger insertClassById(BigInteger userId,BigInteger courseId)
 	{
-		BigInteger classId=NULL;
+		BigInteger classId=null;
 		return classId;
 	}
 	
