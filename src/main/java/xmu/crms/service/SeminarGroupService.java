@@ -18,6 +18,7 @@ public interface SeminarGroupService {
 	
 	/**
 	 * 按seminarGroupId删除SeminarGroupMember信息.
+	 * <p>按seminarGroupId删除SeminarGroupMember信息<br>
 	 * @author zhouzhongjun
      * @param seminarGroupId 讨论课小组Id
      * @return true/false 是否成功删除
@@ -26,7 +27,7 @@ public interface SeminarGroupService {
 	
 	/**
 	 * 将学生加入讨论课小组.
-	 * <p>将用户加入指定的讨论课小组<br>*
+	 * <p>将用户加入指定的讨论课小组<br>
 	 * @author YeHongjie
 	 * @param userId 学生的id
 	 * @param groupId 要加入讨论课小组的id
@@ -42,7 +43,7 @@ public interface SeminarGroupService {
     
 	/**
 	 * 查询讨论课小组成员.
-	 * <p>按照讨论课小组id查询该小组的成员<br>*
+	 * <p>按照讨论课小组id查询该小组的成员<br>
 	 * @author YeHongjie
 	 * @param groupId 要查询的讨论课小组id
 	 * @return List 讨论课小组成员信息
@@ -66,7 +67,7 @@ public interface SeminarGroupService {
     
     /**
 	 * 查询讨论课小组队长id.
-	 * <p>按照讨论课小组id查询该小组的队长id<br>*
+	 * <p>按照讨论课小组id查询该小组的队长id<br>
 	 * @author YeHongjie
 	 * @param groupId 要查询的讨论课小组id
 	 * @return leaderId 讨论课小组队长id
@@ -79,6 +80,7 @@ public interface SeminarGroupService {
 	
 	/**
 	 * 按seminarId获取SeminarGroup.
+	 * <p>按seminarId获取SeminarGroup<br>
 	 * @author zhouzhongjun
      * @param seminarId 课程Id
      * @return 讨论课小组列表
@@ -103,7 +105,7 @@ public interface SeminarGroupService {
 
 	/**
 	 * 创建讨论课小组.
-	 * ＜p＞在指定讨论课下创建讨论课小组<br>*
+	 * <p>在指定讨论课下创建讨论课小组<br>
 	 * @author YeHongjie
 	 * @param seminarId 讨论课的id
 	 * @param seminarGroup 小组信息
@@ -116,7 +118,7 @@ public interface SeminarGroupService {
     
 	/**
 	 * 创建小组成员信息.
-	 * ＜p＞在指定小组成员表下创建一个新的小组信息<br>*
+	 * <p>在指定小组成员表下创建一个新的小组信息<br>
 	 * @param GroupId 小组的id
 	 * @param seminarGroupMember 小组成员信息
 	 * @return BigInteger 若创建成功返回该小组成员表的id，失败则返回-1
@@ -127,7 +129,7 @@ public interface SeminarGroupService {
 	
 	/**
 	 * 删除讨论课小组.
-	 * ＜p＞按照id删除讨论课小组<br>*
+	 * <p>按照id删除讨论课小组<br>
 	 * @author YeHongjie
 	 * @param seminarGroupId 讨论课小组的id
 	 * @return Boolean 若创建成功返回true，失败返回false
@@ -140,7 +142,7 @@ public interface SeminarGroupService {
 	
     /**
 	 * 查询讨论课小组.
-	 * ＜p＞按照id查询某一讨论课小组的信息（包括成员）<br>*
+	 * <p>按照id查询某一讨论课小组的信息（包括成员）<br>
 	 * @author YeHongjie
 	 * @param groupId 小组的id
 	 * @return seminarGroup 讨论课小组对象，若未找到相关小组返回空(null)
@@ -153,7 +155,7 @@ public interface SeminarGroupService {
     
     /**
 	 * 获取学生所在讨论课队长.
-	 * ＜p＞按照用户id和讨论课id获取学生所在讨论课小组队长<br>*
+	 * <p>按照用户id和讨论课id获取学生所在讨论课小组队长<br>
 	 * @author YeHongjie
 	 * @param userId 用户的id
 	 * @param seminarId 讨论课id
@@ -168,7 +170,7 @@ public interface SeminarGroupService {
 	
     /**
 	 * 自动分组.
-	 * ＜p＞根据讨论课id和班级id，对签到的学生进行自动分组<br>*
+	 * <p>根据讨论课id和班级id，对签到的学生进行自动分组<br>
 	 * @author YeHongjie
 	 * @param seminarId 讨论课的id
 	 * @param classId 班级的id
@@ -184,6 +186,7 @@ public interface SeminarGroupService {
     
      /**
      * 根据讨论课Id及用户id，获得该用户所在的讨论课的小组的信息.
+     * <p>根据讨论课Id及用户id，获得该用户所在的讨论课的小组的信息<br>
      * @param BigInteger seminarId (讨论课的id)
      * @param BigInteger userId（用户的id）
      * @return SeminarGroup Group的相关信息
@@ -196,6 +199,7 @@ public interface SeminarGroupService {
 
 	/**
 	 * 根据话题Id获得选择该话题的所有小组的信息.
+	 * <p>根据话题Id获得选择该话题的所有小组的信息<br>
 	 * @param  topicId 话题的id
 	 * @return List 所有选择该话题的所有group的信息
 	 * @exception InfoIllegalException 信息不合法，id格式错误
