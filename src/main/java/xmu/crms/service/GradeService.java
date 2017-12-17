@@ -10,7 +10,7 @@ import java.util.List;
  * @version 2.00
  *
  */
-public interface GradeService {
+public class GradeService {
 
 	/**
 	 * 按topicId删除学生打分表.
@@ -18,7 +18,11 @@ public interface GradeService {
      * @param topicId 话题Id
      *  @return true删除成功  false删除失败
 	 */
-	public Boolean deleteStudentScoreGroupByTopicId(BigInteger topicId);
+	private boolean deleteStudentScoreGroupByTopicId(BigInteger topicId) {
+		
+		//删除自己
+		return true;
+	}
 	/**
 	 * 获取某学生所有讨论课的成绩.
 	 * <p>获取某学生所有讨论课的成绩<br>
@@ -28,7 +32,12 @@ public interface GradeService {
 	 * @return list 讨论课分数列表
 	 * @see SeminarGroupService#listSeminarGroupIdByStudentId(BigInteger userId)
 	 */
-    public List<BigInteger> listSeminarGradeBySeminarGroupId(BigInteger userId, BigInteger seminarGroupId);
+    List<BigInteger> listSeminarGradeBySeminarGroupId(BigInteger userId, BigInteger seminarGroupId)
+    {
+    	List<BigInteger> list = new ArrayList();
+    	
+    	return list;
+    }
     
 	/**
 	 * 提交对其他小组的打分.
@@ -40,7 +49,11 @@ public interface GradeService {
 	 * @param grade 分数
 	 * @return true 提交成功 false 提交失败
 	 */
-	public boolean insertGroupGradeByUserId(BigInteger userId,BigInteger seminarId,BigInteger groupId,BigInteger grade);
+	private boolean insertGroupGradeByUserId(BigInteger userId,BigInteger seminarId,BigInteger groupId,BigInteger grade) {
+	    
+	    //插入打分表
+	    return true;
+	}
 
 	/**
 	 * 按ID设置小组报告分.
@@ -50,7 +63,10 @@ public interface GradeService {
 	 * @param grade 分数
 	 * @return Boolean true 操作成功 false 操作失败
 	 */
-	public boolean updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade);
+	private boolean updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade) {
+		//GradeDAO.updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade)
+		return true;
+	}
 	
 	/**
 	 * 获取某学生的讨论课成绩列表.
@@ -59,6 +75,11 @@ public interface GradeService {
 	 * @return list 讨论课成绩列表
 	 * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId)
 	 */
-	public List<BigInteger> listSeminarGradeByStudentId(BigInteger userId);
+	private List<BigInteger> listSeminarGradeByStudentId(BigInteger userId) {
+		
+		List<BigInteger> list = new ArrayList<BigInteger>();		
+		
+		return list;		
+	}
 	
 }

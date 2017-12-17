@@ -63,7 +63,6 @@ public interface ClassService {
 	 * @author yexiaona
 	 * @param classId 班级ID
 	 * @return boolean 班级修改是否成功情况
-	 * @see ScoreRuleService #updateScoreRuleById(BigInteger scoreRuleId)
 	 */
 	public Boolean updateClassByClassId(BigInteger classId);
 
@@ -75,7 +74,6 @@ public interface ClassService {
 	 * @author yexiaona
 	 * @param classId 班级ID
 	 * @return boolean 班级删除是否成功情况
-	 * @see ScoreRuleService #deleteScoreRuleById(BigInteger scoreRuleId)
 	 * @see ClassService #deleteCourseSelectionById(BigInteger classId,User user)
 	 * @see FixGroupService #deleteFixGroupByClassId(BigInteger classId)
 	 * @see SeminarGroupService #deleteSeminarGroupByClaaId(BigInteger classId)
@@ -139,7 +137,6 @@ public interface ClassService {
 	 * @param courseId 课程Id
 	 * @see ClassService #listClassByCourseId(BigInteger courseId)
 	 * @see ClassService #deleteClasssSelectionByClassId(BigInteger classId)
-	 * @see ScoreRuleService #deleteScoreRuleById(BigInteger CourseId,BigInteger ClassId)
 	 * @see FixGroupService #deleteFixGroupByClassId(BigInteger ClassId)
 	 * @return true删除成功 false删除失败
 	 */
@@ -172,7 +169,7 @@ public interface ClassService {
 	 * 
 	 * @author YeHongjie
 	 * @param classId 班级Id
-	 * @param proportionsBO  评分规则
+	 * @param proportions  评分规则
 	 * @return scoreRuleId 若创建成功则返回该评分规则的id，失败则返回-1
 	 */
 	public BigInteger insertScoreRule(BigInteger classId, ClassInfo proportions);
@@ -184,7 +181,7 @@ public interface ClassService {
 	 * 
 	 * @author YeHongjie
 	 * @param classId 班级id
-	 * @param proportionsBO 评分规则
+	 * @param proportions 评分规则
 	 * @return state 若修改成功则返回true，失败则返回false
 	 */
 	public Boolean updateScoreRule(BigInteger classId, ClassInfo proportions);

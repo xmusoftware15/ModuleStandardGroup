@@ -1,7 +1,7 @@
-﻿package xmu.crms.service;
+package xmu.crms.service;
 import java.math.BigInteger;
 import java.util.List;
-
+import xmu.crms.exception.*;
 import xmu.crms.entity.*;
 
 
@@ -21,36 +21,33 @@ public interface CourseService {
 	 * @exception InfoIllegalException userId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public List<Course> listCourseByUserId(BigInteger userId);
+	public List<Course> listCourseByUserId(BigInteger userId) throws InfoIllegalException,CourseNotFoundException;
 	
 	
 	/**
 	 * 按userId创建课程.
-	 * <p>按userId创建课程<br> 
 	 * @author ZhouZhongjun
 	 * @param userId 用户Id
 	 * @param course 课程信息
 	 * @return courseId 新建课程的id
 	 * @exception InfoIllegalException userId格式错误时抛出
 	 */
-	public  BigInteger insertCourseByUserId(BigInteger userId,Course course);
+	public  BigInteger insertCourseByUserId(BigInteger userId,Course course) throws InfoIllegalException;
 	
 	
 	/**
 	 * 按courseId获取课程 .
-	 * <p>按courseId获取课程 <br> 
 	 * @author ZhouZhongjun
 	 * @param courseId 课程Id
 	 * @return course
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public  Course getCourseByCourseId(BigInteger courseId);
+	public  Course getCourseByCourseId(BigInteger courseId) throws InfoIllegalException,CourseNotFoundException;
 	
 	
 	/**
 	 * 传入courseId和course信息修改course信息.
-	 * <p>传入courseId和course信息修改course信息 <br> 
 	 * @author ZhouZhongjun
      * @param courseId 课程Id
 	 * @param course 课程信息
@@ -70,7 +67,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public Boolean deleteCourseByCourseId(BigInteger courseId);
+	public Boolean deleteCourseByCourseId(BigInteger courseId) throws InfoIllegalException,CourseNotFoundException;
 	
 
 	
@@ -84,7 +81,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public List<Course> listCourseByCourseName(String courseName);
+	public List<Course> listCourseByCourseName(String courseName) throws InfoIllegalException,CourseNotFoundException;
 	
 	
 	/**
@@ -99,7 +96,7 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByCourseName(String courseName);
+	public List<ClassInfo> listClassByCourseName(String courseName) throws InfoIllegalException,CourseNotFoundException,ClassNotFoundException;
 	
 	
 	/**
@@ -114,12 +111,11 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByTeacherName(String teacherName);
+	public List<ClassInfo> listClassByTeacherName(String teacherName) throws UserNotFoundException,CourseNotFoundException,ClassNotFoundException;
 	
 	
 	/**
 	 * 根据教师ID获取班级列表.  
-	 * <p>根据教师ID获取班级列表<br>
 	 * @author YeXiaona
 	 * @param userId 教师ID
 	 * @return list 班级列表
@@ -129,6 +125,8 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByUserId(BigInteger userId);
+	public List<ClassInfo> listClassByUserId(BigInteger userId)
+	        throws InfoIllegalException,CourseNotFoundException,
+	        ClassNotFoundException;
 }
 
