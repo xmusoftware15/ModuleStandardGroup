@@ -3,9 +3,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import xmu.crms.bo.CourseBO;
-import xmu.crms.bo.UserBO;
-import xmu.crms.bo.ClassBO;
+import xmu.crms.entity.*;
 
 
 /**
@@ -24,7 +22,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException userId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public List<CourseBO> listCourseByUserId(BigInteger userId);
+	public List<Course> listCourseByUserId(BigInteger userId);
 	
 	
 	/**

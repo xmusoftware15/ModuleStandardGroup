@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import xmu.crms.bo.ClassBO;
+import xmu.crms.entity.*;
 
 /**
  * 
@@ -12,18 +12,14 @@ import xmu.crms.bo.ClassBO;
  * @version 1.00
  *
  */
-public class ClassService {
+public interface ClassService {
 	/**
 	 * 按classId删除CourseSelection表的一条记录 .
 	 * @author zhouzhongjun
      * @param classId 班级Id
      * @return true/false 是否成功删除
 	 */
-	boolean deleteClassSelectionByClassId(BigInteger classId) {
-		
-		//删除自己
-		return true;
-	}
+	boolean deleteClassSelectionByClassId(BigInteger classId);
 	/**
 	 * 按课程名称和教师名称获取班级列表.
 	 * <p>根据课程名和教师名获取课程ID，通过课程ID获取班级列表;若课程名和班级名均不为空，取交集<br>
@@ -34,11 +30,7 @@ public class ClassService {
 	 * @see ClassService #listClassByCourseName(String courseName)
 	 * @see ClassService #listClassByTeacherName(String teacherName)
 	 */
-	private List<ClassBO> listClassByName(String courseName,String teacherName)
-	{
-		List<ClassBO> list=new ArrayList<ClassBO>();
-		return list;
-	}
+	public List<ClassInfo> listClassByName(String courseName,String teacherName);
 	
 	/**
 	 * 根据课程ID获得班级列表.
@@ -46,11 +38,7 @@ public class ClassService {
 	 * @param courseId 课程ID
 	 * @return list 班级列表
 	 */
-	private List<ClassBO> listClassByCourseId(BigInteger courseId)
-	{
-		List<ClassBO> list=new ArrayList<ClassBO>();
-		return list;
-	}
+	public List<ClassInfo> listClassByCourseId(BigInteger courseId);
 	
 	/**
 	 * 按班级id获取班级详情.
@@ -59,11 +47,7 @@ public class ClassService {
 	 * @param classId 班级ID
 	 * @return ClassBO 班级
 	 */
-	private ClassBO getClassByClassId(BigInteger classId)
-	{
-		ClassBO classBo=new ClassBO();
-		return classBo;
-	}
+	public ClassInfo getClassByClassId(BigInteger classId);
 	
 	/**
 	 * 按班级id和班级修改班级信息.
@@ -73,11 +57,7 @@ public class ClassService {
 	 * @return boolean 班级修改是否成功情况
 	 * @see ScoreRuleService #updateScoreRuleById(BigInteger scoreRuleId)
 	 */
-	private boolean updateClassByClassId(BigInteger classId)
-	{
-		return true;
-	}
-	
+	public boolean updateClassByClassId(BigInteger classId);
 	/**
 	 * 按班级id删除班级.
 	 * <p>根据班级id删除班级<br>
@@ -89,11 +69,7 @@ public class ClassService {
 	 * @see FixGroupService #deleteFixGroupByClassId(BigInteger classId)
 	 * @see SeminarGroupService #deleteSeminarGroupByClaaId(BigInteger classId)
 	 */
-	private boolean deleteClassByClassId(BigInteger classId)
-	{
-		boolean isDeleted=true;
-		return isDeleted;
-	}
+	public boolean deleteClassByClassId(BigInteger classId);
 	
 	/**
 	 * 学生按班级id选择班级.
@@ -103,11 +79,7 @@ public class ClassService {
 	 * @param classId 班级id
 	 * @return url 选课url
 	 */
-	private String insertCourseSelectionById(BigInteger userId,BigInteger classId)
-	{
-		String url=new String();
-		return url;
-	}
+	public String insertCourseSelectionById(BigInteger userId,BigInteger classId);
 	
 	/**
 	 * 学生按班级id取消选择班级.
@@ -117,11 +89,7 @@ public class ClassService {
 	 * @param classId 班级id
 	 * @return boolean 取消班级是否成功
 	 */
-	private boolean deleteCourseSelectionById(BigInteger userId,BigInteger classId)
-	{
-		boolean isDeleted=true;
-		return isDeleted;
-	}
+	public boolean deleteCourseSelectionById(BigInteger userId,BigInteger classId);
 	
 	/**
 	 * 老师获取该班级签到、分组状态.
@@ -131,11 +99,7 @@ public class ClassService {
 	 * @return classBO 班级
 	 * @see SeminarGroupService #listSeminarGroupBySeminarId(BigInteger seminarId)
 	 */
-	private ClassBO getCallGroupStatusById(BigInteger seminarId)
-	{
-		ClassBO classBO=new ClassBO();
-		return classBO;
-	}
+	public ClassInfo getCallGroupStatusById(BigInteger seminarId);
 	
 	/**
 	 * 新建班级.
@@ -145,11 +109,7 @@ public class ClassService {
 	 * @param courseId 课程id
 	 * @return classId 班级Id
 	 */
-	private BigInteger insertClassById(BigInteger userId,BigInteger courseId)
-	{
-		BigInteger classId=null;
-		return classId;
-	}
+	public BigInteger insertClassById(BigInteger userId,BigInteger courseId);
 	
 	/**
 	 * 按courseId删除Class.
@@ -162,11 +122,7 @@ public class ClassService {
 	 *@see FixGroupService  #deleteFixGroupByClassId(BigInteger ClassId)
 	 *@return true删除成功 false删除失败
 	 */
-	boolean deleteClassByCourseId(BigInteger courseId) {
-			
-		//删除自己
-		return true;
-	};
+	public boolean deleteClassByCourseId(BigInteger courseId);
 	
 		/**
 		 * 按classId删除ScoreRule.
@@ -183,7 +139,7 @@ public class ClassService {
 		 * @param classId 班级id
 	     * @return ProportionBO 返回评分规则，若未找到对应评分规则返回空（null)
 		 */
-		public ProportionsBO getScoreRule(BigInteger classId);
+		public ClassInfo getScoreRule(BigInteger classId);
 		
 		/**
 		 * 新增评分规则.
@@ -193,7 +149,7 @@ public class ClassService {
 	     * @param proportionsBO 评分规则
 	     * @return scoreRuleId 若创建成功则返回该评分规则的id，失败则返回-1
 		 */
-		public BigInteger insertScoreRule(BigInteger classId,ProportionsBO proportionsBO);
+		public BigInteger insertScoreRule(BigInteger classId,ClassInfo proportions);
 		
 		/**
 		 * 修改评分规则.
@@ -203,5 +159,5 @@ public class ClassService {
 	     * @param proportionsBO 评分规则
 	     * @return state 若修改成功则返回true，失败则返回false
 		 */
-		public boolean updateScoreRule(BigInteger classId, ProportionsBO proportionsBO);
+		public boolean updateScoreRule(BigInteger classId, ClassInfo proportions);
 }
