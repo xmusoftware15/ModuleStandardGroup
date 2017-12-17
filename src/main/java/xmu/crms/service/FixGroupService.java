@@ -1,4 +1,4 @@
-﻿package xmu.crms.service;
+package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -15,9 +15,10 @@ import xmu.crms.entity.*;
 public interface FixGroupService {
 	/**
 	 * 按FixGroupId删除FixGroupMember.
+	 * <p>按FixGroupId删除FixGroupMember<br>*
 	 * @author zhouzhongjun
      * @param fixGroupId 固定分组Id
-     * @return true删除成功  false删除失败
+     * @return true 删除成功  false删除失败
      * @exception InfoIllegalException 信息不合法，id格式错误 
      * @exception FixGroupNotFoundException 未找到小组
 	 */
@@ -35,7 +36,6 @@ public interface FixGroupService {
      * @exception FixGroupNotFoundException 未找到小组
      * @exception UserNotFoundException 不存在该学生
      * @exception InvalidOperationException 待添加学生已经在小组里了
-
 	 */
     public BigInteger insertFixGroupMemberById(BigInteger userId,BigInteger groupId);
     
@@ -51,6 +51,7 @@ public interface FixGroupService {
     public List<User> listFixGroupMemberByGroupId(BigInteger groupId);
 	/**
 	 * 按classId查找FixGroup信息.
+	 * <p>按classId查找FixGroup信息<br>*
 	 * @author zhouzhongjun
      * @param classId 班级Id
      * @return null 固定分组列表
@@ -60,7 +61,7 @@ public interface FixGroupService {
 	
 	/**
 	 * 按classId删除FixGroup
-	 * <p>先根据classId得到所有的FixGroup信息，再根据FixGroupid删除FixGroupMember表的信息，最后再将FixGroup信息删除<br>  
+	 * <p>先根据classId得到所有的FixGroup信息，再根据FixGroupid删除FixGroupMember表的信息，最后再将FixGroup信息删除<br>*  
 	 * @author zhouzhongjun
      * @param classId 班级Id
      * @see FixGroupService #listFixGroupByClassId(BigInteger classId)
@@ -128,7 +129,7 @@ public interface FixGroupService {
 
     /**
 	 * 小组取消话题.
-	 * <p>小组按小组id取消讨论课的话题的选择<br>
+	 * <p>小组按小组id取消讨论课的话题的选择<br>*
 	 * @author heqi
 	 * @param groupId 小组id
 	 * @return true or false 返回取消话题是否成功
@@ -139,7 +140,7 @@ public interface FixGroupService {
 
     /**
 	 * 按id获取小组.
-	 * <p>通过学生id和班级id获取学生所在的班级固定小组<br>
+	 * <p>通过学生id和班级id获取学生所在的班级固定小组<br>*
 	 * @author heqi
 	 * @param userId 学生id
 	 * @param classId 班级id
@@ -153,7 +154,7 @@ public interface FixGroupService {
 
     /**
      * 根据groupId修改group.
-     * <p>根据groupId修改group<br>
+     * <p>根据groupId修改group<br>*
      * @author aixing
      * @param groupId 要修改的group的Id
      * @param group 新的group信息
