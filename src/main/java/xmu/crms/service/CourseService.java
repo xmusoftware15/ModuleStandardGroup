@@ -1,7 +1,7 @@
 package xmu.crms.service;
 import java.math.BigInteger;
 import java.util.List;
-
+import xmu.crms.exception.*;
 import xmu.crms.entity.*;
 
 
@@ -21,7 +21,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException userId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public List<Course> listCourseByUserId(BigInteger userId);
+	public List<Course> listCourseByUserId(BigInteger userId) throws xmu.crms.exception.InfoIllegalException,xmu.crms.exception.CourseNotFoundException;
 	
 	
 	/**
