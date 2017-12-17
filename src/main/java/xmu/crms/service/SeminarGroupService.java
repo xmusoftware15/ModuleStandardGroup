@@ -4,10 +4,8 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import xmu.crms.bo.AttendanceBO;
-import xmu.crms.bo.SeminarGroupBO;
-import xmu.crms.bo.TopicBO;
-import xmu.crms.bo.UserBO;
+import xmu.crms.entity.*;
+
 
 /**
  * 
@@ -23,7 +21,7 @@ public interface SeminarGroupService {
      * @param seminarGroupId 讨论课小组Id
      * @return true/false 是否成功删除
 	 */
-	public boolean deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId);
+	public Boolean deleteSeminarGroupMemberBySeminarGroupId(BigInteger seminarGroupId);
 	
 	/**
 	 * 将学生加入讨论课小组.
@@ -93,7 +91,7 @@ public interface SeminarGroupService {
 	 * @return true删除成功 false删除失败
 	 * @exception InfoIllegalException 信息不合法，id格式错误
 	 */
-	public boolean deleteSeminarGroupBySeminarId(BigInteger seminarId);
+	public Boolean deleteSeminarGroupBySeminarId(BigInteger seminarId);
 
 	/**
 	 * 创建讨论课小组.
@@ -212,7 +210,7 @@ public interface SeminarGroupService {
 	 * @exception InfoIllegalException GroupId格式错误时抛出
 	 * @exception GroupNotFoundException 该小组不存在时抛出
 	 */
-	public boolean deleteTopicByGroupId(BigInteger groupId);
+	public Boolean deleteTopicByGroupId(BigInteger groupId);
 	
 	/**
 	 * 成为组长.
@@ -225,7 +223,7 @@ public interface SeminarGroupService {
      * @exception UserNotFoundException(不存在该学生)
      * @exception InvalidOperationException（已经有组长了）
 	 */
-	public boolean assignLeaderById(BigInteger groupId,BigInteger userId);
+	public Boolean assignLeaderById(BigInteger groupId,BigInteger userId);
 	
 	/**
 	 * 组长辞职.
@@ -236,7 +234,7 @@ public interface SeminarGroupService {
      * @exception InfoIllegalException(信息不合法，id格式错误)
      * @exception GroupNotFoundException(未找到小组)
 	 */
-	public boolean resignLeaderById(BigInteger groupId,BigInteger userId);
+	public Boolean resignLeaderById(BigInteger groupId,BigInteger userId);
 	
 
 }

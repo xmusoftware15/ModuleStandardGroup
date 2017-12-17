@@ -5,9 +5,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import xmu.crms.bo.Seminar;
-import xmu.crms.bo.SeminarGroup;
-import xmu.crms.bo.Topic;
+import xmu.crms.entity.*;
 
 /**
  * 

@@ -3,7 +3,7 @@ package xmu.crms.service;
 import java.math.BigInteger;
 import java.util.List;
 
-import xmu.crms.bo.*;
+import xmu.crms.entity.*;
 
 /**
  * 
@@ -21,7 +21,7 @@ public interface FixGroupService {
      * @exception InfoIllegalException(信息不合法，id格式错误)
      * @exception FixGroupNotFoundException(未找到小组)
 	 */
-	public boolean deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId);
+	public Boolean deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId);
 	
 	/**
 	 * 将学生加入固定小组.
@@ -47,7 +47,7 @@ public interface FixGroupService {
 	 * @exception InfoIllegalException(信息不合法，id格式错误)
      * @exception FixGroupNotFoundException(未找到小组)
 	 */
-    public List<UserBO> listFixGroupMemberByGroupId(BigInteger groupId);
+    public List<User> listFixGroupMemberByGroupId(BigInteger groupId);
 	/**
 	 * 按classId查找FixGroup信息.
 	 * @author zhouzhongjun
@@ -55,7 +55,7 @@ public interface FixGroupService {
      * @return null 固定分组列表
      * @exception InfoIllegalException(信息不合法，id格式错误)
 	 */
-	public List<FixGroupBO> listFixGroupByClassId(BigInteger classId);
+	public List<FixGroup> listFixGroupByClassId(BigInteger classId);
 	
 	/**
 	 * 按classId删除FixGroup
@@ -68,7 +68,7 @@ public interface FixGroupService {
      * @exception InfoIllegalException(信息不合法，id格式错误)
      * @exception ClassNotFoundException(未找到班级)
 	 */
-	public boolean deleteFixGroupByClassId(BigInteger classId);
+	public Boolean deleteFixGroupByClassId(BigInteger classId);
     
     /**
 	 * 删除固定小组.
@@ -92,7 +92,7 @@ public interface FixGroupService {
 	 * @exception InfoIllegalException  (信息不合法，id格式错误)
 	 * @exception FixGroupNotFoundException(未找到小组)
 	 */
-    public Boolean updateFixGroupByGroupId(BigInteger groupId,FixGroupBO fixGroupBO);
+    public Boolean updateFixGroupByGroupId(BigInteger groupId,FixGroup fixGroupBO);
     
     /**
 	 * 查询固定小组.
@@ -104,7 +104,7 @@ public interface FixGroupService {
 	 * @exception InfoIllegalException  (信息不合法，id格式错误)
 	 * @exception FixGroupNotFoundException(未找到小组)
 	 */
-    public FixGroupBO getFixGroupByGroupId(BigInteger groupId);
+    public FixGroup getFixGroupByGroupId(BigInteger groupId);
  
 
     /**
@@ -130,7 +130,7 @@ public interface FixGroupService {
 	 * @exception InfoIllegalException  (信息不合法，id格式错误)
 	 * @exception FixGroupNotFoundException(未找到小组)
 	 */
-	public boolean deleteTopicByGroupId(BigInteger groupId);
+	public Boolean deleteTopicByGroupId(BigInteger groupId);
 
     /**
 	 * 按id获取小组.
@@ -144,7 +144,7 @@ public interface FixGroupService {
 	 * @exception ClassNotFoundException(未找到小组)
 	 * @exception UserNotFoundException(不存在该学生)
 	 */
-	public FixGroupBO getFixedGroupById(BigInteger userId,BigInteger classId);
+	public FixGroup getFixedGroupById(BigInteger userId,BigInteger classId);
 
     /**
      * 根据groupId修改group.
@@ -156,5 +156,5 @@ public interface FixGroupService {
      * @exception InfoIllegalException  (信息不合法，id格式错误)
 	 * @exception FixGroupNotFoundException(未找到小组)
      */
-    public boolean updateSeminarGroupById(BigInteger groupId,GroupBO group);
+    public Boolean updateSeminarGroupById(BigInteger groupId,SeminarGroup group);
 }

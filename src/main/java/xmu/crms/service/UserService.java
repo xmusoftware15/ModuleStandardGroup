@@ -4,9 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import xmu.crms.bo.AttendanceBO;
-import xmu.crms.bo.CourseBO;
-import xmu.crms.bo.UserBO;
+import xmu.crms.entity.*;
 
 /**
  * @author ModuleStandardGroup/YeHongjie
@@ -28,7 +26,7 @@ public interface UserService {
 	 * @exception ClassesNotFoundException 未找到班级
 	 * @exception SeminarNotFoundException 未找到讨论课
 	 */
-	public boolean insertAttendanceById(BigInteger classId, BigInteger seminarId, BigInteger userId, double longitude, double latitude);
+	public Boolean insertAttendanceById(BigInteger classId, BigInteger seminarId, BigInteger userId, double longitude, double latitude);
 	
 	/**
 	 * 获取学生签到信息.
@@ -41,7 +39,7 @@ public interface UserService {
 	 * @exception ClassesNotFoundException 未找到班级
 	 * @exception SeminarNotFoundException 未找到讨论课
 	 */
-	public List<AttendanceBO> listAttendanceById(BigInteger classId, BigInteger seminarId);
+	public List<Attendance> listAttendanceById(BigInteger classId, BigInteger seminarId);
 
 	/**
 	 * 手机号注册.
@@ -50,7 +48,7 @@ public interface UserService {
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 * @return user 该用户信息
 	 */
-	public UserBO signUpPhone(UserBO user);
+	public User signUpPhone(User user);
 	
 	
 	/**
@@ -77,7 +75,7 @@ public interface UserService {
 	 * @exception InfoIllegalException 信息不合法，id格式错误
 	 * @exception UserNotFoundException 未找到对应用户
 	 */		
-	public boolean deleteStudentAccount(BigInteger userId);
+	public Boolean deleteStudentAccount(BigInteger userId);
 	
 	
 	/**
@@ -90,7 +88,7 @@ public interface UserService {
 	 * @exception InfoIllegalException 信息不合法，id格式错误 
 	 * @exception UserNotFoundException 未找到对应用户
 	 */
-	public UserBO getUserByUserId(BigInteger userId);
+	public User getUserByUserId(BigInteger userId);
 
 	/**
 	 * 根据用户名获取用户ID.
@@ -112,7 +110,7 @@ public interface UserService {
 	 * @return list 用户id列表
 	 * @exception UserNotFoundException 未找到对应用户
 	 */
-	public boolean updateUserByUserId(BigInteger userId, UserBO user) ;
+	public Boolean updateUserByUserId(BigInteger userId, User user) ;
 	
 
 	/**
@@ -126,7 +124,7 @@ public interface UserService {
 	 * @exception InfoIllegalException 信息不合法
 	 * @exception ClassesNotFoundException 未找到对应班级
 	 */	
-	public List listUserByClassId(BigInteger classId,String numBeginWith,String nameBeginWith);
+	public List<User> listUserByClassId(BigInteger classId,String numBeginWith,String nameBeginWith);
 	
 
 	/**
@@ -137,7 +135,7 @@ public interface UserService {
 	 * @return list 用户列表
 	 * @exception UserNotFoundException 未找到对应用户
 	 */	
-	public List<UserBO> listUserByUserName(String userName);
+	public List<User> listUserByUserName(String userName);
 	
 	
 	/**
@@ -151,7 +149,7 @@ public interface UserService {
 	 * @see UserService #getUserByUserId(BigInteger)
 	 * @exception InfoIllegalException 信息不合法，id格式错误 
 	 */
-	public List<UserBO> listPresentStudent(BigInteger seminarId, BigInteger classId);
+	public List<User> listPresentStudent(BigInteger seminarId, BigInteger classId);
 
 
 	/**
@@ -164,7 +162,7 @@ public interface UserService {
 	 * @see UserService #listPresentStudent(BigInteger, BigInteger)
 	 * @exception InfoIllegalException 信息不合法，id格式错误 
 	 */
-	public List<UserBO> listAbsenceStudent(BigInteger seminarId,BigInteger classId);
+	public List<User> listAbsenceStudent(BigInteger seminarId,BigInteger classId);
 	
 	/**
 	 * 根据教师名称列出课程名称.
@@ -175,5 +173,5 @@ public interface UserService {
 	 * @see UserService #listUserByUserName(String userName)
 	 * @see CourseService #listCourseByUserId(BigInteger userId)
 	 */
-	public List<CourseBO> listCourseByTeacherName(String teacherName);
+	public List<Course> listCourseByTeacherName(String teacherName);
 }
