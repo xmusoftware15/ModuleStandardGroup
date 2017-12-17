@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 /**
  * 定时器
  * 
- * @author ModuleStandardGroup
+ * @author qinlingyun liuaiqi
+ * @version 2.00
  */
 @Component
 public class TimerService {

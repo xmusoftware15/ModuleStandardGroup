@@ -8,7 +8,7 @@ import xmu.crms.entity.*;
 /**
  * 
  * @author ZhouZhongjun YeHongjie Heqi Aixing
- * @version 1.00
+ * @version 2.00
  *
  */
 

@@ -7,8 +7,8 @@ import java.util.List;
 import xmu.crms.entity.*;
 
 /**
- * @author ModuleStandardGroup/YeHongjie
- * @version 1.10
+ * @author YeHongjie
+ * @version 2.00
  */
 public interface UserService {
 	

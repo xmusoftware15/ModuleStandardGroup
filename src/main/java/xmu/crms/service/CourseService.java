@@ -8,7 +8,7 @@ import xmu.crms.entity.*;
 /**
  * 
  * @author YeXiaona ZhouZhongjun CaoXingmei
- * @version 1.00
+ * @version 2.00
  *
  */
 public interface CourseService {

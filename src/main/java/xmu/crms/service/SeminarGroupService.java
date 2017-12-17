@@ -10,7 +10,7 @@ import xmu.crms.entity.*;
 /**
  * 
  * @author ModuleStandardGroup/zhouzhongjun
- * @version 1.00
+ * @version 2.00
  *
  */
 public interface SeminarGroupService {

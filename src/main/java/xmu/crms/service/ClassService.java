@@ -8,7 +8,7 @@ import xmu.crms.entity.*;
 /**
  * 
  * @author YeXiaona,ZhouZhongJun
- * @version 1.00
+ * @version 2.00
  *
  */
 public interface ClassService {
