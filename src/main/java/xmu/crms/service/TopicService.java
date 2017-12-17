@@ -1,9 +1,9 @@
 package xmu.crms.service;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 import xmu.crms.entity.*;
-import xmu.crms.exception.*;
 
 
 /**
@@ -19,10 +19,8 @@ public interface TopicService {
 	 * @author aixing
 	 * @param topicId 要获取的topic的topicId
 	 * @return 该topic
-	 * @exception TopicNotFoundException 无此小组或Id错误
-	 * @exception InfoIllegalException Id格式错误时抛出
 	 */
-    public Topic getTopicByTopicId(BigInteger topicId) throws TopicNotFoundException,InfoIllegalException;
+    public Topic getTopicByTopicId(BigInteger topicId);
     
     /**
      * 根据topicId修改topic.
@@ -31,10 +29,8 @@ public interface TopicService {
      * @param topicId 讨论课的ID
      * @param topic 修改后的讨论课
      * @return 是否修改成功
-     * @exception TopicNotFoundException 无此小组或Id错误
-     * @exception InfoIllegalException Id格式错误或topic格式错误时抛出
      */
-    public Boolean updateTopicByTopicId(BigInteger topicId,Topic topic)throws TopicNotFoundException,InfoIllegalException;
+    public Boolean updateTopicByTopicId(BigInteger topicId,Topic topic);
     
     /**
      * 删除topic.
@@ -42,9 +38,8 @@ public interface TopicService {
      * @param topicId 要删除的topic的topicId
      * @param seminarId 要删除topic所属seminar的id
      * @return 是否成功
-     * @exception InfoIllegalException Id格式错误时抛出
      */
-    public Boolean deleteTopicByTopicId(BigInteger topicId,BigInteger seminarId) throws InfoIllegalException;
+    public Boolean deleteTopicByTopicId(BigInteger topicId,BigInteger seminarId);
         //删除topic还要把每个选了这个topic的小组的选题属性修改为null
         //想找到选了这个topic的小组，首先通过seminarId获得该讨论课所有小组，遍历判断是否选了这个topic
         //SeminarGroupService sg=new SeminarGroupService();
@@ -67,9 +62,8 @@ public interface TopicService {
 	 * @author zhouzhongjun
      * @param seminarId 课程Id
      * @return null
-     * @exception InfoIllegalException Id格式错误时抛出
 	 */
-    public List<Topic> listTopicBySeminarId(BigInteger seminarId) throws InfoIllegalException;
+    public List<Topic> listTopicBySeminarId(BigInteger seminarId) ;
 	
 	/**
 	 * 根据讨论课Id和topic信息创建一个话题.
@@ -78,9 +72,8 @@ public interface TopicService {
 	 * @param seminarId 话题所属讨论课的Id
 	 * @param topic 话题
 	 * @return 新建话题后给topic分配的Id
-     * @exception InfoIllegalException Id格式错误或topic格式错误时抛出
 	 */
-    public BigInteger insertTopicBySeminarId(BigInteger seminarId,Topic topic) throws InfoIllegalException;
+    public BigInteger insertTopicBySeminarId(BigInteger seminarId,Topic topic);
 	
 	/**
 	 * 小组取消选择话题.
@@ -90,17 +83,15 @@ public interface TopicService {
      * @param groupId 小组Id
      * @param topicId 话题Id
 	 * @return true删除成功 false删除失败
-     * @exception InfoIllegalException groupId格式错误或topicId格式错误时抛出
 	 */
-	public Boolean deleteTopicById(BigInteger groupId,BigInteger topicId)throws InfoIllegalException;
+	public Boolean deleteTopicById(BigInteger groupId,BigInteger topicId);
 	/**
 	 * 按topicId删除SeminarGroupTopic表信息.
 	 * @author zhouzhongjun
      * @param topicId 讨论课Id
 	 * @return true删除成功 false删除失败
-     * @exception InfoIllegalException topicId格式错误
 	 */
-	public Boolean deleteSeminarGroupTopicByTopicId(BigInteger topicId)throws InfoIllegalException;
+	public Boolean deleteSeminarGroupTopicByTopicId(BigInteger topicId);
 	
 	
 	/**
@@ -112,8 +103,7 @@ public interface TopicService {
 	 *@see TopicService #deleteSeminarGroupTopicByTopicId(BigInteger topicId)
 	 *@see GradeService   #deleteStudentScoreGroupByTopicId(BigInteger topicId)
 	 * @return true删除成功 false删除失败
-     * @exception InfoIllegalException seminarId格式错误
 	 */
-	public Boolean deleteTopicBySeminarId(BigInteger seminarId) throws InfoIllegalException;
+	public Boolean deleteTopicBySeminarId(BigInteger seminarId);
 	
 }
