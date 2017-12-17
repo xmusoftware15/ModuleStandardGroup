@@ -26,6 +26,7 @@ public interface CourseService {
 	
 	/**
 	 * 按userId创建课程.
+	 * <p>按userId创建课程<br> 
 	 * @author ZhouZhongjun
 	 * @param userId 用户Id
 	 * @param course 课程信息
@@ -37,6 +38,7 @@ public interface CourseService {
 	
 	/**
 	 * 按courseId获取课程 .
+	 * <p>按courseId获取课程 <br> 
 	 * @author ZhouZhongjun
 	 * @param courseId 课程Id
 	 * @return course
@@ -48,6 +50,7 @@ public interface CourseService {
 	
 	/**
 	 * 传入courseId和course信息修改course信息.
+	 * <p>传入courseId和course信息修改course信息 <br> 
 	 * @author ZhouZhongjun
      * @param courseId 课程Id
 	 * @param course 课程信息
@@ -116,6 +119,7 @@ public interface CourseService {
 	
 	/**
 	 * 根据教师ID获取班级列表.  
+	 * <p>根据教师ID获取班级列表<br>
 	 * @author YeXiaona
 	 * @param userId 教师ID
 	 * @return list 班级列表
@@ -125,9 +129,6 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-
-	public List<ClassInfo> listClassByUserId(BigInteger userId)
-	        throws InfoIllegalException,CourseNotFoundException,
-	        ClassNotFoundException;
+	public List<ClassInfo> listClassByUserId(BigInteger userId);
 }
 
