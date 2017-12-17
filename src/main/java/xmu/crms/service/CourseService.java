@@ -8,7 +8,7 @@ import xmu.crms.entity.*;
 
 /**
  * 
- * @author YeXiaona ZhouZhongjun
+ * @author YeXiaona ZhouZhongjun CaoXingmei
  * @version 1.00
  *
  */
@@ -33,7 +33,7 @@ public interface CourseService {
 	 * @return courseId 新建课程的id
 	 * @exception InfoIllegalException userId格式错误时抛出
 	 */
-	public  BigInteger insertCourseByUserId(BigInteger userId,CourseBO course);
+	public  BigInteger insertCourseByUserId(BigInteger userId,Course course);
 	
 	
 	/**
@@ -44,7 +44,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public  CourseBO getCourseByCourseId(BigInteger courseId);
+	public  Course getCourseByCourseId(BigInteger courseId);
 	
 	
 	/**
@@ -54,7 +54,7 @@ public interface CourseService {
 	 * @param course 课程信息
 	 * @return true修改成功  false修改失败
 	 */
-	public boolean updateCourseByCourseId(BigInteger courseId,CourseBO course);
+	public boolean updateCourseByCourseId(BigInteger courseId,Course course);
 	
 	
 	/**
@@ -82,7 +82,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public List<CourseBO> listCourseByCourseName(String courseName);
+	public List<Course> listCourseByCourseName(String courseName);
 	
 	
 	/**
@@ -97,7 +97,7 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassBO> listClassByCourseName(String courseName);
+	public List<ClassInfo> listClassByCourseName(String courseName);
 	
 	
 	/**
@@ -112,7 +112,7 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassBO> listClassByTeacherName(String teacherName);
+	public List<ClassInfo> listClassByTeacherName(String teacherName);
 	
 	
 	/**
@@ -127,6 +127,6 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassBO> listClassByUserId(BigInteger userId);
+	public List<ClassInfo> listClassByUserId(BigInteger userId);
 }
 
