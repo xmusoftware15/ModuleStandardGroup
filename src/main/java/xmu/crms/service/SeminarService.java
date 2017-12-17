@@ -20,8 +20,8 @@ public interface SeminarService {
 	 * @author zhouzhongjun
      * @param courseId 课程Id
      * @return List 讨论课列表
-     * @exception InfoIllegalException CourseId格式错误、教师设置embedGrade为true时抛出
-     * @exception CourseNotFoundException 未找到该课程时抛出
+     * @exception InfoIllegalException CourseId throws when 格式错误、教师设置embedGrade为true时抛出
+     * @exception CourseNotFoundException throws when 未找到该课程时抛出
 	 */
 	public List<Seminar> listSeminarByCourseId(BigInteger courseId);
 	
@@ -35,8 +35,8 @@ public interface SeminarService {
 	 * @see TopicService   #deleteTopicBySeminarId(BigInteger seminarId)
 	 * @see SeminarGroupService  #deleteSeminarGroupBySeminarId(BigInteger seminarId)
 	 * @return true删除成功 false删除失败
-	 * @exception InfoIllegalException CourseId格式错误时抛出
-	 * @exception CourseNotFoundException 该课程不存在时抛出
+	 * @exception InfoIllegalException CourseId throws when 格式错误时抛出
+	 * @exception CourseNotFoundException throws when 该课程不存在时抛出
 	 */
 	public Boolean deleteSeminarByCourseId(BigInteger courseId); 
 		
@@ -49,8 +49,8 @@ public interface SeminarService {
 	 * @param userId 用户的id
 	 * @return 当前讨论课的信息
 	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
-	 * @exception InfoIllegalException SeminarId格式错误时抛出
-	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
+	 * @exception InfoIllegalException SeminarId throws when 格式错误时抛出
+	 * @exception SeminarNotFoundException throws when 该讨论课不存在时抛出
 	 */
 	public Seminar getMySeminarBySeminarId(BigInteger seminarId,BigInteger userId);
 	
@@ -62,8 +62,8 @@ public interface SeminarService {
 	 * @param seminarId 讨论课的id
 	 * @param userId 学生的id
 	 * @return 相应的讨论课的详细信息
-	 * @exception InfoIllegalException SeminarId格式错误时抛出
-	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
+	 * @exception InfoIllegalException SeminarId throws when 格式错误时抛出
+	 * @exception SeminarNotFoundException throws when 该讨论课不存在时抛出
 	 */
 	public Seminar getSeminarDetailBySeminarId(BigInteger seminarId,BigInteger userId);
 	
@@ -74,8 +74,8 @@ public interface SeminarService {
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @return 相应的讨论课信息
-	 * @exception InfoIllegalException SeminarId格式错误时抛出
-	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
+	 * @exception InfoIllegalException SeminarId throws when 格式错误时抛出
+	 * @exception SeminarNotFoundException throws when 该讨论课不存在时抛出
 	 */
 	public Seminar getSeminarBySeminarId(BigInteger seminarId);
 	
@@ -87,8 +87,8 @@ public interface SeminarService {
 	 * @param seminarId 讨论课的id
 	 * @param seminar 讨论课信息
 	 * @return true(修改成功), false(修改失败)
-	 * @exception InfoIllegalException SeminarId格式错误时抛出
-	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
+	 * @exception InfoIllegalException SeminarId throws when 格式错误时抛出
+	 * @exception SeminarNotFoundException throws when 该讨论课不存在时抛出
 	 */
 	public Boolean updateSeminarBySeminarId(BigInteger seminarId, Seminar seminar);
 	
@@ -101,8 +101,8 @@ public interface SeminarService {
 	 * @return true(删除成功), false(删除失败)
 	 * @see SeminarGroupService #deleteSeminarGroupBySeminarId(BigInteger seminarId)
 	 * @see TopicService#deleteTopicBySeminarId(BigInteger seminarId)
-	 * @exception InfoIllegalException SeminarId格式错误时抛出
-	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
+	 * @exception InfoIllegalException SeminarId throws when 格式错误时抛出
+	 * @exception SeminarNotFoundException throws when 该讨论课不存在时抛出
 	 */
 	public Boolean deleteSeminarBySeminarId(BigInteger seminarId);
 	
@@ -114,8 +114,8 @@ public interface SeminarService {
 	 * @param courseId 课程的id
 	 * @param seminar 讨论课信息
 	 * @return seminarId 若创建成功返回创建的讨论课id，失败则返回-1
-	 * @exception InfoIllegalException CourseId格式错误时抛出
-	 * @exception CourseNotFoundException 该课程不存在时抛出
+	 * @exception InfoIllegalException CourseId throws when 格式错误时抛出
+	 * @exception CourseNotFoundException throws when 该课程不存在时抛出
 	 */
 	public BigInteger insertSeminarByCourseId(BigInteger courseId, Seminar seminar);
     
