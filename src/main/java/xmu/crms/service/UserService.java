@@ -16,7 +16,7 @@ public interface UserService {
 	
 	/**
 	 * 添加学生签到信息.
-	 * <p>根据班级id，讨论课id，学生id，经度，纬度进行签到<br>*在方法中通过班级id，讨论课id获取当堂课发起签到的位置
+	 * <p>根据班级id，讨论课id，学生id，经度，纬度进行签到，在方法中通过班级id，讨论课id获取当堂课发起签到的位置<br>
 	 * @author LiuAiqi
 	 * @param classId 班级的id
 	 * @param seminarId 讨论课的id
@@ -32,7 +32,7 @@ public interface UserService {
 	
 	/**
 	 * 获取学生签到信息.
-	 * <p>根据班级id，讨论课id获取当堂课签到信息
+	 * <p>根据班级id，讨论课id获取当堂课签到信息<br>
 	 * @author LiuAiqi
 	 * @param classId 班级的id
 	 * @param seminarId 讨论课id
@@ -45,7 +45,7 @@ public interface UserService {
 
 	/**
 	 * 手机号注册.
-	 * <p>手机号注册 (.Net使用)<br>*User中只有phone和password，userId是注册后才有并且在数据库自增<br> 
+	 * <p>手机号注册 (.Net使用),User中只有phone和password，userId是注册后才有并且在数据库自增<br> 
 	 * @author qinlingyun	 
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 * @return user 该用户信息

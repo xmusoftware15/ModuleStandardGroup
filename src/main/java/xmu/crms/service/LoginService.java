@@ -25,7 +25,7 @@ public interface LoginService {
 	
 	/**
 	 * 手机号登录.
-	 * <p>手机号登录 (.Net使用)<br>*User中只有phone和password，用于判断用户名密码是否正确<br>
+	 * <p>手机号登录 (.Net使用),User中只有phone和password，用于判断用户名密码是否正确<br>
 	 * @author qinlingyun 
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 * @return user 该用户信息
