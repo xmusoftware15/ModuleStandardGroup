@@ -21,7 +21,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException userId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public List<Course> listCourseByUserId(BigInteger userId) throws xmu.crms.exception.InfoIllegalException,xmu.crms.exception.CourseNotFoundException;
+	public List<Course> listCourseByUserId(BigInteger userId) throws InfoIllegalException,CourseNotFoundException;
 	
 	
 	/**
@@ -32,7 +32,7 @@ public interface CourseService {
 	 * @return courseId 新建课程的id
 	 * @exception InfoIllegalException userId格式错误时抛出
 	 */
-	public  BigInteger insertCourseByUserId(BigInteger userId,Course course);
+	public  BigInteger insertCourseByUserId(BigInteger userId,Course course) throws InfoIllegalException;
 	
 	
 	/**
@@ -43,7 +43,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public  Course getCourseByCourseId(BigInteger courseId);
+	public  Course getCourseByCourseId(BigInteger courseId) throws InfoIllegalException,CourseNotFoundException;
 	
 	
 	/**
@@ -67,7 +67,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public Boolean deleteCourseByCourseId(BigInteger courseId);
+	public Boolean deleteCourseByCourseId(BigInteger courseId) throws InfoIllegalException,CourseNotFoundException;
 	
 
 	
@@ -81,7 +81,7 @@ public interface CourseService {
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public List<Course> listCourseByCourseName(String courseName);
+	public List<Course> listCourseByCourseName(String courseName) throws InfoIllegalException,CourseNotFoundException;
 	
 	
 	/**
@@ -96,7 +96,7 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByCourseName(String courseName);
+	public List<ClassInfo> listClassByCourseName(String courseName) throws InfoIllegalException,CourseNotFoundException,ClassNotFoundException;
 	
 	
 	/**
@@ -111,7 +111,7 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByTeacherName(String teacherName);
+	public List<ClassInfo> listClassByTeacherName(String teacherName) throws UserNotFoundException,CourseNotFoundException,ClassNotFoundException;
 	
 	
 	/**
@@ -126,6 +126,6 @@ public interface CourseService {
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByUserId(BigInteger userId);
+	public List<ClassInfo> listClassByUserId(BigInteger userId) throws UserNotFoundException,CourseNotFoundException,ClassNotFoundException;
 }
 
