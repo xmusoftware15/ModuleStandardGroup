@@ -2,11 +2,11 @@ package xmu.crms.service;
 
 import java.math.BigInteger;
 
-import xmu.crms.bo.UserBO;
+import xmu.crms.entity.*;
 
 /**
  * @author ModuleStandardGroup/YeHongjie
- * @version 1.10
+ * @version 2.00
  */
 public interface LoginService {
 	
@@ -20,7 +20,7 @@ public interface LoginService {
 	 * @param successUrl 微信OAuth2授权后跳转到的网址
 	 * @return user 该用户信息
 	 */
-	public UserBO signInWeChat(BigInteger userId,String code,String state,String successUrl);
+	public User signInWeChat(BigInteger userId,String code,String state,String successUrl);
 	
 	
 	/**
@@ -30,5 +30,5 @@ public interface LoginService {
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 * @return user 该用户信息
 	 */
-	public UserBO signInPhone(UserBO user);
+	public User signInPhone(User user);
 }
