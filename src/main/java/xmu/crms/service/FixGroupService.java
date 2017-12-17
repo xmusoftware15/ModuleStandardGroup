@@ -15,7 +15,7 @@ import xmu.crms.entity.*;
 public interface FixGroupService {
 	/**
 	 * 按FixGroupId删除FixGroupMember.
-	 * <p>按FixGroupId删除FixGroupMember<br>*
+	 * <p>按FixGroupId删除FixGroupMember<br>
 	 * @author zhouzhongjun
      * @param fixGroupId 固定分组Id
      * @return true 删除成功  false删除失败
@@ -27,7 +27,7 @@ public interface FixGroupService {
 	
 	/**
 	 * 将学生加入固定小组.
-	 * ＜p＞将用户加入指定的固定小组<br>*
+	 * ＜p＞将用户加入指定的固定小组<br>
 	 * @author YeHongjie
 	 * @param userId 学生的id
 	 * @param groupId 要加入固定小组的id
@@ -41,7 +41,7 @@ public interface FixGroupService {
     
 	/**
 	 * 查询固定小组成员.
-	 * ＜p＞按照固定小组id查询该小组的成员<br>*
+	 * ＜p＞按照固定小组id查询该小组的成员<br>
 	 * @author YeHongjie
 	 * @param groupId 要查询的固定小组id
 	 * @return List 固定小组成员信息
@@ -51,7 +51,7 @@ public interface FixGroupService {
     public List<User> listFixGroupMemberByGroupId(BigInteger groupId);
 	/**
 	 * 按classId查找FixGroup信息.
-	 * <p>按classId查找FixGroup信息<br>*
+	 * <p>按classId查找FixGroup信息<br>
 	 * @author zhouzhongjun
      * @param classId 班级Id
      * @return null 固定分组列表
@@ -74,7 +74,7 @@ public interface FixGroupService {
     
     /**
 	 * 删除固定小组.
-	 * ＜p＞按照id删除固定小组<br>*
+	 * ＜p＞按照id删除固定小组<br>
 	 * @author YeHongjie
 	 * @param groupId 固定小组的id
 	 * @return state 若删除成功返回true，失败返回false
@@ -86,7 +86,7 @@ public interface FixGroupService {
     
     /**
 	 * 修改固定小组.
-	 * ＜p＞修改固定小组的信息（不包括成员）<br>*
+	 * ＜p＞修改固定小组的信息（不包括成员）<br>
 	 * @author YeHongjie
 	 * @param groupId 小组的id
 	 * @param fixGroupBO 小组信息
@@ -98,7 +98,7 @@ public interface FixGroupService {
     
     /**
 	 * 查询固定小组.
-	 * ＜p＞按照id查询某一固定小组的信息（包括成员）<br>*
+	 * ＜p＞按照id查询某一固定小组的信息（包括成员）<br>
 	 * @author YeHongjie
 	 * @param groupId 小组的id
 	 * @return fixGroupBO 固定小组对象，若未找到相关小组返回空(null)
@@ -111,7 +111,7 @@ public interface FixGroupService {
 
     /**
 	 * 将学生加入小组.
-	 * ＜p＞将用户加入指定的小组<br>*
+	 * ＜p＞将用户加入指定的小组<br>
 	 * @author YeHongjie
 	 * @param userId 学生的id
 	 * @param groupId 要加入小组的id
@@ -129,7 +129,7 @@ public interface FixGroupService {
 
     /**
 	 * 小组取消话题.
-	 * <p>小组按小组id取消讨论课的话题的选择<br>*
+	 * <p>小组按小组id取消讨论课的话题的选择<br>
 	 * @author heqi
 	 * @param groupId 小组id
 	 * @return true or false 返回取消话题是否成功
@@ -140,7 +140,7 @@ public interface FixGroupService {
 
     /**
 	 * 按id获取小组.
-	 * <p>通过学生id和班级id获取学生所在的班级固定小组<br>*
+	 * <p>通过学生id和班级id获取学生所在的班级固定小组<br>
 	 * @author heqi
 	 * @param userId 学生id
 	 * @param classId 班级id
@@ -154,7 +154,7 @@ public interface FixGroupService {
 
     /**
      * 根据groupId修改group.
-     * <p>根据groupId修改group<br>*
+     * <p>根据groupId修改group<br>
      * @author aixing
      * @param groupId 要修改的group的Id
      * @param group 新的group信息
