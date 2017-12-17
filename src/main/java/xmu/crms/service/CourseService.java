@@ -121,11 +121,12 @@ public interface CourseService {
 	 * @return list 班级列表
 	 * @see CourseService #listCourseByUserId(BigInteger userId)
 	 * @see ClassService #listClassByCourseId(BigInteger courseId)
-	 * @exception InfoIllegalException userId格式错误时抛出
-	 * @exception InfoIllegalException courseId格式错误时抛出
+	 * @exception InfoIllegalException userId格式错误时抛出或courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByUserId(BigInteger userId) throws UserNotFoundException,CourseNotFoundException,ClassNotFoundException;
+	public List<ClassInfo> listClassByUserId(BigInteger userId)
+	        throws InfoIllegalException,CourseNotFoundException,
+	        ClassNotFoundException;
 }
 

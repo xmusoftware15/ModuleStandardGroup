@@ -18,10 +18,11 @@ public interface FixGroupService {
 	 * @author zhouzhongjun
      * @param fixGroupId 固定分组Id
      * @return true删除成功  false删除失败
-     * @exception InfoIllegalException(信息不合法，id格式错误)
-     * @exception FixGroupNotFoundException(未找到小组)
+     * @exception InfoIllegalException 信息不合法，id格式错误 
+     * @exception FixGroupNotFoundException 未找到小组
 	 */
-	public Boolean deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId);
+	public Boolean deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId) throws
+	        InfoIllegalException,FixGroupNotFoundException;
 	
 	/**
 	 * 将学生加入固定小组.
@@ -30,10 +31,10 @@ public interface FixGroupService {
 	 * @param userId 学生的id
 	 * @param groupId 要加入固定小组的id
 	 * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
-	 * @exception InfoIllegalException(信息不合法，id格式错误)
-     * @exception FixGroupNotFoundException(未找到小组)
-     * @exception UserNotFoundException(不存在该学生)
-     * @exception InvalidOperationException（待添加学生已经在小组里了）
+	 * @exception InfoIllegalException 信息不合法，id格式错误
+     * @exception FixGroupNotFoundException 未找到小组
+     * @exception UserNotFoundException 不存在该学生
+     * @exception InvalidOperationException 待添加学生已经在小组里了
 
 	 */
     public BigInteger insertFixGroupMemberById(BigInteger userId,BigInteger groupId) throws InfoIllegalException
@@ -45,8 +46,8 @@ public interface FixGroupService {
 	 * @author YeHongjie
 	 * @param groupId 要查询的固定小组id
 	 * @return List 固定小组成员信息
-	 * @exception InfoIllegalException(信息不合法，id格式错误)
-     * @exception FixGroupNotFoundException(未找到小组)
+	 * @exception InfoIllegalException 信息不合法，id格式错误
+     * @exception FixGroupNotFoundException 未找到小组
 	 */
     public List<User> listFixGroupMemberByGroupId(BigInteger groupId) throws InfoIllegalException,
             FixGroupNotFoundException;
@@ -55,7 +56,7 @@ public interface FixGroupService {
 	 * @author zhouzhongjun
      * @param classId 班级Id
      * @return null 固定分组列表
-     * @exception InfoIllegalException(信息不合法，id格式错误)
+     * @exception InfoIllegalException 信息不合法，id格式错误
 	 */
 	public List<FixGroup> listFixGroupByClassId(BigInteger classId) throws InfoIllegalException;
 	
@@ -67,8 +68,8 @@ public interface FixGroupService {
      * @see FixGroupService #listFixGroupByClassId(BigInteger classId)
      * @see FixGroupService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
      * @return true删除成功  false删除失败
-     * @exception InfoIllegalException(信息不合法，id格式错误)
-     * @exception ClassNotFoundException(未找到班级)
+     * @exception InfoIllegalException 信息不合法，id格式错误 
+     * @exception ClassNotFoundException 未找到班级
 	 */
 	public Boolean deleteFixGroupByClassId(BigInteger classId) throws InfoIllegalException,
 	        ClassNotFoundException;
@@ -80,8 +81,8 @@ public interface FixGroupService {
 	 * @param groupId 固定小组的id
 	 * @return state 若删除成功返回true，失败返回false
 	 * @see FixGroupService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
-	 * @exception InfoIllegalException  (信息不合法，id格式错误)
-	 * @exception FixGroupNotFoundException(未找到小组)
+	 * @exception InfoIllegalException  信息不合法，id格式错误
+	 * @exception FixGroupNotFoundException 未找到小组
 	 */
     public Boolean deleteFixGroupByGroupId(BigInteger groupId) throws InfoIllegalException,
             FixGroupNotFoundException;
@@ -93,8 +94,8 @@ public interface FixGroupService {
 	 * @param groupId 小组的id
 	 * @param fixGroupBO 小组信息
 	 * @return Boolean 若更新成功返回true，失败返回false
-	 * @exception InfoIllegalException  (信息不合法，id格式错误)
-	 * @exception FixGroupNotFoundException(未找到小组)
+	 * @exception InfoIllegalException 信息不合法，id格式错误
+	 * @exception FixGroupNotFoundException 未找到小组
 	 */
     public Boolean updateFixGroupByGroupId(BigInteger groupId,FixGroup fixGroupBO) throws 
             InfoIllegalException,FixGroupNotFoundException;
@@ -106,8 +107,8 @@ public interface FixGroupService {
 	 * @param groupId 小组的id
 	 * @return fixGroupBO 固定小组对象，若未找到相关小组返回空(null)
 	 * @see FixGroupService #listFixGroupMemberByGroupId(BigInteger groupId)
-	 * @exception InfoIllegalException  (信息不合法，id格式错误)
-	 * @exception FixGroupNotFoundException(未找到小组)
+	 * @exception InfoIllegalException  信息不合法，id格式错误
+	 * @exception FixGroupNotFoundException 未找到小组
 	 */
     public FixGroup getFixGroupByGroupId(BigInteger groupId) throws InfoIllegalException,
             FixGroupNotFoundException;
@@ -120,13 +121,14 @@ public interface FixGroupService {
 	 * @param userId 学生的id
 	 * @param groupId 要加入小组的id
 	 * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
-	 * @exception InfoIllegalException  (信息不合法，id格式错误)
-	 * @exception FixGroupNotFoundException(未找到小组)
-	 * @exception UserNotFoundException(不存在该学生)
-	 * @exception InvalidOperationException（待添加学生已经在小组里了）
+	 * @exception FixGroupNotFoundException  信息不合法，id格式错误
+	 * @exception FixGroupNotFoundException 未找到小组
+	 * @exception UserNotFoundException 不存在该学生
+	 * @exception InvalidOperationException 待添加学生已经在小组里了
 	 */
     public BigInteger insertStudnetIntoGroup(BigInteger userId,BigInteger groupId) throws 
-            FixGroupNotFoundException,UserNotFoundException,InvalidOperationException;
+            FixGroupNotFoundException,FixGroupNotFoundException,UserNotFoundException,
+            InvalidOperationException;
 
     /**
 	 * 小组取消话题.
@@ -134,8 +136,8 @@ public interface FixGroupService {
 	 * @author heqi
 	 * @param groupId 小组id
 	 * @return true or false 返回取消话题是否成功
-	 * @exception InfoIllegalException  (信息不合法，id格式错误)
-	 * @exception FixGroupNotFoundException(未找到小组)
+	 * @exception InfoIllegalException  信息不合法，id格式错误
+	 * @exception FixGroupNotFoundException 未找到小组
 	 */
 	public Boolean deleteTopicByGroupId(BigInteger groupId) throws InfoIllegalException,
 	        FixGroupNotFoundException;
@@ -148,9 +150,9 @@ public interface FixGroupService {
 	 * @param classId 班级id
 	 * @return GroupBO 返回班级固定小组的信息 
 	 * @see UserService#getUserByUserId(BigInteger UserId)
-	 * @exception InfoIllegalException  (信息不合法，id格式错误)
-	 * @exception ClassNotFoundException(未找到小组)
-	 * @exception UserNotFoundException(不存在该学生)
+	 * @exception InfoIllegalException  信息不合法，id格式错误
+	 * @exception ClassNotFoundException 未找到小组
+	 * @exception UserNotFoundException 不存在该学生
 	 */
 	public FixGroup getFixedGroupById(BigInteger userId,BigInteger classId) throws 
 	        InfoIllegalException,ClassNotFoundException,UserNotFoundException;
@@ -162,8 +164,8 @@ public interface FixGroupService {
      * @param groupId 要修改的group的Id
      * @param group 新的group信息
      * @return Boolean 若更新成功返回true，失败返回false
-     * @exception InfoIllegalException  (信息不合法，id格式错误)
-	 * @exception FixGroupNotFoundException(未找到小组)
+     * @exception InfoIllegalException  信息不合法，id格式错误
+	 * @exception FixGroupNotFoundException 未找到小组
      */
     public Boolean updateSeminarGroupById(BigInteger groupId,SeminarGroup group) throws
             InfoIllegalException,FixGroupNotFoundException;
