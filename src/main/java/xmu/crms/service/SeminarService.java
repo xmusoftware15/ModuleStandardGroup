@@ -24,7 +24,7 @@ public interface SeminarService {
      * @exception InfoIllegalException CourseId 格式错误、教师设置embedGrade为true时抛出
      * @exception CourseNotFoundException 未找到该课程时抛出
 	 */
-	public List<Seminar> listSeminarByCourseId(BigInteger courseId)
+	 List<Seminar> listSeminarByCourseId(BigInteger courseId)
 	        throws InfoIllegalException,CourseNotFoundException;
 	
 	
@@ -40,7 +40,7 @@ public interface SeminarService {
 	 * @exception InfoIllegalException CourseId 格式错误时抛出
 	 * @exception CourseNotFoundException 该课程不存在时抛出
 	 */
-	public Boolean deleteSeminarByCourseId(BigInteger courseId) throws InfoIllegalException,
+	 Boolean deleteSeminarByCourseId(BigInteger courseId) throws InfoIllegalException,
 	        CourseNotFoundException; 
 		
 
@@ -55,7 +55,7 @@ public interface SeminarService {
 	 * @exception InfoIllegalException  格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
-	public Seminar getMySeminarBySeminarId(BigInteger seminarId,BigInteger userId) throws 
+	 Seminar getMySeminarBySeminarId(BigInteger seminarId,BigInteger userId) throws 
 	        InfoIllegalException,SeminarNotFoundException;
 	
 	
@@ -69,7 +69,7 @@ public interface SeminarService {
 	 * @exception InfoIllegalException SeminarId 格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
-	public Seminar getSeminarDetailBySeminarId(BigInteger seminarId,BigInteger userId)
+	 Seminar getSeminarDetailBySeminarId(BigInteger seminarId,BigInteger userId)
 	        throws InfoIllegalException,SeminarNotFoundException;
 	
 	
@@ -82,7 +82,7 @@ public interface SeminarService {
 	 * @exception InfoIllegalException SeminarId 格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
-	public Seminar getSeminarBySeminarId(BigInteger seminarId) throws
+	 Seminar getSeminarBySeminarId(BigInteger seminarId) throws
 	        InfoIllegalException,SeminarNotFoundException;
 	
 	
@@ -96,7 +96,7 @@ public interface SeminarService {
 	 * @exception InfoIllegalException SeminarId 格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
-	public Boolean updateSeminarBySeminarId(BigInteger seminarId, Seminar seminar) throws
+	 Boolean updateSeminarBySeminarId(BigInteger seminarId, Seminar seminar) throws
 	        InfoIllegalException,SeminarNotFoundException;
 	
 	
@@ -111,7 +111,7 @@ public interface SeminarService {
 	 * @exception InfoIllegalException SeminarId 格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
-	public Boolean deleteSeminarBySeminarId(BigInteger seminarId) throws
+	 Boolean deleteSeminarBySeminarId(BigInteger seminarId) throws
 	        InfoIllegalException,SeminarNotFoundException;
 	
 	
@@ -125,7 +125,7 @@ public interface SeminarService {
 	 * @exception InfoIllegalException CourseId 格式错误时抛出
 	 * @exception CourseNotFoundException 该课程不存在时抛出
 	 */
-	public BigInteger insertSeminarByCourseId(BigInteger courseId, Seminar seminar) throws
+	 BigInteger insertSeminarByCourseId(BigInteger courseId, Seminar seminar) throws
 	        InfoIllegalException,CourseNotFoundException;
     
 }

@@ -20,7 +20,7 @@ public interface LoginService {
 	 * @param successUrl 微信OAuth2授权后跳转到的网址
 	 * @return user 该用户信息
 	 */
-	public User signInWeChat(BigInteger userId,String code,String state,String successUrl);
+	 User signInWeChat(BigInteger userId,String code,String state,String successUrl);
 	
 	
 	/**
@@ -30,5 +30,5 @@ public interface LoginService {
 	 * @param user 用户信息(手机号Phone和密码Password)
 	 * @return user 该用户信息
 	 */
-	public User signInPhone(User user);
+	 User signInPhone(User user);
 }

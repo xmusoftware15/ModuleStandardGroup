@@ -19,7 +19,7 @@ public interface ClassService {
 	 * @param classId 班级Id
 	 * @return true/false 是否成功删除
 	 */
-	public Boolean deleteClassSelectionByClassId(BigInteger classId);
+	 Boolean deleteClassSelectionByClassId(BigInteger classId);
 
 	/**
 	 * 按课程名称和教师名称获取班级列表.
@@ -33,7 +33,7 @@ public interface ClassService {
 	 * @see ClassService #listClassByCourseName(String courseName)
 	 * @see ClassService #listClassByTeacherName(String teacherName)
 	 */
-	public List<ClassInfo> listClassByName(String courseName, String teacherName);
+	 List<ClassInfo> listClassByName(String courseName, String teacherName);
 
 	/**
 	 * 根据课程ID获得班级列表.
@@ -42,7 +42,7 @@ public interface ClassService {
 	 * @param courseId 课程ID
 	 * @return list 班级列表
 	 */
-	public List<ClassInfo> listClassByCourseId(BigInteger courseId);
+	 List<ClassInfo> listClassByCourseId(BigInteger courseId);
 
 	/**
 	 * 按班级id获取班级详情.
@@ -53,7 +53,7 @@ public interface ClassService {
 	 * @param classId 班级ID
 	 * @return ClassBO 班级
 	 */
-	public ClassInfo getClassByClassId(BigInteger classId);
+	 ClassInfo getClassByClassId(BigInteger classId);
 
 	/**
 	 * 按班级id和班级修改班级信息.
@@ -64,7 +64,7 @@ public interface ClassService {
 	 * @param classId 班级ID
 	 * @return boolean 班级修改是否成功情况
 	 */
-	public Boolean updateClassByClassId(BigInteger classId);
+	 Boolean updateClassByClassId(BigInteger classId);
 
 	/**
 	 * 按班级id删除班级.
@@ -78,7 +78,7 @@ public interface ClassService {
 	 * @see FixGroupService #deleteFixGroupByClassId(BigInteger classId)
 	 * @see SeminarGroupService #deleteSeminarGroupByClaaId(BigInteger classId)
 	 */
-	public Boolean deleteClassByClassId(BigInteger classId);
+	 Boolean deleteClassByClassId(BigInteger classId);
 
 	/**
 	 * 学生按班级id选择班级.
@@ -90,7 +90,7 @@ public interface ClassService {
 	 * @param classId 班级id
 	 * @return url 选课url
 	 */
-	public String insertCourseSelectionById(BigInteger userId, BigInteger classId);
+	 String insertCourseSelectionById(BigInteger userId, BigInteger classId);
 
 	/**
 	 * 学生按班级id取消选择班级.
@@ -102,7 +102,7 @@ public interface ClassService {
 	 * @param classId  班级id
 	 * @return boolean 取消班级是否成功
 	 */
-	public Boolean deleteCourseSelectionById(BigInteger userId, BigInteger classId);
+	 Boolean deleteCourseSelectionById(BigInteger userId, BigInteger classId);
 
 	/**
 	 * 老师获取该班级签到、分组状态.
@@ -114,7 +114,7 @@ public interface ClassService {
 	 * @return classBO 班级
 	 * @see SeminarGroupService #listSeminarGroupBySeminarId(BigInteger seminarId)
 	 */
-	public ClassInfo getCallGroupStatusById(BigInteger seminarId);
+	 ClassInfo getCallGroupStatusById(BigInteger seminarId);
 
 	/**
 	 * 新建班级.
@@ -126,7 +126,7 @@ public interface ClassService {
 	 * @param courseId 课程id
 	 * @return classId 班级Id
 	 */
-	public BigInteger insertClassById(BigInteger userId, BigInteger courseId);
+	 BigInteger insertClassById(BigInteger userId, BigInteger courseId);
 
 	/**
 	 * 按courseId删除Class.
@@ -140,7 +140,7 @@ public interface ClassService {
 	 * @see FixGroupService #deleteFixGroupByClassId(BigInteger ClassId)
 	 * @return true删除成功 false删除失败
 	 */
-	public Boolean deleteClassByCourseId(BigInteger courseId);
+	 Boolean deleteClassByCourseId(BigInteger courseId);
 
 	/**
 	 * 按classId删除ScoreRule.
@@ -149,7 +149,7 @@ public interface ClassService {
 	 * @param classId 班级Id
 	 * @return true删除成功 false删除失败
 	 */
-	public Boolean deleteScoreRuleById(BigInteger classId);
+	 Boolean deleteScoreRuleById(BigInteger classId);
 
 	/**
 	 * 查询评分规则.
@@ -160,7 +160,7 @@ public interface ClassService {
 	 * @param classId  班级id
 	 * @return ProportionBO 返回评分规则，若未找到对应评分规则返回空（null)
 	 */
-	public ClassInfo getScoreRule(BigInteger classId);
+	 ClassInfo getScoreRule(BigInteger classId);
 
 	/**
 	 * 新增评分规则.
@@ -172,7 +172,7 @@ public interface ClassService {
 	 * @param proportions  评分规则
 	 * @return scoreRuleId 若创建成功则返回该评分规则的id，失败则返回-1
 	 */
-	public BigInteger insertScoreRule(BigInteger classId, ClassInfo proportions);
+	 BigInteger insertScoreRule(BigInteger classId, ClassInfo proportions);
 
 	/**
 	 * 修改评分规则.
@@ -184,5 +184,5 @@ public interface ClassService {
 	 * @param proportions 评分规则
 	 * @return state 若修改成功则返回true，失败则返回false
 	 */
-	public Boolean updateScoreRule(BigInteger classId, ClassInfo proportions);
+	 Boolean updateScoreRule(BigInteger classId, ClassInfo proportions);
 }
