@@ -222,11 +222,12 @@ public interface SeminarGroupService {
 	 * <p>小组按小组id取消讨论课的话题的选择<br>
 	 * @author heqi
 	 * @param groupId 小组id
+	 * @param topicId 小组id
 	 * @return true/false 返回取消话题是否成功
 	 * @exception InfoIllegalException GroupId 格式错误时抛出
 	 * @exception GroupNotFoundException 该小组不存在时抛出
 	 */
-	 Boolean deleteTopicByGroupId(BigInteger groupId) throws
+	 Boolean deleteTopicByGroupId(BigInteger groupId, BigInteger topicId) throws
             InfoIllegalException,GroupNotFoundException;;
 	
 	/**
