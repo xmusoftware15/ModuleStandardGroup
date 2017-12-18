@@ -54,9 +54,8 @@ public interface CourseService {
 	 * @author ZhouZhongjun
      * @param courseId 课程Id
 	 * @param course 课程信息
-	 * @return true修改成功  false修改失败
 	 */
-	public boolean updateCourseByCourseId(BigInteger courseId,Course course);
+	public void updateCourseByCourseId(BigInteger courseId,Course course);
 	
 	
 	/**
@@ -66,11 +65,10 @@ public interface CourseService {
      * @param courseId 课程Id
 	 * @see SeminarService #deleteSemiarByCourseId(BigInteger courseId)
 	 * @see ClassService   #deleteClassByCourseId(BigInteger courseId)
-	 * @return true删除成功  false删除失败
 	 * @exception InfoIllegalException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public Boolean deleteCourseByCourseId(BigInteger courseId)throws InfoIllegalException,CourseNotFoundException;
+	public void deleteCourseByCourseId(BigInteger courseId)throws InfoIllegalException,CourseNotFoundException;
 	
 
 	
