@@ -65,10 +65,10 @@ public interface CourseService {
      * @param courseId 课程Id
 	 * @see SeminarService #deleteSemiarByCourseId(BigInteger courseId)
 	 * @see ClassService   #deleteClassByCourseId(BigInteger courseId)
-	 * @exception InfoIllegalException courseId格式错误时抛出
+	 * @exception IlegalArgumentException courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 */
-	public void deleteCourseByCourseId(BigInteger courseId)throws InfoIllegalException,CourseNotFoundException;
+	public void deleteCourseByCourseId(BigInteger courseId)throws IlegalArgumentException,CourseNotFoundException;
 	
 
 	
@@ -115,10 +115,10 @@ public interface CourseService {
 	 * @return list 班级列表
 	 * @see CourseService #listCourseByUserId(BigInteger userId)
 	 * @see ClassService #listClassByCourseId(BigInteger courseId)
-	 * @exception InfoIllegalException userId格式错误时抛出或courseId格式错误时抛出
+	 * @exception IlegalArgumentException userId格式错误时抛出或courseId格式错误时抛出
 	 * @exception CourseNotFoundException 未找到课程
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-	public List<ClassInfo> listClassByUserId(BigInteger userId)throws InfoIllegalException,CourseNotFoundException,ClassNotFoundException;
+	public List<ClassInfo> listClassByUserId(BigInteger userId)throws IlegalArgumentException,CourseNotFoundException,ClassNotFoundException;
 }
 
