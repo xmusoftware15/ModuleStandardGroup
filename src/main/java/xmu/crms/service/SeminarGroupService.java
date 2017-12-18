@@ -210,11 +210,11 @@ public interface SeminarGroupService {
 	 * @author heqi
 	 * @param groupId 小组id
 	 * @param topicId 话题id
-	 * @return String 返回一个url
+	 * @return BigInteger 返回seminarGroupTopicId
 	 * @exception IlegalArgumentException GroupId、TopicId格式错误时抛出
 	 * @exception GroupNotFoundException 该小组不存在时抛出
 	 */
-	public String insertTopicByGroupId(BigInteger groupId, BigInteger topicId) throws
+	public BigInteger insertTopicByGroupId(BigInteger groupId, BigInteger topicId) throws
 	IlegalArgumentException,GroupNotFoundException;
 
 	
