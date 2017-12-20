@@ -51,7 +51,7 @@ public interface SeminarService {
 	 * @param seminarId 讨论课的id
 	 * @param userId 用户的id
 	 * @return 当前讨论课的信息
-	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
+	 * @see SeminarGroupService #getSeminarGroupById(BigInteger seminarId,BigInteger userId)
 	 * @exception IllegalArgumentException  格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
