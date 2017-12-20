@@ -64,14 +64,6 @@ public interface GradeService {
 	 * @return Boolean true 操作成功 false 操作失败
 	 */
 	 Boolean updateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade) ;
-	
-	/**
-	 * 获取某学生的讨论课成绩列表.
-	 * @author qinlingyun
-	 * @param userId 用户id
-	 * @return list 讨论课成绩列表
-	 * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId)
-	 */
-	 List<BigInteger> listSeminarGradeByStudentId(BigInteger userId);
+
 	
 }
