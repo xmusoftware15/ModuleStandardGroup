@@ -20,11 +20,12 @@ public interface FixGroupService {
 	 * <p>按ClassId删除FixGroupMember<br>
 	 * @author zhouzhongjun
      * @param classId 固定分组Id
+     * @param userId 队长的Id
      * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
      * @exception InfoIllegalException 信息不合法，id格式错误 
      * @exception classNotFoundException 未找到班级
 	 */
-	public BigInteger insertFixGroupByClassId(BigInteger classId) throws
+	public BigInteger insertFixGroupByClassId(BigInteger classId,BigInteger userId) throws
 	        InfoIllegalException,classNotFoundException;
 	
 	/**
