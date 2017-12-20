@@ -2,8 +2,13 @@ package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.List;
-import xmu.crms.entity.*;
-import xmu.crms.exception.*;
+
+import xmu.crms.entity.FixGroup;
+import xmu.crms.entity.SeminarGroup;
+import xmu.crms.entity.User;
+import xmu.crms.exception.FixGroupNotFoundException;
+import xmu.crms.exception.InvalidOperationException;
+import xmu.crms.exception.UserNotFoundException;
 
 /**
  *
@@ -169,4 +174,16 @@ public interface FixGroupService {
 	 */
 	Boolean updateSeminarGroupById(BigInteger groupId,SeminarGroup group) throws
 			IllegalArgumentException,FixGroupNotFoundException;
+	
+	
+	/**
+	 * 定时器方法.
+	 * 课前将固定小组复制一份作为讨论课小组名单.
+	 * <p>条件: 讨论课上课前<br>*SeminarGroupService<br>
+	 * @author qinlingyun
+	 * @param semianrId 讨论课ID
+	 * @param fixedGroupId 小组ID
+	 */
+	void fixedGroupToSeminarGroup(BigInteger semianrId, BigInteger fixedGroupId);
+
 }

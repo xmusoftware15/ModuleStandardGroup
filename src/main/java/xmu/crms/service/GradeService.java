@@ -1,7 +1,6 @@
 package xmu.crms.service;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -61,5 +60,27 @@ public interface GradeService {
 	 * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId)
 	 */
 	 List<BigInteger> listSeminarGradeByStudentId(BigInteger userId);
+	 
+		/**
+		 * 定时器方法.
+		 * 讨论课结束后计算展示得分.
+		 * <p>条件: 讨论课已结束<br>*GradeService<br>
+		 * @author qinlingyun
+		 * @param semianrId 讨论课ID
+		 * @param semianrGoupId 小组ID
+		 */
+		void countPresentationGrade(BigInteger semianrId, BigInteger seminarGroupId);
+		
+		
+		/**
+		 * 定时器方法.
+		 * 讨论课结束后计算本次讨论课得分.
+		 * <p>条件: 讨论课已结束，展示得分已算出<br>*GradeService<br>
+		 * @author qinlingyun
+		 * @param semianrId 讨论课ID
+		 * @param semianrGoupId 小组ID
+		 */
+		void countGroupGradeBySerminarId(BigInteger semianrId, BigInteger seminarGroupId);		
+	
 	
 }
