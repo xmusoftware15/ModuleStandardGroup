@@ -32,21 +32,19 @@ namespace Xmu.Crms.Shared.Service
 	 * @author aixing
 	 * @param topicId 讨论课的ID
 	 * @param topic 修改后的讨论课
-	 * @return 是否修改成功
 	 * @exception TopicNotFoundException 无此小组或Id错误
 	 * @exception IllegalArgumentException Id格式错误或topic格式错误时抛出
 	 */
-        Boolean UpdateTopicByTopicId(long topicId, Topic topic);
+        void UpdateTopicByTopicId(long topicId, Topic topic);
 
         /**
 	 * 删除topic.
 	 * <p>删除topic表中相应讨论课的topic<br>
 	 * @param topicId 要删除的topic的topicId
 	 * @param seminarId 要删除topic所属seminar的id
-	 * @return 是否成功
 	 * @exception IllegalArgumentException Id格式错误时抛出
 	 */
-        Boolean DeleteTopicByTopicId(long topicId, long seminarId);
+        void DeleteTopicByTopicId(long topicId, long seminarId);
         //删除topic还要把每个选了这个topic的小组的选题属性修改为null
         //想找到选了这个topic的小组，首先通过seminarId获得该讨论课所有小组，遍历判断是否选了这个topic
         //SeminarGroupService sg=new SeminarGroupService();
@@ -91,19 +89,17 @@ namespace Xmu.Crms.Shared.Service
 	 * @author zhouzhongjun
 	 * @param groupId 小组Id
 	 * @param topicId 话题Id
-	 * @return true删除成功 false删除失败
 	 * @exception IllegalArgumentException groupId格式错误或topicId格式错误时抛出
 	 */
-        Boolean DeleteTopicById(long groupId, long topicId);
+        void DeleteTopicById(long groupId, long topicId);
         /**
       * 按topicId删除SeminarGroupTopic表信息.
       * <p>删除seminar_group_topic表中选择了某个话题的全部记录<br>
       * @author zhouzhongjun
       * @param topicId 讨论课Id
-      * @return true删除成功 false删除失败
       * @exception IllegalArgumentException topicId格式错误
       */
-        Boolean DeleteSeminarGroupTopicByTopicId(long topicId);
+        void DeleteSeminarGroupTopicByTopicId(long topicId);
 
 
         /**
@@ -115,10 +111,9 @@ namespace Xmu.Crms.Shared.Service
 	 *@see TopicService #listTopicBySeminarId(BigInteger seminarId)
 	 *@see TopicService #deleteSeminarGroupTopicByTopicId(BigInteger topicId)
 	 *@see GradeService   #deleteStudentScoreGroupByTopicId(BigInteger topicId)
-	 * @return true删除成功 false删除失败
 	 * @exception IllegalArgumentException seminarId格式错误
 	 */
-        Boolean DeleteTopicBySeminarId(long seminarId);
+       void DeleteTopicBySeminarId(long seminarId);
 
 
     }

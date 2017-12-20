@@ -21,9 +21,8 @@ namespace Xmu.Crms.Shared.Service
          * 按topicId删除学生打分表.
          * @author zhouzhongjun
          * @param topicId 话题Id
-         *  @return true删除成功  false删除失败
          */
-        Boolean DeleteStudentScoreGroupByTopicId(long topicId);
+        void DeleteStudentScoreGroupByTopicId(long topicId);
 
         /**
          * 获取某学生所有讨论课的成绩.
@@ -44,9 +43,8 @@ namespace Xmu.Crms.Shared.Service
          * @param seminarId 讨论课Id
          * @param groupId 小组Id
          * @param grade 分数
-         * @return true 提交成功 false 提交失败
          */
-        Boolean InsertGroupGradeByUserId(long userId, long seminarId, long groupId, int grade);
+        void InsertGroupGradeByUserId(long userId, long seminarId, long groupId, int grade);
 
         /**
          * 按ID设置小组报告分.
@@ -54,9 +52,8 @@ namespace Xmu.Crms.Shared.Service
          * @author Huhui
          * @param seminar_group_id 讨论课组id
          * @param grade 分数
-         * @return Boolean true 操作成功 false 操作失败
          */
-        Boolean UpdateGroupByGroupId(long seminar_group_id, int grade);
+        void UpdateGroupByGroupId(long seminar_group_id, int grade);
 
         /**
          * 获取某学生的讨论课成绩列表.

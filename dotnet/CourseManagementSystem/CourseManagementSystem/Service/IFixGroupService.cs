@@ -14,11 +14,10 @@ namespace Xmu.Crms.Shared.Service
 	 * 按FixGroupId删除FixGroupMember.
 	 * @author zhouzhongjun
 	 * @param fixGroupId 固定分组Id
-	 * @return true删除成功  false删除失败
 	 * @exception IllegalArgumentException 信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-        Boolean DeleteFixGroupMemberByFixGroupId(long fixGroupId);
+        void DeleteFixGroupMemberByFixGroupId(long fixGroupId);
 
         /**
 	 * 将学生加入固定小组.
@@ -61,23 +60,21 @@ namespace Xmu.Crms.Shared.Service
 	 * @param classId 班级Id
 	 * @see FixGroupService #listFixGroupByClassId(BigInteger classId)
 	 * @see FixGroupService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
-	 * @return true删除成功  false删除失败
 	 * @exception IllegalArgumentException 信息不合法，id格式错误
 	 * @exception ClassNotFoundException 未找到班级
 	 */
-        Boolean DeleteFixGroupByClassId(long classId);
+        void DeleteFixGroupByClassId(long classId);
 
         /**
 	 * 删除固定小组.
 	 * ＜p＞按照id删除固定小组<br>*
 	 * @author YeHongjie
 	 * @param groupId 固定小组的id
-	 * @return state 若删除成功返回true，失败返回false
 	 * @see FixGroupService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
 	 * @exception IllegalArgumentException  信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-        Boolean DeleteFixGroupByGroupId(long groupId);
+        void DeleteFixGroupByGroupId(long groupId);
 
         /**
 	 * 修改固定小组.
@@ -85,11 +82,10 @@ namespace Xmu.Crms.Shared.Service
 	 * @author YeHongjie
 	 * @param groupId 小组的id
 	 * @param fixGroupBO 小组信息
-	 * @return Boolean 若更新成功返回true，失败返回false
 	 * @exception IllegalArgumentException 信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-        Boolean UpdateFixGroupByGroupId(long groupId, FixGroup fixGroupBO);
+        void UpdateFixGroupByGroupId(long groupId, FixGroup fixGroupBO);
 
         /**
 	 * 查询固定小组.
@@ -123,11 +119,10 @@ namespace Xmu.Crms.Shared.Service
 	 * <p>小组按小组id取消讨论课的话题的选择<br>
 	 * @author heqi
 	 * @param groupId 小组id
-	 * @return true or false 返回取消话题是否成功
 	 * @exception IllegalArgumentException  信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-        Boolean DeleteTopicByGroupId(long groupId);
+        void DeleteTopicByGroupId(long groupId);
 
         /**
 	 * 按id获取小组.
@@ -149,11 +144,10 @@ namespace Xmu.Crms.Shared.Service
 	 * @author aixing
 	 * @param groupId 要修改的group的Id
 	 * @param group 新的group信息
-	 * @return Boolean 若更新成功返回true，失败返回false
 	 * @exception IllegalArgumentException  信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-        Boolean UpdateSeminarGroupById(long groupId, SeminarGroup group);
+        void UpdateSeminarGroupById(long groupId, SeminarGroup group);
 
     }
 }

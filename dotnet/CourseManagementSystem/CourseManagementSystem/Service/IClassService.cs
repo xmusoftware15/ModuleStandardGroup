@@ -20,11 +20,11 @@ namespace Xmu.Crms.Shared.Service
          * 
          * @author zhouzhongjun
          * @param classId 班级Id
-         * @return true/false 是否成功删除
+         
          */
 
         
-        bool DeleteClassSelectionByClassId(long classId);
+        void DeleteClassSelectionByClassId(long classId);
 
         /**
 	   * 按课程名称和教师名称获取班级列表.
@@ -69,10 +69,9 @@ namespace Xmu.Crms.Shared.Service
          * 
          * @author yexiaona
          * @param classId 班级ID
-         * @return boolean 班级修改是否成功情况
          * @see ScoreRuleService #updateScoreRuleById(long scoreRuleId)
          */
-        bool UpdateClassByClassId(long classId);
+        void UpdateClassByClassId(long classId);
 
         /**
          * 按班级id删除班级.
@@ -87,7 +86,7 @@ namespace Xmu.Crms.Shared.Service
          * @see FixGroupService #deleteFixGroupByClassId(long classId)
          * @see SeminarGroupService #deleteSeminarGroupByClaaId(long classId)
          */
-        bool DeleteClassByClassId(long classId);
+        void DeleteClassByClassId(long classId);
 
         /**
          * 学生按班级id选择班级.
@@ -109,9 +108,8 @@ namespace Xmu.Crms.Shared.Service
          * @author yexiaona
          * @param userId 用户id
          * @param classId  班级id
-         * @return boolean 取消班级是否成功
          */
-        bool DeleteCourseSelectionById(long userId, long classId);
+        void DeleteCourseSelectionById(long userId, long classId);
 
         /**
          * 老师获取该班级签到、分组状态.
@@ -148,18 +146,16 @@ namespace Xmu.Crms.Shared.Service
          * @see ClassService #deleteClasssSelectionByClassId(long classId)
          * @see ScoreRuleService #deleteScoreRuleById(long CourseId,long ClassId)
          * @see FixGroupService #deleteFixGroupByClassId(long ClassId)
-         * @return true删除成功 false删除失败
          */
-        bool DeleteClassByCourseId(long courseId);
+        void DeleteClassByCourseId(long courseId);
 
         /**
          * 按classId删除ScoreRule.
          * 
          * @author zhouzhongjun
          * @param classId 班级Id
-         * @return true删除成功 false删除失败
          */
-        bool DeleteScoreRuleById(long classId);
+        void DeleteScoreRuleById(long classId);
 
         /**
          * 查询评分规则.
@@ -194,7 +190,7 @@ namespace Xmu.Crms.Shared.Service
          * @param proportionsBO 评分规则
          * @return state 若修改成功则返回true，失败则返回false
          */
-        bool UpdateScoreRule(long classId, ClassInfo proportions);
+        void UpdateScoreRule(long classId, ClassInfo proportions);
 
     }
 }
