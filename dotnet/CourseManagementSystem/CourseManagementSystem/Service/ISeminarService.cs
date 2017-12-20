@@ -36,38 +36,15 @@ namespace Xmu.Crms.Shared.Service
 	 * @see SeminarService #listSemiarByCourseId(BigInteger courseId)
 	 * @see TopicService   #deleteTopicBySeminarId(BigInteger seminarId)
 	 * @see SeminarGroupService  #deleteSeminarGroupBySeminarId(BigInteger seminarId)
-	 * @return true删除成功 false删除失败
 	 * @exception IllegalArgumentException CourseId 格式错误时抛出
 	 * @exception CourseNotFoundException 该课程不存在时抛出
 	 */
-        Boolean DeleteSeminarByCourseId(long courseId);
+        void DeleteSeminarByCourseId(long courseId);
 
 
-        /**
-	 * 获得学生当前讨论课信息(小程序端获得讨论课信息进行选题分组、签到等).
-	 * <p>通过学生用户id和讨论课id获得学生当前的讨论课信息<br>(此学生是否是队长，当前讨论课是否处于签到状态，当前讨论课是否可以选题，当前讨论课的组队方式).
-	 * @author CaoXingmei
-	 * @param seminarId 讨论课的id
-	 * @param userId 用户的id
-	 * @return 当前讨论课的信息
-	 * @see SeminarGroupService #getSeminarGroupById(BigInteger userId, BigInteger seminarId)
-	 * @exception IllegalArgumentException  格式错误时抛出
-	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
-	 */
-        Seminar GetMySeminarBySeminarId(long seminarId, long userId);
+      
 
-
-        /**
-	 * 获得学生相关的某个讨论课的信息.
-	 * ＜p＞通过学生用户id和讨论课id获得学生某个讨论课的详细信息<br>(包括讨论课信息，教师信息).
-	 * @author CaoXingmei
-	 * @param seminarId 讨论课的id
-	 * @param userId 学生的id
-	 * @return 相应的讨论课的详细信息
-	 * @exception IllegalArgumentException SeminarId 格式错误时抛出
-	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
-	 */
-        Seminar GetSeminarDetailBySeminarId(long seminarId, long userId);
+       
 
 
         /**
@@ -88,11 +65,10 @@ namespace Xmu.Crms.Shared.Service
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
 	 * @param seminar 讨论课信息
-	 * @return true(修改成功), false(修改失败)
 	 * @exception IllegalArgumentException SeminarId 格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
-        Boolean UpdateSeminarBySeminarId(long seminarId, Seminar seminar);
+        void UpdateSeminarBySeminarId(long seminarId, Seminar seminar);
 
 
         /**
@@ -100,13 +76,12 @@ namespace Xmu.Crms.Shared.Service
 	 * <p>用户（老师）通过seminarId删除讨论课<br>(包括删除讨论课包含的topic信息和小组信息).
 	 * @author CaoXingmei
 	 * @param seminarId 讨论课的id
-	 * @return true(删除成功), false(删除失败)
 	 * @see SeminarGroupService #deleteSeminarGroupBySeminarId(BigInteger seminarId)
 	 * @see TopicService#deleteTopicBySeminarId(BigInteger seminarId)
 	 * @exception IllegalArgumentException SeminarId 格式错误时抛出
 	 * @exception SeminarNotFoundException 该讨论课不存在时抛出
 	 */
-        Boolean DeleteSeminarBySeminarId(long seminarId);
+        void DeleteSeminarBySeminarId(long seminarId);
 
 
         /**
