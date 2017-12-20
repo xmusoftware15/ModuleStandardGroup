@@ -1,5 +1,7 @@
 package xmu.crms.service;
 
+import xmu.crms.entity.SeminarGroup;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,15 +22,25 @@ public interface GradeService {
 	 */
 	 Boolean deleteStudentScoreGroupByTopicId(BigInteger topicId);
 	/**
-	 * 获取某学生所有讨论课的成绩.
-	 * <p>获取某学生所有讨论课的成绩<br>
+	 * 获取某学生一堂讨论课信息.
+	 * <p>获取某学生一堂讨论课的详细信息（包括成绩）<br>
 	 * @author qinlingyun
 	 * @param userId 学生id
 	 * @param seminarGroupId 讨论课小组id
 	 * @return list 讨论课分数列表
-	 * @see SeminarGroupService#listSeminarGroupIdByStudentId(BigInteger userId)
 	 */
-    List<BigInteger> listSeminarGradeBySeminarGroupId(BigInteger userId, BigInteger seminarGroupId);
+    SeminarGroup getSeminarGroupBySeminarGroupId(BigInteger userId, BigInteger seminarGroupId);
+
+	/**
+	 * 获取某学生所有讨论课的所有成绩
+	 * <p>获取某学生所有讨论课的详细信息（包括成绩）<br>
+	 * @author qinlingyun
+	 * @param userId
+	 * @return list 学生历史讨论课小组列表（包含成绩）
+	 * @see SeminarGroupService#listSeminarGroupIdByStudentId(BigInteger)
+	 * @see GradeService#getSeminarGroupBySeminarGroupId(BigInteger, BigInteger)
+	 */
+	List<SeminarGroup> listSeminarGradeByUserId(BigInteger userId);
     
 	/**
 	 * 提交对其他小组的打分.
