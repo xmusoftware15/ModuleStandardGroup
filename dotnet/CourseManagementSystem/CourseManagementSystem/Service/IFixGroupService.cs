@@ -9,7 +9,16 @@ namespace Xmu.Crms.Shared.Service
 {
     public interface FixGroupService
     {
-
+        /**
+	 * 按班级Id添加固定分组.
+	 * @author zhouzhongjun
+     * @param classId 固定分组Id
+     * @param userId 队长的Id
+     * @return 若创建成功返回该条记录的id，失败则返回-1
+     * @exception InfoIllegalException 信息不合法，id格式错误 
+     * @exception classNotFoundException 未找到班级
+	 */
+        long InsertFixGroupByClassId(long classId, long userId);
         /**
 	 * 按FixGroupId删除FixGroupMember.
 	 * @author zhouzhongjun
@@ -85,7 +94,7 @@ namespace Xmu.Crms.Shared.Service
 	 * @exception IllegalArgumentException 信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-        void UpdateFixGroupByGroupId(long groupId, FixGroup fixGroupBO);
+        void UpdateFixGroupByGroupId(long groupId, FixGroup fixGroup);
 
         /**
 	 * 查询固定小组.
