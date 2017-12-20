@@ -24,20 +24,22 @@ namespace Xmu.Crms.Shared.Service
          */
 
         
-        void DeleteClassSelectionByClassId(long classId);
+        bool DeleteClassSelectionByClassId(long classId);
 
         /**
-         * 按课程名称和教师名称获取班级列表.
-         * <p>
-         * 根据课程名和教师名获取课程ID，通过课程ID获取班级列表;若课程名和班级名均不为空，取交集<br>
-         * 
-         * @author yexiaona
-         * @param courseName 课程名称
-         * @param teacherName 教师名称
-         * @return List 班级列表
-         * @see ClassService #listClassByCourseName(String courseName)
-         * @see ClassService #listClassByTeacherName(String teacherName)
-         */
+	   * 按课程名称和教师名称获取班级列表.
+	 * <p>
+	 * 根据课程名和教师名获取课程ID，通过课程ID获取班级列表;若课程名和班级名均不为空，取交集<br>
+	 * 
+	 * @author yexiaona
+	 * @param courseName 课程名称
+	 * @param teacherName 教师名称
+	 * @return List 班级列表
+	 * @see ClassService #listClassByCourseName(String courseName)
+	 * @see ClassService #listClassByTeacherName(String teacherName)
+	 * @exception UserNotFoundException 无此姓名的教师
+	 * @exception CourseNotFoundException 无此名称的课程
+	 */
         List<ClassInfo> ListClassByName(string courseName, string teacherName);
 
         /**

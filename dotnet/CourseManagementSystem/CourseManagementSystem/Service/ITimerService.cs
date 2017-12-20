@@ -18,22 +18,19 @@ namespace Xmu.Crms.Shared.Service
 
 
         /**
-         * 讨论课结束后计算展示得分.
-         * <p>对数据库直接操作<br>*条件：讨论课结束<br>
-         * @author qinlingyun
-         * @return 无返回值
-         */
-
-
+		 * 讨论课结束后计算展示得分.
+		 * <p>每天8点到21点 每四十分钟触发一次<br>
+		 * <p>条件: 讨论课已结束<br>
+		 * @author qinlingyun
+		 */
         void CountPresentationGrade();
 
         /**
-         * 课前将固定小组复制一份作为讨论课小组名单.
-         * <p>对数据库直接操作<br>*条件：上课前<br>
-         * @author qinlingyun
-         * @return 无返回值
-         */
-
+		 * 课前将固定小组复制一份作为讨论课小组名单.
+		 * <p>每天7点到21点 每半小时触发一次<br>
+		 * <p>条件: 讨论课上课前<br>
+		 * @author qinlingyun
+		 */
         void FixedGroupToSeminarGroup();
 
 
