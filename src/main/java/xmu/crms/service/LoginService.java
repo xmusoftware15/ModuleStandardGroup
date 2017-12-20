@@ -6,7 +6,7 @@ import xmu.crms.entity.*;
 import xmu.crms.exception.*;
 
 /**
- * @author ModuleStandardGroup/YeHongjie
+ * @author Huhui
  * @version 2.00
  */
 public interface LoginService {
