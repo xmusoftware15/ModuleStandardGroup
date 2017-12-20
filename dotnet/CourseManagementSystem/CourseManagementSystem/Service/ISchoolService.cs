@@ -58,7 +58,7 @@ namespace Xmu.Crms.Shared.Service
          * @param SchoolId 学校id
          * @return SchoolBO 学校信息
          */
-        School GetSchoolBySchoolId(BigInteger SchoolId);
+        School GetSchoolBySchoolId(long SchoolId);
 
 
     }

@@ -23,7 +23,7 @@ namespace Xmu.Crms.Shared.Service
          * @param topicId 话题Id
          *  @return true删除成功  false删除失败
          */
-        Boolean DeleteStudentScoreGroupByTopicId(BigInteger topicId);
+        Boolean DeleteStudentScoreGroupByTopicId(long topicId);
 
         /**
          * 获取某学生所有讨论课的成绩.
@@ -34,7 +34,7 @@ namespace Xmu.Crms.Shared.Service
          * @return list 讨论课分数列表
          * @see SeminarGroupService#listSeminarGroupIdByStudentId(BigInteger userId)
          */
-        List<BigInteger> ListSeminarGradeBySeminarGroupId(BigInteger userId, BigInteger seminarGroupId);
+        List<int> ListSeminarGradeBySeminarGroupId(long userId, long seminarGroupId);
 
         /**
          * 提交对其他小组的打分.
@@ -46,7 +46,7 @@ namespace Xmu.Crms.Shared.Service
          * @param grade 分数
          * @return true 提交成功 false 提交失败
          */
-        Boolean InsertGroupGradeByUserId(BigInteger userId, BigInteger seminarId, BigInteger groupId, BigInteger grade);
+        Boolean InsertGroupGradeByUserId(long userId, long seminarId, long groupId, int grade);
 
         /**
          * 按ID设置小组报告分.
@@ -56,7 +56,7 @@ namespace Xmu.Crms.Shared.Service
          * @param grade 分数
          * @return Boolean true 操作成功 false 操作失败
          */
-        Boolean UpdateGroupByGroupId(BigInteger seminar_group_id, BigInteger grade);
+        Boolean UpdateGroupByGroupId(long seminar_group_id, int grade);
 
         /**
          * 获取某学生的讨论课成绩列表.
@@ -65,7 +65,7 @@ namespace Xmu.Crms.Shared.Service
          * @return list 讨论课成绩列表
          * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger seminarId)
          */
-        List<BigInteger> ListSeminarGradeByStudentId(BigInteger userId);
+        List<int> ListSeminarGradeByStudentId(long userId);
         
 
 
