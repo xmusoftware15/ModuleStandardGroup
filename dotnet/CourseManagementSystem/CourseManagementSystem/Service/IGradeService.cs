@@ -18,13 +18,14 @@ namespace Xmu.Crms.Shared.Service
 
 
         /**
-         * 按topicId删除学生打分表.
-         *
-         * @param topicId 话题Id
-         * @throws IllegalArgumentException topicId格式错误时抛出
-         * @author zhouzhongjun
-         */
-        void DeleteStudentScoreGroupByTopicId(long topicId);
+     * 按seminarGroupTopicId删除学生打分表.
+     *
+     * @param seminarGroupTopicId  小组话题表的Id
+     * @return true删除成功  false删除失败
+     * @throws IllegalArgumentException topicId格式错误时抛出
+     * @author zhouzhongjun
+     */
+        void DeleteStudentScoreGroupByTopicId(long seminarGroupTopicId);
 
         /**
          * 获取某学生一堂讨论课信息.
