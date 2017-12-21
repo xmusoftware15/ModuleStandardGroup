@@ -22,6 +22,12 @@ public interface TimerService {
 	 * @param beanName 方法名称
 	 * @param paramMap 方法参数
 	 */
-	public void insertEvent(Date time, Bean beanName, HashMap<Integer, String> paramMap);	
+	public void insertEvent(Date time, Bean beanName, HashMap<Integer, String> paramMap);
+
+	/**
+	 * 每十分钟检查一次Event实体的状况
+	 * @author qinlingyun
+	 */
+	public void scheduled();
 		
 }
