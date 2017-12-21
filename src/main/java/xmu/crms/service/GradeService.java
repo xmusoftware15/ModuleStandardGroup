@@ -60,7 +60,7 @@ public interface GradeService {
      * @throws IllegalArgumentException courseId格式错误
      * @see SeminarService#listSeminarByCourseId(BigInteger)
      * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger)
-     * @see GradeService#getSeminarGroupBySeminarGroupId(BigInteger, BigInteger)
+     * @see GradeService#listSeminarGradeByUserId(BigInteger) 
      */
     List<SeminarGroup> listSeminarGradeByCourseId(BigInteger userId,BigInteger courseId) throws IllegalArgumentException;
 
