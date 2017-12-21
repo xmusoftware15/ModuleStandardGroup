@@ -3,7 +3,14 @@ package xmu.crms.service;
 import java.math.BigInteger;
 import java.util.List;
 
-import xmu.crms.entity.*;
+import xmu.crms.entity.FixGroup;
+import xmu.crms.entity.SeminarGroup;
+import xmu.crms.entity.User;
+import xmu.crms.exception.ClassesNotFoundException;
+import xmu.crms.exception.FixGroupNotFoundException;
+import xmu.crms.exception.InfoIllegalException;
+import xmu.crms.exception.InvalidOperationException;
+import xmu.crms.exception.UserNotFoundException;
 
 /**
  * 
@@ -11,7 +18,6 @@ import xmu.crms.entity.*;
  * @version 2.00
  *
  */
-
 public interface FixGroupService {
 	
 	
@@ -26,7 +32,7 @@ public interface FixGroupService {
      * @exception classNotFoundException 未找到班级
 	 */
 	public BigInteger insertFixGroupByClassId(BigInteger classId,BigInteger userId) throws
-	        InfoIllegalException,classNotFoundException;
+	        InfoIllegalException,ClassesNotFoundException;
 	
 	/**
 	 * 按FixGroupId删除FixGroupMember.
@@ -163,14 +169,25 @@ public interface FixGroupService {
 	 */
 	public FixGroup getFixedGroupById(BigInteger userId,BigInteger classId);
 
-    /**
-     * 根据groupId修改group.
-     * <p>根据groupId修改group<br>
-     * @author aixing
-     * @param groupId 要修改的group的Id
-     * @param group 新的group信息
-     * @exception InfoIllegalException  信息不合法，id格式错误
-	 * @exception FixGroupNotFoundException 未找到小组
-     */
-    public void updateSeminarGroupById(BigInteger groupId,SeminarGroup group);
+	    /**
+	     * 根据groupId修改group.
+	     * <p>根据groupId修改group<br>
+	     * @author aixing
+	     * @param groupId 要修改的group的Id
+	     * @param group 新的group信息
+	     * @exception InfoIllegalException  信息不合法，id格式错误
+		 * @exception FixGroupNotFoundException 未找到小组
+	     */
+	    public void updateSeminarGroupById(BigInteger groupId,SeminarGroup group);	
+	
+	/**
+	 * 定时器方法.
+	 * 课前将固定小组复制一份作为讨论课小组名单.
+	 * <p>条件: 讨论课上课前<br>*SeminarGroupService<br>
+	 * @author qinlingyun
+	 * @param semianrId 讨论课ID
+	 * @param fixedGroupId 小组ID
+	 */
+	public void fixedGroupToSeminarGroup(BigInteger semianrId, BigInteger fixedGroupId);
+
 }

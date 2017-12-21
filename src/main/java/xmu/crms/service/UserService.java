@@ -2,8 +2,13 @@ package xmu.crms.service;
 
 import java.math.BigInteger;
 import java.util.List;
-import xmu.crms.entity.*;
-import xmu.crms.exception.*;
+
+import xmu.crms.entity.Attendance;
+import xmu.crms.entity.Course;
+import xmu.crms.entity.User;
+import xmu.crms.exception.ClassesNotFoundException;
+import xmu.crms.exception.SeminarNotFoundException;
+import xmu.crms.exception.UserNotFoundException;
 
 /**
  * @author YeHongjie
@@ -119,6 +124,22 @@ public interface UserService {
 	 * @exception IllegalArgumentException throws when 信息不合法，id格式错误 
 	 */
 	List<User> listPresentStudent(BigInteger seminarId, BigInteger classId)
+			throws IllegalArgumentException;
+
+
+	/**
+	 * 获取讨论课所在班级迟到学生名单.
+	 * <p>获取讨论课所在班级迟到学生名单<br>
+	 * @author qinlingyun
+	 * @param seminarId 讨论课ID
+	 * @param classId 班级ID
+	 * @return list 处于迟到状态的学生列表
+	 * @see UserService #listUserByClassId(BigInteger, String, String)
+	 * @see UserService #listPresentStudent(BigInteger, BigInteger)
+	 * @see UserService #listAbsenceStudent(BigInteger, BigInteger)
+	 * @exception IllegalArgumentException throws when 信息不合法，id格式错误 
+	 */
+	List<User> listLateStudent(BigInteger seminarId,BigInteger classId) 
 			throws IllegalArgumentException;
 
 
