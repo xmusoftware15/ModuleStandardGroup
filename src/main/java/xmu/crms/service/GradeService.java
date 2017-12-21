@@ -68,7 +68,6 @@ public interface GradeService {
      * 提交对其他小组的打分.
      *
      * @param userId    用户id
-     * @param seminarId 讨论课Id
      * @param groupId   小组Id
      * @param grade     分数
      * @param topicId   话题id
@@ -76,7 +75,7 @@ public interface GradeService {
      * @throws IllegalArgumentException topicId或userId或seminarId或groupId或grade格式错误
      * @author Huhui
      */
-    Boolean insertGroupGradeByUserId(BigInteger topicId, BigInteger userId, BigInteger seminarId, BigInteger groupId, BigInteger grade)
+    Boolean insertGroupGradeByUserId(BigInteger topicId, BigInteger userId, BigInteger groupId, BigInteger grade)
             throws IllegalArgumentException;
 
     /**
