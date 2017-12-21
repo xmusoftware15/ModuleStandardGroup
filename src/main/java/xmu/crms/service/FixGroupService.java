@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 import xmu.crms.entity.FixGroup;
+import xmu.crms.entity.FixGroupMember;
 import xmu.crms.entity.SeminarGroup;
 import xmu.crms.entity.User;
 import xmu.crms.exception.*;
@@ -27,7 +28,7 @@ public interface FixGroupService {
      * @exception IllegalArgumentException 信息不合法，id格式错误 
      * @exception ClassesNotFoundException 未找到班级
 	 */
-	public BigInteger insertFixGroupByClassId(BigInteger classId,BigInteger userId) throws
+	 BigInteger insertFixGroupByClassId(BigInteger classId,BigInteger userId) throws
 	        IllegalArgumentException,ClassesNotFoundException;
 	
 	/**
@@ -38,7 +39,7 @@ public interface FixGroupService {
      * @exception IllegalArgumentException 信息不合法，id格式错误 
      * @exception FixGroupNotFoundException 未找到小组
 	 */
-	public void deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId) throws
+	 void deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId) throws
 	        IllegalArgumentException,FixGroupNotFoundException;
 	
 	/**
@@ -53,7 +54,7 @@ public interface FixGroupService {
      * @exception UserNotFoundException 不存在该学生
      * @exception InvalidOperationException 待添加学生已经在小组里了
 	 */
-    public BigInteger insertFixGroupMemberById(BigInteger userId,BigInteger groupId);
+     BigInteger insertFixGroupMemberById(BigInteger userId,BigInteger groupId) throws FixGroupNotFoundException,UserNotFoundException,InvalidOperationException;
     
 	/**
 	 * 查询固定小组成员.
@@ -64,7 +65,8 @@ public interface FixGroupService {
 	 * @exception IllegalArgumentException 信息不合法，id格式错误
      * @exception FixGroupNotFoundException 未找到小组
 	 */
-    public List<User> listFixGroupMemberByGroupId(BigInteger groupId);
+     List<User> listFixGroupMemberByGroupId(BigInteger groupId) throws 
+     IllegalArgumentException,FixGroupNotFoundException;
 	/**
 	 * 按classId查找FixGroup信息.
 	 * <p>按classId查找FixGroup信息<br>
@@ -73,7 +75,8 @@ public interface FixGroupService {
      * @return null 固定分组列表
      * @exception IllegalArgumentException 信息不合法，id格式错误
 	 */
-	public List<FixGroup> listFixGroupByClassId(BigInteger classId);
+	 List<FixGroup> listFixGroupByClassId(BigInteger classId) throws
+	 IllegalArgumentException;
 	
 	/**
 	 * 按classId删除FixGroup
@@ -82,11 +85,10 @@ public interface FixGroupService {
      * @param classId 班级Id
      * @see FixGroupService #listFixGroupByClassId(BigInteger classId)
      * @see FixGroupService #deleteFixGroupMemberByFixGroupId(BigInteger fixGroupId)
-     * @return true删除成功  false删除失败
      * @exception IllegalArgumentException 信息不合法，id格式错误 
-     * @exception ClassNotFoundException 未找到班级
+     * @exception ClassesNotFoundException 未找到班级
 	 */
-	public void deleteFixGroupByClassId(BigInteger classId);
+	 void deleteFixGroupByClassId(BigInteger classId) throws ClassesNotFoundException;
     
     /**
 	 * 删除固定小组.
@@ -97,7 +99,8 @@ public interface FixGroupService {
 	 * @exception IllegalArgumentException  信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-    public void deleteFixGroupByGroupId(BigInteger groupId);
+     void deleteFixGroupByGroupId(BigInteger groupId) throws
+     IllegalArgumentException,FixGroupNotFoundException;
     
     /**
 	 * 修改固定小组.
@@ -108,19 +111,21 @@ public interface FixGroupService {
 	 * @exception IllegalArgumentException 信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-    public void updateFixGroupByGroupId(BigInteger groupId,FixGroup fixGroupBO);
+     void updateFixGroupByGroupId(BigInteger groupId,FixGroup fixGroupBO) throws
+     IllegalArgumentException,FixGroupNotFoundException;
     
     /**
 	 * 查询固定小组.
 	 * ＜p＞按照id查询某一固定小组的信息（包括成员）<br>
 	 * @author YeHongjie
 	 * @param groupId 小组的id
-	 * @return fixGroupBO 固定小组对象，若未找到相关小组返回空(null)
+	 * @return List 固定小组对象列表
 	 * @see FixGroupService #listFixGroupMemberByGroupId(BigInteger groupId)
 	 * @exception IllegalArgumentException  信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-    public FixGroup getFixGroupByGroupId(BigInteger groupId);
+	List<FixGroupMember> getFixGroupByGroupId(BigInteger groupId) throws
+	IllegalArgumentException,FixGroupNotFoundException;
  
 
     /**
@@ -130,13 +135,13 @@ public interface FixGroupService {
 	 * @param userId 学生的id
 	 * @param groupId 要加入小组的id
 	 * @return BigInteger 若创建成功返回该条记录的id，失败则返回-1
-	 * @exception FixGroupNotFoundException  信息不合法，id格式错误
+	 * @exception IllegalArgumentException  信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 * @exception UserNotFoundException 不存在该学生
 	 * @exception InvalidOperationException 待添加学生已经在小组里了
 	 */
 
-    public BigInteger insertStudentIntoGroup(BigInteger userId,BigInteger groupId) throws 
+     BigInteger insertStudentIntoGroup(BigInteger userId,BigInteger groupId) throws
             FixGroupNotFoundException,FixGroupNotFoundException,UserNotFoundException,
             InvalidOperationException;
 
@@ -149,7 +154,8 @@ public interface FixGroupService {
 	 * @exception IllegalArgumentException  信息不合法，id格式错误
 	 * @exception FixGroupNotFoundException 未找到小组
 	 */
-	public void deleteTopicByGroupId(BigInteger groupId);
+	 void deleteTopicByGroupId(BigInteger groupId) throws
+	 IllegalArgumentException,FixGroupNotFoundException;
 
     /**
 	 * 按id获取小组.
@@ -163,7 +169,8 @@ public interface FixGroupService {
 	 * @exception ClassNotFoundException 未找到小组
 	 * @exception UserNotFoundException 不存在该学生
 	 */
-	public FixGroup getFixedGroupById(BigInteger userId,BigInteger classId);
+	 FixGroup getFixedGroupById(BigInteger userId,BigInteger classId) throws
+	 IllegalArgumentException,ClassNotFoundException,UserNotFoundException;
 
 	    /**
 	     * 根据groupId修改group.
@@ -174,7 +181,8 @@ public interface FixGroupService {
 	     * @exception IllegalArgumentException  信息不合法，id格式错误
 		 * @exception FixGroupNotFoundException 未找到小组
 	     */
-	    public void updateSeminarGroupById(BigInteger groupId,SeminarGroup group);	
+	     void updateSeminarGroupById(BigInteger groupId,SeminarGroup group) throws
+	     IllegalArgumentException,FixGroupNotFoundException;
 	
 	/**
 	 * 定时器方法.
@@ -184,6 +192,6 @@ public interface FixGroupService {
 	 * @param semianrId 讨论课ID
 	 * @param fixedGroupId 小组ID
 	 */
-	public void fixedGroupToSeminarGroup(BigInteger semianrId, BigInteger fixedGroupId);
+	 void fixedGroupToSeminarGroup(BigInteger semianrId, BigInteger fixedGroupId);
 
 }
