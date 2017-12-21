@@ -155,6 +155,7 @@ namespace Xmu.Crms.Shared.Service
 
 
         /**
+         * 定时器方法
 	 * 自动分组.
 	 * <p>根据讨论课id和班级id，对签到的学生进行自动分组<br>
 	 * @author YeHongjie
