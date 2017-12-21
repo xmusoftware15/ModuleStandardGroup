@@ -14,14 +14,14 @@ import java.util.List;
 public interface GradeService {
 
     /**
-     * 按topicId删除学生打分表.
+     * 按seminarGroupTopicId删除学生打分表.
      *
-     * @param topicId 话题Id
+     * @param seminarGroupTopicId  小组话题表的Id
      * @return true删除成功  false删除失败
      * @throws IllegalArgumentException topicId格式错误时抛出
      * @author zhouzhongjun
      */
-    Boolean deleteStudentScoreGroupByTopicId(BigInteger topicId) throws IllegalArgumentException;
+    Boolean deleteStudentScoreGroupByTopicId(BigInteger seminarGroupTopicId) throws IllegalArgumentException;
 
     /**
      * 获取某学生一堂讨论课信息.
