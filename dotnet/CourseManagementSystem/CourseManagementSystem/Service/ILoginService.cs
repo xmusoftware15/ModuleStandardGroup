@@ -26,7 +26,7 @@ namespace Xmu.Crms.Shared.Service
       * @return user 该用户信息
       * @exception UserNotFoundException 登录失败时抛出
       */
-        UserInfo SignInWeChat(BigInteger userId, String code, String state, String successUrl);
+        UserInfo SignInWeChat(long userId, String code, String state, String successUrl);
 
 
         /**

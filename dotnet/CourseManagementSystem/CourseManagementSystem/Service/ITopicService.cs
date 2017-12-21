@@ -45,19 +45,7 @@ namespace Xmu.Crms.Shared.Service
 	 * @exception IllegalArgumentException Id格式错误时抛出
 	 */
         void DeleteTopicByTopicId(long topicId, long seminarId);
-        //删除topic还要把每个选了这个topic的小组的选题属性修改为null
-        //想找到选了这个topic的小组，首先通过seminarId获得该讨论课所有小组，遍历判断是否选了这个topic
-        //SeminarGroupService sg=new SeminarGroupService();
-        //GroupService gs=new GroupService();
-        //List<SeminarGroupBO> groups=sg.listSeminarGroupBySeminarId(seminarId);
-        // List<SeminarGroupBO> topic_group=new ArrayList<SeminarGroupBO>();
-        //for g in groups
-        //if(选了此topic) topic_group.add(g);
-        //修改topic_group的选题属性
-        //for g in topic_group{
-        //g.topic=null;
-        //gs.updateSeminarGroupById(g.id, g);}
-        //删除讨论课
+        
 
 
 

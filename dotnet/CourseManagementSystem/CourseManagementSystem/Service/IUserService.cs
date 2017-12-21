@@ -116,6 +116,19 @@ namespace Xmu.Crms.Shared.Service
          */
         List<UserInfo> ListPresentStudent(long seminarId, long classId);
 
+        /**
+	 * 获取讨论课所在班级迟到学生名单.
+	 * <p>获取讨论课所在班级迟到学生名单<br>
+	 * @author qinlingyun
+	 * @param seminarId 讨论课ID
+	 * @param classId 班级ID
+	 * @return list 处于迟到状态的学生列表
+	 * @see UserService #listUselongrByClassId(BigInteger, String, String)
+	 * @see UserService #listPresentStudent(BigInteger, BigInteger)
+	 * @see UserService #listAbsenceStudent(BigInteger, BigInteger)
+	 * @exception IllegalArgumentException throws when 信息不合法，id格式错误 
+	 */
+        List<UserInfo> listLateStudent(long seminarId, long classId);
 
         /**
          * 获取讨论课所在班级缺勤学生名单.

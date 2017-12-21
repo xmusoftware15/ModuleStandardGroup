@@ -158,5 +158,15 @@ namespace Xmu.Crms.Shared.Service
 	 */
         void UpdateSeminarGroupById(long groupId, SeminarGroup group);
 
+        /**
+	 * 定时器方法.
+	 * 课前将固定小组复制一份作为讨论课小组名单.
+	 * <p>条件: 讨论课上课前<br>*SeminarGroupService<br>
+	 * @author qinlingyun
+	 * @param semianrId 讨论课ID
+	 * @param fixedGroupId 小组ID
+	 */
+       void FixedGroupToSeminarGroup(long semianrId, long fixedGroupId);
+
     }
 }
