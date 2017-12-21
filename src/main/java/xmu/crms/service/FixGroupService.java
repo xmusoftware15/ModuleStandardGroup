@@ -11,7 +11,7 @@ import xmu.crms.exception.*;
 /**
  * 
  * @author ZhouChulun YeHongjie Heqi Aixing
- * @version 2.00
+ * @version 2.10
  *
  */
 public interface FixGroupService {

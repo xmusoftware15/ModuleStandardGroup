@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * 定时器
  * 
  * @author qinlingyun liuaiqi
- * @version 2.00
+ * @version 2.10
  */
 @Component
 public interface TimerService {
