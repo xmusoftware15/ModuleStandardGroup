@@ -51,16 +51,18 @@ public interface GradeService {
     List<SeminarGroup> listSeminarGradeByUserId(BigInteger userId) throws IllegalArgumentException;
 
     /**
-     * 按课程id获取学生所有讨论课成绩
+     * 按课程id获取学生该课程所有讨论课
      * <p>通过课程id获取该课程下学生所有讨论课详细信息（包括成绩）<br>
      *
+     * @param userId
      * @param courseId
      * @return list 该课程下所有讨论课列表
      * @throws IllegalArgumentException courseId格式错误
      * @see SeminarService#listSeminarByCourseId(BigInteger)
      * @see SeminarGroupService#listSeminarGroupBySeminarId(BigInteger)
+     * @see GradeService#getSeminarGroupBySeminarGroupId(BigInteger, BigInteger)
      */
-    List<SeminarGroup> listSeminarGradeByCourseId(BigInteger courseId) throws IllegalArgumentException;
+    List<SeminarGroup> listSeminarGradeByCourseId(BigInteger userId,BigInteger courseId) throws IllegalArgumentException;
 
     /**
      * 提交对其他小组的打分.
